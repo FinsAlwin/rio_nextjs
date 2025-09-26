@@ -3,9 +3,9 @@ frontend:
   phases:
     preBuild:
       commands:
-        # Install Node.js 18 first, then use it
-        - nvm install 18
-        - nvm use 18
+        # Install Node.js 20 (required by AWS Amplify)
+        - nvm install 20
+        - nvm use 20
         # Verify Node.js version
         - node --version
         # Install dependencies with legacy peer deps to resolve conflicts
