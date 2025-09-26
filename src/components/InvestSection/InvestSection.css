@@ -1,0 +1,24 @@
+.scroll-down-wrapper-invest-section {
+  position: absolute;
+  bottom: 9%;
+  right: 80%;
+  transform: translate(-60%, 0px);
+  z-index: 10;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  .scroll-down-wrapper-invest-section {
+    bottom: 6%;
+    right: 41%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1450px) {
+  .dual-invest-section {
+    display: grid;
+    grid-template-columns: 2fr 2fr !important;
+    height: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+.scroll-snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* Apply snap alignment to each section */
+.scroll-snap-container section {
+  scroll-snap-align: start;
+  height: 100vh;
+}

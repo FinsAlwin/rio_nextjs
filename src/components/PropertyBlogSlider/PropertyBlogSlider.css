@@ -1,0 +1,13 @@
+.property-blog-slider {
+  padding: 95px 114px 95px 145px;
+}
+
+.image-property-blog-slider {
+  display: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+}

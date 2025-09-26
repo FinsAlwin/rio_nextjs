@@ -1,0 +1,11 @@
+.our-journey-heading {
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-container-our-heading {
+  color: #fff;
+  text-transform: uppercase;
+}

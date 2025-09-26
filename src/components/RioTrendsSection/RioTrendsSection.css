@@ -1,0 +1,9 @@
+.rio-trends {
+  /* height: 92vh !important; */
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .rio-trends {
+    height: 100vh !important;
+  }
+}

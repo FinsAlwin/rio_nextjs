@@ -1,0 +1,101 @@
+/* .custom-arrow {
+
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 91%;
+
+
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+} */
+
+/* .custom-arrow.slick-prev {
+  left: 46%; 
+} */
+.slick-next:before {
+  content: "" !important;
+}
+.slick-prev:before {
+  content: "" !important;
+}
+/* .custom-arrow.slick-next {
+  right: 10px; 
+} */
+
+.custom-arrow .arrow-icon {
+  font-size: 24px;
+  color: #000000; /* Arrow color */
+}
+
+.custom-arrow:hover .arrow-icon {
+  color: #ffffff; /* Change arrow color on hover */
+}
+
+.slick-disabled {
+  opacity: 0.5;
+  pointer-events: none; /* Disable interaction */
+}
+
+.sb-custom div {
+  margin-bottom: 15px; /* Adjust the value for more or less spacing */
+  font-size: 16px;
+  line-height: 1.8; /* Optional, to improve readability */
+}
+
+.sb-custom div:last-child {
+  margin-bottom: 0; /* Ensure no extra margin after the last div */
+}
+
+.content-section-slick {
+  gap: 50px !important;
+}
+
+/* .project-slick-explore {
+  height: 116vh;
+} */
+
+.projects-section .projects-container {
+  grid-template-columns: 1.5fr 2fr;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .custom-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .custom-arrow .arrow-icon {
+    font-size: 20px;
+  }
+
+  /* .custom-arrow.slick-prev {
+    left: 2px; 
+  }
+
+  .custom-arrow {
+    top: 41%;
+  }
+
+  .custom-arrow.slick-next {
+    right: -50px; 
+  } */
+  /* .project-slick-explore {
+    height: 49vh;
+  } */
+  .sb-custom div {
+    line-height: 1.5; /* Optional, to improve readability */
+  }
+}
+
+/* @media only screen and (max-width: 1370px) {
+  .project-slick-explore {
+    height: 88vh;
+  }
+} */

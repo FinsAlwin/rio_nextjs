@@ -1,0 +1,9 @@
+@media only screen and (max-width: 768px) {
+  header .wrapper {
+    width: 92%;
+  }
+  header {
+    background: rgba(0, 0, 0, 0.8) !important;
+    z-index: 99;
+  }
+}

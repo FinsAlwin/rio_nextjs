@@ -1,0 +1,29 @@
+.btn-load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.load-more {
+  background: rgba(0, 0, 0, 0);
+  border: 2px solid #050505;
+  border-radius: 12px;
+  padding: 12px 40px;
+  text-decoration: none;
+  color: #050505;
+  cursor: pointer;
+  text-align: center;
+  min-width: 210px;
+  transition: all 0.3s ease;
+  font-family: "Berthold-Extended", sans-serif !important;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+}
+
+.load-more:hover {
+  background-color: #050505;
+  border: 2px solid #fff !important;
+  color: #fff;
+}

@@ -1,0 +1,131 @@
+.dot-container {
+  position: absolute;
+  top: 49px;
+  right: 10px;
+  display: none;
+  /* flex-direction: column; */
+  gap: 8px;
+}
+
+/* Individual dot styling */
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #fff; /* Dot color */
+  border-radius: 50%;
+  padding: 5px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.dot:hover {
+  font-size: 30px;
+
+  background-color: #2d2dda;
+  transform: scale(1.2); /* Enlarges the dot on hover */
+}
+
+.arrow-container {
+  position: absolute;
+  top: 60%;
+  left: 0%;
+  right: 0;
+  display: none; /* Hide by default */
+  width: 100%;
+
+  pointer-events: none;
+  z-index: 10;
+}
+
+.arrow {
+  pointer-events: all;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+.arrow svg {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+.arrow svg {
+  color: #fff; /* White arrow color */
+  width: 30px;
+  height: 30px;
+}
+.team-members
+  .wrapper
+  .inner-container
+  .teams-container
+  .team-item
+  .team-item-image
+  .contact {
+  z-index: 2;
+  opacity: 0; /* Start with opacity 0 */
+  pointer-events: none; /* Prevent interaction when hidden */
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth transition */
+  font-size: 14px;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 15px;
+  visibility: hidden; /* Hidden by default */
+}
+
+/* Mobile-specific styles (dots visible only in mobile view) */
+@media only screen and (max-width: 768px) {
+  .dot-container {
+    display: flex; /* Dots will be displayed only in mobile view */
+  }
+  .arrow-container {
+    display: flex; /* Show arrows only on mobile */
+    justify-content: space-between;
+  }
+
+  .team-members
+    .wrapper
+    .inner-container
+    .teams-container
+    .team-item
+    .team-item-image
+    .contact {
+    z-index: 2;
+    opacity: 0; /* Start with opacity 0 */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth transition */
+    font-size: 11px;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    bottom: 15px;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 769px) {
+  .arrow-container {
+    display: none; /* Hide arrows on larger screens */
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  .team-members
+    .wrapper
+    .inner-container
+    .teams-container
+    .team-item
+    .team-item-image
+    .image-container {
+    height: 50vh !important;
+  }
+}

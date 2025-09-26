@@ -1,0 +1,11 @@
+.d-none {
+  display: none;
+}
+.dnd-upload-success {
+  display: flex;
+  justify-content: end;
+  color: #22b022;
+}
+.codedropz-upload-inner {
+  padding: 34px;
+}

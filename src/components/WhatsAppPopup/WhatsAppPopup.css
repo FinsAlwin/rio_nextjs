@@ -1,0 +1,26 @@
+.whatsapp-floating {
+  position: fixed;
+  bottom: 32px;
+  right: 14%;
+  z-index: 1000;
+  opacity: 0;
+
+  transition: opacity 1s ease-in-out;
+}
+
+.whatsapp-floating.fade-in {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .whatsapp-floating {
+    width: 35px;
+    position: fixed;
+    bottom: 32px;
+    right: 5%;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    height: 35px;
+  }
+}

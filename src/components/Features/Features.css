@@ -1,0 +1,25 @@
+.project-features
+  .wrapper
+  .inner-container
+  .features-container
+  .col
+  .title-container
+  .desc {
+  height: auto;
+  width: 100%;
+  max-height: 0;
+  margin-top: 10px;
+  overflow: hidden;
+
+  transition: max-height 0.4s ease;
+}
+
+.project-features
+  .wrapper
+  .inner-container
+  .features-container
+  .col:hover
+  .title-container
+  .desc {
+  max-height: 130px;
+}

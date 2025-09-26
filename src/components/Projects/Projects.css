@@ -1,0 +1,98 @@
+.upcoming-new-height {
+  height: 150vh !important;
+}
+
+.upcoming
+  .wrapper
+  .inner-container
+  .upcoming-container
+  .upcoming-projects-container {
+  /* display: flex !important; */
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important;
+  overflow: hidden !important;
+}
+.upcoming .wrapper .inner-container .upcoming-container .header {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center; /* Align items horizontally centered */
+  gap: 20px; /* Space between text and line */
+  justify-content: space-between;
+}
+
+.upcoming .wrapper .inner-container .upcoming-container .header .line {
+  height: 2px;
+  background-color: #707070;
+  flex: 1; /* Makes the line grow to fill available space */
+}
+
+.phuket-video-section,
+.dubai-video-section {
+  object-fit: cover;
+
+  height: 570px;
+}
+
+.upcoming .wrapper .inner-container .upcoming-container .header {
+  margin-top: 19px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .upcoming-new-height {
+    height: 105vh !important;
+  }
+  .upcoming
+    .wrapper
+    .inner-container
+    .upcoming-container
+    .upcoming-projects-container {
+    display: grid !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    overflow: hidden !important;
+  }
+  .upcoming
+    .wrapper
+    .inner-container
+    .upcoming-container
+    .upcoming-projects-container {
+    display: flex; /* Use flexbox for mobile */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 10px !important; /* Center align items */
+  }
+  .phuket-video-section,
+  .dubai-video-section {
+    width: 100%;
+    height: auto;
+  }
+  .upcoming .wrapper .inner-container .upcoming-container .header {
+    gap: 10px;
+  }
+}
+
+/* @media only screen and (max-width: 1024px) {
+  .phuket-video-section,
+  .dubai-video-section {
+    height: 400px;
+  }
+} */
+
+@media only screen and (max-height: 1366px) {
+  .phuket-video-section,
+  .dubai-video-section {
+    object-fit: cover;
+
+    height: 500px;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+  .phuket-video-section,
+  .dubai-video-section {
+    height: 350px;
+  }
+}

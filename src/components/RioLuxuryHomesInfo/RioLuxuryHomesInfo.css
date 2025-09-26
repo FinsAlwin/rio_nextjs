@@ -1,0 +1,9 @@
+.dual-container-2 {
+  grid-template-columns: 1fr 1fr !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .dual-container-2 {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}

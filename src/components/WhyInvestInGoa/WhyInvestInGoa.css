@@ -1,0 +1,48 @@
+.invest-wrapper {
+  padding-top: 7% !important;
+}
+
+.invest-in-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Add some space below the video */
+}
+
+.responsive-video {
+  width: 100%; /* Full width */
+  max-width: 800px; /* Limit max width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 1366px) {
+  /* .responsive-video {
+    max-width: 100%;
+    max-height: 250px;
+  } */
+
+  .why-invest-in-desc {
+    font-size: 14px;
+  }
+}
+
+/* Media query for tablet screens */
+@media only screen and (max-width: 1920px) {
+  .responsive-video {
+    max-width: 90%; /* Slightly smaller on tablet */
+    max-height: 300px;
+  }
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 1536px) {
+  /* .invest-wrapper {
+    width: 100%;
+  } */
+
+  .responsive-video {
+    max-width: 100%;
+    max-height: 260px;
+  }
+}

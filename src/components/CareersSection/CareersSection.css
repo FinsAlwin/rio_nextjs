@@ -1,0 +1,39 @@
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.8); /* Darker background with higher opacity */
+}
+
+/* Modal Centering */
+.modal {
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  height: 100%; /* Full height */
+}
+
+/* Modal Content Styling */
+.modal-content {
+  display: flex; /* Enable flexbox for content */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  width: 100%;
+  max-width: 600px; /* Max width for the modal */
+  background-color: white; /* Distinct background for the modal */
+  padding: 20px;
+  border-radius: 8px; /* Optional: for rounded corners */
+}
+
+/* Center the Form */
+.modal-content form {
+  width: 100%; /* Make form take full width */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack form elements vertically */
+  align-items: center; /* Center form elements horizontally */
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .modal {
+    max-width: 50%; /* Limit width on larger screens */
+  }
+}
