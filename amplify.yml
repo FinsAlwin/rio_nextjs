@@ -1,0 +1,24 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        # Use Node.js 18 for better compatibility
+        - nvm use 18
+        # Install dependencies with legacy peer deps to resolve conflicts
+        - npm install --legacy-peer-deps
+    build:
+      commands:
+        # Critical Next.js fix for Amplify deployment
+        - echo "__NEXT_PRIVATE_PREBUNDLED_REACT=next" >> .env.production
+
+        # Build the application
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - "**/*"
+  cache:
+    paths:
+      - .next/cache/**/*
+      - node_modules/**/*
