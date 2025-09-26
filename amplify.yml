@@ -3,8 +3,11 @@ frontend:
   phases:
     preBuild:
       commands:
-        # Use Node.js 18 for better compatibility
+        # Install Node.js 18 first, then use it
+        - nvm install 18
         - nvm use 18
+        # Verify Node.js version
+        - node --version
         # Install dependencies with legacy peer deps to resolve conflicts
         - npm install --legacy-peer-deps
     build:
