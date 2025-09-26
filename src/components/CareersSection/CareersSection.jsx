@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import ApplyNowForm from "../ApplyForm/ApplyForm";
+import "./CareersSection.css";
 // import M from "materialize-css"; // Removed for SSR compatibility
 // import { Modal } from "react-responsive-modal"; // Temporarily disabled due to ESM compatibility issue
 // import "react-responsive-modal/styles.css"; // Temporarily disabled due to ESM compatibility issue
-// import "./CareersSection.css";
 const CareersSection = () => {
   // State to manage the open/close state of the accordion items
   const [openAccordion, setOpenAccordion] = useState(null);

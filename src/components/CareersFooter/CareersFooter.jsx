@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import careerFooterImg from "../../assets/careers_images/careers-footer.webp";
 import { useEffect, useRef } from "react";
 const CareersFooter = () => {
   const scrollToTop = () => {
@@ -41,7 +40,7 @@ const CareersFooter = () => {
             ref={imageRef}
             className="image-container reveal-image reveal-image-active"
           >
-            <img src={careerFooterImg} alt="Footer" />
+            <img src="/careers_images/careers-footer.webp" alt="Footer" />
           </div>
           <div className="left-footer-bottom">
             <div className="left-col">
