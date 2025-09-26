@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { fetchDataPost } from "../../utils/fetchData";
 import endpoints from "../../config/endpoints";
 import { showToastError, showToastSuccess } from "../../utils/toast";
-import formImage from "../../assets/contact_us_form_image/contact_form_image_web.webp";
 import PhoneInput from "../PhoneInput/PhoneInput";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
 import "./ContactForm.css";
@@ -13,7 +12,7 @@ const ContactForm = () => {
     yourName: "",
     phone: "",
     email: "",
-    investment: "1-5 CR",
+    investment: "50 - 70 MB",
     hearAboutUs: "",
     countryCode: "in",
     dialingCode: "+91",
@@ -231,7 +230,7 @@ const ContactForm = () => {
           yourName: "",
           phone: "",
           email: "",
-          investment: "1-5 CR",
+          investment: "50 - 70 MB",
           hearAboutUs: "",
           countryCode: "in",
           dialingCode: "+91",
@@ -415,8 +414,8 @@ const ContactForm = () => {
                             <input
                               type="radio"
                               name="investment"
-                              value="1-5 CR"
-                              // checked={formData.investment === "1-5 CR"}
+                              value="50 - 70 MB"
+                              // checked={formData.investment === "50 - 70 MB"}
                               onChange={handleChange}
                               className="radio-investment-btn"
                             />
@@ -430,29 +429,29 @@ const ContactForm = () => {
                                   {errors.investment}
                                 </p>
                               ))}
-                            <span style={dynamicStyle}>1-5 CR</span>
+                            <span style={dynamicStyle}>50 - 70 MB</span>
                           </label>
                           <label className="new-set-label-form new-set-form-investmentlabel new-form-investment-rb">
                             <input
                               type="radio"
                               name="investment"
-                              value="5-15 CR"
+                              value="71 - 90 MB"
                               className="radio-investment-btn"
-                              // checked={formData.investment === "5-15 CR"}
+                              // checked={formData.investment === "71 - 90 MB"}
                               onChange={handleChange}
                             />
-                            <span style={dynamicStyle}>5-15 CR</span>
+                            <span style={dynamicStyle}>71 - 90 MB</span>
                           </label>
                           <label className="new-set-label-form new-set-form-investmentlabel">
                             <input
                               type="radio"
                               name="investment"
-                              value="15+ CR"
+                              value="91+ MB"
                               className="radio-investment-btn"
-                              // checked={formData.investment === "15+ CR"}
+                              // checked={formData.investment === "91+ MB"}
                               onChange={handleChange}
                             />
-                            <span style={dynamicStyle}>15+ CR</span>
+                            <span style={dynamicStyle}>91+ MB</span>
                           </label>
                         </p>
                       </div>
@@ -552,7 +551,7 @@ const ContactForm = () => {
             className="image reveal-image reveal-image-active"
             ref={imageRef}
           >
-                <img src={formImage.src || formImage} alt="" />
+                <img src="/contact_us_form_image/contact_form_image_web.webp" alt="" />
           </div>
         </div>
       </div>

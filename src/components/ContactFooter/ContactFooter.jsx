@@ -1,5 +1,4 @@
 "use client";
-import investFooter from "../../assets/invest_page_image/Invest.webp";
 import { useEffect, useRef } from "react";
 import LocationDetails from "../LocationDetails/LocationDetails";
 const ContactFooter = () => {
@@ -41,7 +40,7 @@ const ContactFooter = () => {
             ref={imageRef}
             className="image-container reveal-image reveal-image-active"
           >
-            <img src={investFooter.src || investFooter} alt="Footer" />
+            <img src="/invest_page_image/Invest.webp" alt="Footer" />
           </div>
           <div className="left-footer-bottom">
             <div className="left-col">

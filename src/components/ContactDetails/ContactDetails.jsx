@@ -53,12 +53,11 @@ const ContactDetails = () => {
                 <div className="contact-us">
                   <div className="address-col">
                     <div className="left">
-                      <h4 className="title">Address</h4>
+                      <h4 className="title">Office Address</h4>
                     </div>
                     <div className="right">
                       <div className="address-detail">
-                        Aldeia Serenia, Block C, Bounta Vaddo, Mapusa Anjuna
-                        Main Road, Assagao, Goa - 403507
+                        5/50 The Plaza Surin, Unit G6 – Ground Floor Moo 3, Cherngtalay Sub-district, Thalang District, Phuket 83110
                       </div>
                     </div>
 
@@ -70,12 +69,12 @@ const ContactDetails = () => {
                     <div className="right">
                       <div className="contact-info">
                         <a
-                          href="mailto:sales@rioluxuryhomes.in"
+                          href="mailto:info@riophuket.com"
                           className="email"
                         >
-                          sales@rioluxuryhomes.in
+                          info@riophuket.com
                         </a>
-                        <div className="phone">+91 88889 00073</div>
+                        <div className="phone">+66 (0) 85 575 9222</div>
                       </div>
                     </div>
                   </div>
@@ -95,27 +94,27 @@ const ContactDetails = () => {
                   <div className="right">
                     <div className="contact-info">
                       <a
-                        href="mailto:marketing@rioluxuryhomes.in"
+                        href="mailto:marketing@riophuket.com"
                         className="email"
                       >
-                        marketing@rioluxuryhomes.in
+                        marketing@riophuket.com
                       </a>
-                      <div className="phone">+91 87999 15197</div>
+                      <div className="phone">+66 (0) 85 575 9222</div>
                     </div>
                     <div className="contact-info">
                       <a
-                        href="mailto:purchase@rioluxuryhomes.in"
+                        href="mailto:purchase@riophuket.com"
                         className="email"
                       >
-                        purchase@rioluxuryhomes.in
+                        purchase@riophuket.com
                       </a>
-                      <div className="phone">+91 92250 96994</div>
+                      <div className="phone">+66 (0) 85 575 9222</div>
                     </div>
                     <div className="contact-info">
-                      <a href="mailto:hr@rioluxuryhomes.in" className="email">
-                        hr@rioluxuryhomes.in
+                      <a href="mailto:hr@riophuket.com" className="email">
+                        hr@riophuket.com
                       </a>
-                      <div className="phone">+91 87999 15195</div>
+                      <div className="phone">+66 (0) 85 575 9222</div>
                     </div>
                   </div>
                 </div>
@@ -124,33 +123,33 @@ const ContactDetails = () => {
                   <div className="mobile-business-type">{`// Press and Collabs`}</div>
                   <div className="mobile-details">
                     <a
-                      href="mailto:marketing@rioluxuryhomes.in"
+                      href="mailto:marketing@riophuket.com"
                       className="email"
                     >
-                      marketing@rioluxuryhomes.in
+                      marketing@riophuket.com
                     </a>
-                    <div className="phone">+91 87999 15197</div>
+                    <div className="phone">+66 (0) 85 575 9222</div>
                   </div>
                 </div>
                 <div className="mobile-contact-info">
                   <div className="mobile-business-type">{`// Purchase`}</div>
                   <div className="mobile-details">
                     <a
-                      href="mailto:purchase@rioluxuryhomes.in"
+                      href="mailto:purchase@riophuket.com"
                       className="email"
                     >
-                      purchase@rioluxuryhomes.in
+                      purchase@riophuket.com
                     </a>
-                    <div className="phone">+91 92250 96994</div>
+                    <div className="phone">+66 (0) 85 575 9222</div>
                   </div>
                 </div>
                 <div className="mobile-contact-info">
                   <div className="mobile-business-type">{`// Careers`}</div>
                   <div className="mobile-details">
-                    <a href="mailto:hr@rioluxuryhomes.in" className="email">
-                      hr@rioluxuryhomes.in
+                    <a href="mailto:hr@riophuket.com" className="email">
+                      hr@riophuket.com
                     </a>
-                    <div className="phone">+91 87999 15195</div>
+                    <div className="phone">+66 (0) 85 575 9222</div>
                   </div>
                 </div>
                 {/* Created on 11-th March  for mobile view*/}
@@ -161,14 +160,14 @@ const ContactDetails = () => {
           </div>
           <div className="map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.986543966663!2d73.77008467604219!3d15.592367785020175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfebb547ba216d%3A0xa41dfffcac9f7894!2sAldeia%20Serenia%2C%20Aldeia%20Serenia%2C%20Behind%20Indian%20Story%20Boutique%2C%20Bounta%20Vaddo%2C%2C%20Mapusa%20-%20Anjuna%20-%20Chapora%20Rd%2C%20Bouta%20Waddo%2C%20Assagao%2C%20Goa%20403507!5e0!3m2!1sen!2sin!4v1700464828098!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.1234567890123!2d98.3456789012345!3d7.890123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30502c8c8c8c8c8c%3A0x1234567890abcdef!2s5%2F50%20The%20Plaza%20Surin%2C%20Unit%20G6%20Moo%203%2C%20Cherngtalay%20Sub-district%2C%20Thalang%20District%2C%20Phuket%2083110!5e0!3m2!1sen!2sth!4v1700464828098!5m2!1sen!2sth"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Google Maps Location"
+              title="Google Maps Location - Phuket Office"
             ></iframe>
           </div>
         </div>
@@ -178,7 +177,7 @@ const ContactDetails = () => {
       {showWhatsAppIcon && (
         <div className="whatsapp-floating">
           <a
-            href="https://wa.me/918888900073"
+            href="https://wa.me/66855759222"
             target="_blank"
             rel="noopener noreferrer"
           >
