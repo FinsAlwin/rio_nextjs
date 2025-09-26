@@ -164,13 +164,13 @@ function BlogCore({ postURLId }) {
 
   // Strip HTML from post_content for meta description
   const description = blogDetails
-    ? stripHTMLTags(blogDetails?.blog_post_details.meta_description).slice(
+    ? stripHTMLTags(blogDetails?.blog_details?.meta_description || blogDetails?.blog_details?.post_content || "").slice(
         0,
         160
       )
     : "";
-  const canonicalUrl = blogDetails?.blog_post_details.canonical_url || "";
-  const title = blogDetails?.blog_post_details.meta_title;
+  const canonicalUrl = blogDetails?.blog_details?.canonical_url || "";
+  const title = blogDetails?.blog_details?.meta_title;
 
   return (
     <div
@@ -192,7 +192,7 @@ function BlogCore({ postURLId }) {
           {blogPostData && <BlogPostDetails blogPostData={blogPostData} />}
         </section>
         <section data-logo-type="logo-dark-v" data-sidebar-title="Blog">
-          <RecommendedArticles />
+          <RecommendedArticles recommendedPosts={blogDetails?.recommended_posts} />
         </section>
         <section data-logo-type="logo-dark">
           <Footer />

@@ -4,7 +4,7 @@ import Link from "next/link";
 import endpoints from "../../config/endpoints";
 import { fetchDataPost } from "../../utils/fetchData";
 
-const RecommendedArticles = () => {
+const RecommendedArticles = ({ recommendedPosts }) => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -14,11 +14,11 @@ const RecommendedArticles = () => {
     setError(null);
 
     try {
-      const url = `${endpoints.getRecommendArticles}`;
-      const response = await fetchDataPost(url);
+      const url = `${endpoints.getBlogs}`;
+      const response = await fetchDataPost(url, { offset: 0, limit: 3 });
 
       if (response.status === "success") {
-        setArticles(response.response_data.blog_posts);
+        setArticles(response.response_data.blog_posts?.slice(0, 3) || []);
       } else {
         setError("Error fetching recommended articles");
       }
@@ -31,8 +31,12 @@ const RecommendedArticles = () => {
   };
 
   useEffect(() => {
-    fetchRecommendedArticles();
-  }, []);
+    if (recommendedPosts && recommendedPosts.length > 0) {
+      setArticles(recommendedPosts);
+    } else {
+      fetchRecommendedArticles();
+    }
+  }, [recommendedPosts]);
 
   return (
     <section

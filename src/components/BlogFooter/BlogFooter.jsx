@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import blogFooterImg from "../../assets/blogs_images/blog_image_footer.webp";
 import { useEffect, useRef } from "react";
 const BlogFooter = () => {
   const scrollToTop = () => {
@@ -41,7 +40,7 @@ const BlogFooter = () => {
             ref={imageRef}
             className="image-container reveal-image reveal-image-active"
           >
-            <img src={blogFooterImg} alt="Footer Banner" />
+            <img src="/blogs_images/blog_image_footer.webp" alt="Footer Banner" />
           </div>
           <div className="left-footer-bottom">
             <div className="left-col">

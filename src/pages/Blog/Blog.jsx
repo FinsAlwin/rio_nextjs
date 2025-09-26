@@ -118,26 +118,26 @@ function Blog() {
     "Stay updated with the latest news on real estate, decor, design, lifestyle, and all things luxury.";
 
   return (
-    // <div
-    //   ref={containerRef}
-    //   style={{
-    //     height: "100vh",
-    //     overflowY: "scroll",
-    //   }}
-    // >
-    <>
-      <DynamicMeta title={title} description={description} />
-      <Header />
-      <section data-logo-type="logo-dark-v" data-sidebar-title="RIO">
-        <BlogSection />
-      </section>
-      <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
-        <BlogFooter />
-      </section>
-      <WhatsAppPopup />
-      <SliderBar sidebarTitle={sidebarTitle} />
-    </>
-    // </div>
+    <div
+      ref={containerRef}
+      style={{
+        height: "100vh",
+        overflowY: "scroll",
+      }}
+    >
+      <>
+        <DynamicMeta title={title} description={description} />
+        <Header logoType={logoType} />
+        <section data-logo-type="logo-dark-v" data-sidebar-title="Blog">
+          <BlogSection />
+        </section>
+        <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
+          <BlogFooter />
+        </section>
+        <WhatsAppPopup />
+        <SliderBar sidebarTitle={sidebarTitle} />
+      </>
+    </div>
   );
 }
 

@@ -7,7 +7,7 @@ function BlogPostDetails({ blogPostData }) {
   }
 
   const { post_title, post_content, post_image_name, display_date } =
-    blogPostData.blog_post_details || {}; // Destructure nested data
+    blogPostData.blog_details || {}; // Destructure nested data
 
   return (
     <section
