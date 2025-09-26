@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import CEOImage from "../../assets/about_us_founder/ceo_image.webp";
+import Image from "next/image";
 import CFOImage from "../../assets/about_us_founder/cfo_image.webp";
 import DirectorImage from "../../assets/about_us_founder/director_image.webp";
 import HRImage from "../../assets/about_us_founder/hr_image.webp";
@@ -108,7 +109,7 @@ const TeamSection = () => {
               </div>
               <div className="team-item-image">
                 <div className="image-container">
-                  <img src={CEOImage.src || CEOImage} alt="Nilesh Dessai" />
+                  <Image src={CEOImage} alt="Nilesh Dessai" fill style={{ objectFit: 'cover' }} />
                 </div>
                 <div className="contact">
                   <a href="mailto:ceo@rioluxuryhomes.in" className="mail">
@@ -129,7 +130,7 @@ const TeamSection = () => {
               </div>
               <div className="team-item-image">
                 <div className="image-container">
-                  <img src={CFOImage.src || CFOImage} alt="Evita Fernandes" />
+                  <Image src={CFOImage} alt="Evita Fernandes" fill style={{ objectFit: 'cover' }} />
                 </div>
                 <div className="contact">
                   <a href="mailto:accounts@rioluxuryhomes.in" className="mail">
@@ -150,7 +151,7 @@ const TeamSection = () => {
               </div>
               <div className="team-item-image">
                 <div className="image-container">
-                  <img src={DirectorImage.src || DirectorImage} alt="Sheetal Pandit" />
+                  <Image src={DirectorImage} alt="Sheetal Pandit" fill style={{ objectFit: 'cover' }} />
                 </div>
                 <div className="contact">
                   <a href="mailto:sales@rioluxuryhomes.in" className="mail">
@@ -171,7 +172,7 @@ const TeamSection = () => {
               </div>
               <div className="team-item-image">
                 <div className="image-container">
-                  <img src={HRImage.src || HRImage} alt="Scarlet Braganza" />
+                  <Image src={HRImage} alt="Scarlet Braganza" fill style={{ objectFit: 'cover' }} />
                 </div>
                 <div className="contact">
                   <a href="mailto:hr@rioluxuryhomes.in" className="mail">

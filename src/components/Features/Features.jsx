@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import cardImage1 from "../../assets/homepage_images/card_image_1.webp";
 import cardImage2 from "../../assets/homepage_images/card_image_2.webp";
 import cardImage3 from "../../assets/homepage_images/card_image_3.webp";
@@ -78,7 +79,14 @@ function Features() {
               }`}
             >
               <div className="image-container">
-                <img src={images[0].src || images[0]} alt="Architecture" />
+                <Image 
+                  src={images[0].src || images[0]} 
+                  alt="Architecture" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
               </div>
               <div className="title-container">
                 <h4 className="title">Architecture</h4>
@@ -99,7 +107,14 @@ function Features() {
               }`}
             >
               <div className="image-container">
-                <img src={images[1].src || images[1]} alt="Guarantee & Warranty" />
+                <Image 
+                  src={images[1].src || images[1]} 
+                  alt="Guarantee & Warranty" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
               </div>
               <div className="title-container">
                 <h4 className="title">Guarantee & Warranty</h4>
@@ -120,7 +135,14 @@ function Features() {
               }`}
             >
               <div className="image-container">
-                <img src={images[2].src || images[2]} alt="Housekeeping" />
+                <Image 
+                  src={images[2].src || images[2]} 
+                  alt="Housekeeping" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
               </div>
               <div className="title-container">
                 <h4 className="title">Housekeeping</h4>
@@ -143,7 +165,14 @@ function Features() {
               }`}
             >
               <div className="image-container">
-                <img src={images[3].src || images[3]} alt="Rental Management" />
+                <Image 
+                  src={images[3].src || images[3]} 
+                  alt="Rental Management" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
               </div>
               <div className="title-container">
                 <h4 className="title">Rental Management</h4>

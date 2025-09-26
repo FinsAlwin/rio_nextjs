@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import footerImage from "../../assets/properties_image/Properties.webp";
 import { useEffect, useRef } from "react";
 const FooterProperties = () => {
@@ -41,7 +42,7 @@ const FooterProperties = () => {
             ref={imageRef}
             className="image-container reveal-image reveal-image-active"
           >
-            <img src={footerImage.src || footerImage} alt="Footer Image" />
+            <Image src={footerImage} alt="Footer Image" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className="left-footer-bottom">
             <div className="left-col">

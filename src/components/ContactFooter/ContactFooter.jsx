@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import LocationDetails from "../LocationDetails/LocationDetails";
 const ContactFooter = () => {
   const scrollToTop = () => {
@@ -40,7 +41,7 @@ const ContactFooter = () => {
             ref={imageRef}
             className="image-container reveal-image reveal-image-active"
           >
-            <img src="/invest_page_image/Invest.webp" alt="Footer" />
+            <Image src="/invest_page_image/Invest.webp" alt="Footer" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className="left-footer-bottom">
             <div className="left-col">

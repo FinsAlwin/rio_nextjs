@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 // import { useParams } from "react-router-dom"; // Removed for Next.js
+import Image from "next/image";
 import endpoints from "../../config/endpoints";
 import { fetchDataPost } from "../../utils/fetchData";
 import "./RentCalculator.css";
@@ -53,15 +54,18 @@ const RentCalculator = ({ propertiesURLId }) => {
   }, []);
   // Function to update estimates
   const updateEstimates = (villa, share) => {
-    if (!villa || !share) return;
+    if (!villa || !share) {
+      return;
+    }
 
-    const dailyRent = villa.daily_rent; // Ensure this is a number
-    const monthlyIncome = villa.gross_monthly[`share_${share}`];
-    const yearlyIncome = villa.gross_yearly[`share_${share}`];
+    // Safely access villa properties with fallbacks
+    const dailyRent = Number(villa.daily_rent) || 0;
+    const monthlyIncome = villa.gross_monthly?.[`share_${share}`] || 0;
+    const yearlyIncome = villa.gross_yearly?.[`share_${share}`] || 0;
 
-    setEstimatedRent(dailyRent); // Set daily rent as estimated rent
-    setMonthlyIncome(monthlyIncome); // Set monthly income based on share
-    setYearlyIncome(yearlyIncome); // Set yearly income based on share
+    setEstimatedRent(dailyRent);
+    setMonthlyIncome(Number(monthlyIncome) || 0);
+    setYearlyIncome(Number(yearlyIncome) || 0);
   };
 
   const handleVillaChange = (event) => {
@@ -122,7 +126,7 @@ const RentCalculator = ({ propertiesURLId }) => {
             className="image-container reveal-image reveal-image-active"
             ref={imageRef}
           >
-            <img src="/properties_image/rumah_1-bedroom_image.webp" alt="Bedroom" />
+            <Image src="/properties_image/rumah_1-bedroom_image.webp" alt="Bedroom" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
         <div className="right">
@@ -142,8 +146,8 @@ const RentCalculator = ({ propertiesURLId }) => {
                     onChange={handleVillaChange}
                   >
                     <option value="">Select your villa</option>
-                    {villas.map((villa) => (
-                      <option key={villa.villa_id} value={villa.villa_id}>
+                    {villas.map((villa, index) => (
+                      <option key={`villa-${villa.villa_id || index}`} value={villa.villa_id}>
                         {villa.villa_name}
                       </option>
                     ))}

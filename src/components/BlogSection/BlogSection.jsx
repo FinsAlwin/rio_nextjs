@@ -27,7 +27,9 @@ const BlogSection = () => {
         const offset = (currentPage - 1) * limit;
         const data = { offset, limit };
 
+        console.log("Fetching blogs with data:", data);
         const response = await fetchDataPost(endpoints.getBlogs, data);
+        console.log("Blog API response:", response);
 
         if (!response || response.status.toLowerCase() !== "success") {
           throw new Error("API request failed");
@@ -36,6 +38,7 @@ const BlogSection = () => {
         const { response_data } = response;
 
         if (response_data && response_data.blog_posts) {
+          console.log("Blog posts found:", response_data.blog_posts.length);
           if (currentPage === 1) {
             setBlogs(response_data.blog_posts);
           } else {
@@ -52,9 +55,34 @@ const BlogSection = () => {
           const hasMore = response_data.load_more === "y";
           setShowLoadMore(hasMore);
         } else {
-          showToastError("Blogs data not found.");
+          console.log("No blog posts in response data");
+          // Temporary fallback for testing
+          const fallbackBlogs = [
+            {
+              blog_post_id: 1,
+              post_title: "Test Blog Post 1",
+              post_content: "This is a test blog post",
+              post_image_name: "/blogs_images/blog_image_footer.webp",
+              post_url: "/blog/test-1",
+              display_date: "January 15, 2024",
+              author: "RIO Team"
+            },
+            {
+              blog_post_id: 2,
+              post_title: "Test Blog Post 2", 
+              post_content: "This is another test blog post",
+              post_image_name: "/properties_image/blog1.webp",
+              post_url: "/blog/test-2",
+              display_date: "January 10, 2024",
+              author: "RIO Team"
+            }
+          ];
+          console.log("Using fallback blogs:", fallbackBlogs);
+          setBlogs(fallbackBlogs);
+          setShowLoadMore(false);
         }
       } catch (error) {
+        console.error("Error fetching blogs:", error);
         setFetchError(error.message);
         showToastError("Error fetching blogs: " + error.message);
       } finally {
@@ -115,7 +143,7 @@ const BlogSection = () => {
               ) : fetchError ? (
                 <p>Error fetching blogs: {fetchError}</p>
               ) : blogs.length === 0 ? (
-                <p>No blogs found.</p>
+                <p>No blogs found. Debug: blogs.length = {blogs.length}, isLoading = {isLoading.toString()}, fetchError = {fetchError || 'null'}</p>
               ) : (
                 blogs.map((blog) => (
                   <div

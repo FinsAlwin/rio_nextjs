@@ -1,15 +1,14 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Suspense } from "react";
 import Header from "../../components/Header/Header";
 import PropertiesIntroSection from "../../components/PropertiesIntroSection/PropertiesIntroSection";
 // import createScrollSnap from "scroll-snap"; // Conditional import to prevent SSR issues
 import PropertiesListing from "../../components/PropertiesListing/PropertiesListing";
-import PropertyBlogSlider from "../../components/PropertyBlogSlider/PropertyBlogSlider";
 import FooterProperties from "../../components/FooterProperties/FooterProperties";
 import SliderBar from "../../components/SliderBar/SliderBar";
-import Projects from "../../components/Projects/Projects";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
+import { DynamicProjects, DynamicPropertyBlogSlider } from "../../components/DynamicComponents/DynamicComponents";
 // import { Modal } from "react-responsive-modal"; // Temporarily disabled due to ESM compatibility issue
 // import "react-responsive-modal/styles.css"; // Temporarily disabled due to ESM compatibility issue
 import ApplyNowForm from "../../components/ApplyForm/ApplyForm";
@@ -92,19 +91,20 @@ function Properties() {
             threshold: 0.1,
           };
           try {
-            if (element && typeof window !== "undefined") {
-              import("scroll-snap").then(({ default: createScrollSnap }) => {
-                createScrollSnap(element, config);
-                if (element.style) {
-                  element.style.scrollSnapType = "y mandatory";
-                }
-              }).catch((error) => {
-                console.warn("ScrollSnap import error:", error);
-              });
-              if (element.style) {
-                
-              }
-            }
+            // Scroll snap disabled
+            // if (element && typeof window !== "undefined") {
+            //   import("scroll-snap").then(({ default: createScrollSnap }) => {
+            //     createScrollSnap(element, config);
+            //     if (element.style) {
+            //       element.style.scrollSnapType = "y mandatory";
+            //     }
+            //   }).catch((error) => {
+            //     console.warn("ScrollSnap import error:", error);
+            //   });
+            //   if (element.style) {
+            //     
+            //   }
+            // }
           } catch (error) {
             console.warn("ScrollSnap error:", error);
           }
@@ -160,11 +160,15 @@ function Properties() {
         data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
         data-sidebar-title="Overseas"
       >
-        <Projects />
+        <Suspense fallback={<div className="loading-placeholder">Loading projects...</div>}>
+          <DynamicProjects />
+        </Suspense>
       </section>
 
       <section data-logo-type="logo-dark" data-sidebar-title="Blogs">
-        <PropertyBlogSlider />
+        <Suspense fallback={<div className="loading-placeholder">Loading blog slider...</div>}>
+          <DynamicPropertyBlogSlider />
+        </Suspense>
       </section>
 
       {/* Sidebar */}

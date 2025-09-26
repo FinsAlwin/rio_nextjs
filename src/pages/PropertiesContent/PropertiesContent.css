@@ -1,11 +1,11 @@
 .scroll-snap-container {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */ /* Disabled */
   overflow-y: scroll;
   height: 100vh;
 }
 
 /* Apply snap alignment to each section */
 .scroll-snap-container section {
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */ /* Disabled */
   height: 100vh;
 }

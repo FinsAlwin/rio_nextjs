@@ -5,6 +5,7 @@ import endpoints from "../../config/endpoints";
 import { showToastError, showToastSuccess } from "../../utils/toast";
 import PhoneInput from "../PhoneInput/PhoneInput";
 import { parsePhoneNumberFromString } from "libphonenumber-js";
+import Image from "next/image";
 import "./ContactForm.css";
 import { getLocalStorage, setLocalStorage } from "../../utils/localStorage";
 const ContactForm = () => {
@@ -145,36 +146,6 @@ const ContactForm = () => {
       e.preventDefault();
     }
   };
-  const [dynamicStyle, setDynamicStyle] = useState({
-    position: "relative",
-    top: "-13px",
-    right: "100px",
-  });
-
-  useEffect(() => {
-    const updateStyle = () => {
-      if (window.innerWidth === 1336) {
-        setDynamicStyle({
-          position: "relative",
-          top: "-15px",
-          right: "71px",
-          fontSize: "12px",
-        });
-      } else {
-        setDynamicStyle({
-          position: "relative",
-          top: "-15px",
-          right: "69px",
-          fontSize: "12px",
-        });
-      }
-    };
-
-    updateStyle(); // Set style initially
-    window.addEventListener("resize", updateStyle);
-
-    return () => window.removeEventListener("resize", updateStyle);
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -409,51 +380,50 @@ const ContactForm = () => {
                         <p>Investment Bracket</p>
                       </div>
                       <div className="form-item-inner-col">
-                        <p>
-                          <label className="new-set-label-form new-set-form-investmentlabel">
+                        <div className="investment-bracket-container">
+                          <label className="investment-option">
                             <input
                               type="radio"
                               name="investment"
                               value="50 - 70 MB"
-                              // checked={formData.investment === "50 - 70 MB"}
+                              checked={formData.investment === "50 - 70 MB"}
                               onChange={handleChange}
                               className="radio-investment-btn"
                             />
-
-                            {errors.investment &&
-                              (isSmallScreen ? (
-                                !isFormSubmitted &&
-                                showToastError(errors.investment)
-                              ) : (
-                                <p className="error-message">
-                                  {errors.investment}
-                                </p>
-                              ))}
-                            <span style={dynamicStyle}>50 - 70 MB</span>
+                            50 - 70 MB
                           </label>
-                          <label className="new-set-label-form new-set-form-investmentlabel new-form-investment-rb">
+                          <label className="investment-option">
                             <input
                               type="radio"
                               name="investment"
                               value="71 - 90 MB"
                               className="radio-investment-btn"
-                              // checked={formData.investment === "71 - 90 MB"}
+                              checked={formData.investment === "71 - 90 MB"}
                               onChange={handleChange}
                             />
-                            <span style={dynamicStyle}>71 - 90 MB</span>
+                            71 - 90 MB
                           </label>
-                          <label className="new-set-label-form new-set-form-investmentlabel">
+                          <label className="investment-option">
                             <input
                               type="radio"
                               name="investment"
                               value="91+ MB"
                               className="radio-investment-btn"
-                              // checked={formData.investment === "91+ MB"}
+                              checked={formData.investment === "91+ MB"}
                               onChange={handleChange}
                             />
-                            <span style={dynamicStyle}>91+ MB</span>
+                            91+ MB
                           </label>
-                        </p>
+                        </div>
+                        {errors.investment &&
+                          (isSmallScreen ? (
+                            !isFormSubmitted &&
+                            showToastError(errors.investment)
+                          ) : (
+                            <p className="error-message">
+                              {errors.investment}
+                            </p>
+                          ))}
                       </div>
                     </div>
                   </div>
@@ -551,7 +521,7 @@ const ContactForm = () => {
             className="image reveal-image reveal-image-active"
             ref={imageRef}
           >
-                <img src="/contact_us_form_image/contact_form_image_web.webp" alt="" />
+                <Image src="/contact_us_form_image/contact_form_image_web.webp" alt="" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </div>

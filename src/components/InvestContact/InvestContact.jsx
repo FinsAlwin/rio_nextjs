@@ -444,39 +444,42 @@ const InvestContact = () => {
                           ))}
                       </div>
 
-                      <div className="form-item-inner-col ">
-                        <p>
-                          <label className="new-set-label-form new-set-form-investmentlabel">
+                      <div className="form-item-inner-col">
+                        <div className="investment-bracket-container">
+                          <label className="investment-option">
                             <input
                               type="radio"
                               name="investment"
                               value="1-5 CR"
+                              checked={formData.investment === "1-5 CR"}
                               onChange={handleChange}
                               className="radio-investment-btn"
                             />
-                            <span style={dynamicStyle}>1-5 CR</span>
+                            1-5 CR
                           </label>
-                          <label className="new-set-label-form new-set-form-investmentlabel new-form-investment-rb">
+                          <label className="investment-option">
                             <input
                               type="radio"
                               name="investment"
                               value="5-15 CR"
-                              className="radio-investment-btn"
+                              checked={formData.investment === "5-15 CR"}
                               onChange={handleChange}
+                              className="radio-investment-btn"
                             />
-                            <span style={dynamicStyle}>5-15 CR</span>
+                            5-15 CR
                           </label>
-                          <label className="new-set-label-form new-set-form-investmentlabel">
+                          <label className="investment-option">
                             <input
                               type="radio"
                               name="investment"
                               value="15+ CR"
-                              className="radio-investment-btn"
+                              checked={formData.investment === "15+ CR"}
                               onChange={handleChange}
+                              className="radio-investment-btn"
                             />
-                            <span style={dynamicStyle}>15+ CR</span>
+                            15+ CR
                           </label>
-                        </p>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./Interiors.css";
 import Link from "next/link";
+import Image from "next/image";
 import slick1 from "../../assets/homepage_images/assagao_main.webp";
 import slick2 from "../../assets/homepage_images/assagao_thumb.webp";
 import slick6 from "../../assets/homepage_images/black-forest-rooftop.webp";
@@ -113,7 +114,7 @@ function Interiors({ onSlideChange }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -169,7 +170,7 @@ function Interiors({ onSlideChange }) {
               </div>
               <div className="right">
                 <div className="image">
-                  <img src={slick_1_1.src || slick_1_1} alt="Villa C Foyer" />
+                  <Image src={slick_1_1} alt="Villa C Foyer" fill style={{ objectFit: 'cover' }} />
                 </div>
               </div>
             </div>
@@ -211,7 +212,7 @@ function Interiors({ onSlideChange }) {
               </div>
               <div className="right">
                 <div className="image">
-                  <img src={slick6.src || slick6} alt="Hill Rooftop" />
+                  <Image src={slick6} alt="Hill Rooftop" fill style={{ objectFit: 'cover' }} />
                 </div>
               </div>
             </div>
@@ -256,7 +257,7 @@ function Interiors({ onSlideChange }) {
               </div>
               <div className="right">
                 <div className="image">
-                  <img src={slick1.src || slick1} alt="Master Bedroom" />
+                  <Image src={slick1} alt="Master Bedroom" fill style={{ objectFit: 'cover' }} />
                 </div>
               </div>
             </div>
@@ -298,7 +299,7 @@ function Interiors({ onSlideChange }) {
               </div>
               <div className="right">
                 <div className="image">
-                  <img src={slick_2_3.src || slick_2_3} alt="Master Bedroom" />
+                  <Image src={slick_2_3} alt="Master Bedroom" fill style={{ objectFit: 'cover' }} />
                 </div>
               </div>
             </div>

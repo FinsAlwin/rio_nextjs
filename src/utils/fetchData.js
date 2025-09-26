@@ -22,7 +22,7 @@ const fetchDataPost = async (url = "", data = {}) => {
       method: "post",
       data,
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json",
       },
     };
 

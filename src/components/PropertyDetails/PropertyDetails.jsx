@@ -1,6 +1,7 @@
 "use client";
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import "./PropertyDetails.css";
 
 const PropertyDetails = ({
@@ -62,13 +63,15 @@ const PropertyDetails = ({
             className="image-container reveal-image reveal-image-active"
             ref={imageRef}
           >
-            <img
+            <Image
               src={
                 typeof specs_cover_image === "string"
                   ? specs_cover_image
                   : (specs_cover_image?.src || "/placeholder.jpg")
               }
               alt="Living Room"
+              fill
+              style={{ objectFit: 'cover' }}
             />
           </div>
         </div>

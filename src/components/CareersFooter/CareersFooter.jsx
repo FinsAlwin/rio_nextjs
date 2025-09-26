@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 const CareersFooter = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -40,7 +41,7 @@ const CareersFooter = () => {
             ref={imageRef}
             className="image-container reveal-image reveal-image-active"
           >
-            <img src="/careers_images/careers-footer.webp" alt="Footer" />
+            <Image src="/careers_images/careers-footer.webp" alt="Footer" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className="left-footer-bottom">
             <div className="left-col">

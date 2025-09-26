@@ -75,29 +75,30 @@ function PropertiesContent({ propertiesURLId }) {
 
         // Initialize scroll snap on the container
         try {
-          if (element && typeof window !== "undefined") {
-            // Dynamic import to prevent SSR issues
-            import("scroll-snap").then(({ default: createScrollSnap }) => {
-              const snapInstance = createScrollSnap(element, {
-                snapDestinationX: "0%",
-                snapDestinationY: "100%",
-                timeout: 100,
-                duration: 300,
-                threshold: 0.1,
-              });
-              if (element.style) {
-                element.style.scrollSnapType = "y mandatory";
-              }
-              snapInstance.bind();
-
-              // Cleanup on component unmount or screen size change
-              return () => {
-                snapInstance.unbind();
-              };
-            }).catch((error) => {
-              console.warn("ScrollSnap import error:", error);
-            });
-          }
+            // Scroll snap disabled
+            // if (element && typeof window !== "undefined") {
+            //   // Dynamic import to prevent SSR issues
+            //   import("scroll-snap").then(({ default: createScrollSnap }) => {
+            //     const snapInstance = createScrollSnap(element, {
+            //       snapDestinationX: "0%",
+            //       snapDestinationY: "100%",
+            //       timeout: 100,
+            //       duration: 300,
+            //       threshold: 0.1,
+            //     });
+            //     if (element.style) {
+            //       element.style.scrollSnapType = "y mandatory";
+            //     }
+            //     snapInstance.bind();
+            //
+            //     // Cleanup on component unmount or screen size change
+            //     return () => {
+            //       snapInstance.unbind();
+            //     };
+            //   }).catch((error) => {
+            //     console.warn("ScrollSnap import error:", error);
+            //   });
+            // }
         } catch (error) {
           console.warn("ScrollSnap error:", error);
         }
@@ -488,7 +489,7 @@ function PropertiesContent({ propertiesURLId }) {
           main_image={propertyDetails.main_image}
         />
       </section>
-      {propertyDetails.property_tagline_1?.trim() &&
+      {/* {propertyDetails.property_tagline_1?.trim() &&
         propertyDetails.property_tagline_1_img?.trim() && (
           <section
             data-logo-type="logo-dark"
@@ -499,7 +500,7 @@ function PropertiesContent({ propertiesURLId }) {
               property_tagline_1_img={propertyDetails.property_tagline_1_img}
             />
           </section>
-        )}
+        )} */}
       <section
         data-logo-type="logo-dark-v"
         data-sidebar-title={propertyDetails.property_name}

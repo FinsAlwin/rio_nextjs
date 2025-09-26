@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import "./ContactDetails.css"; // Add this to handle fade-out effect
 
 const ContactDetails = () => {
@@ -42,7 +43,14 @@ const ContactDetails = () => {
           <div className="contact-details-container">
             <div className="left-col">
               <div className="image-container reveal-image reveal-image-active">
-                <img src="/contact_us_form_image/contact_office_facade.webp" alt="Contact Office Facade" />
+                <Image 
+                  src="/contact_us_form_image/contact_office_facade.webp" 
+                  alt="Contact Office Facade" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: 'cover' }}
+                  loading="lazy"
+                />
               </div>
             </div>
             <div className="right-col">
@@ -181,7 +189,13 @@ const ContactDetails = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-                <img src="/contact_us_form_image/whatsapp_black.webp" alt="WhatsApp" />
+                <Image 
+                  src="/contact_us_form_image/whatsapp_black.webp" 
+                  alt="WhatsApp" 
+                  width={60}
+                  height={60}
+                  priority
+                />
           </a>
         </div>
       )}

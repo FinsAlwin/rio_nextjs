@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import entireTeam from "../../assets/about_us_founder/entire_team_rio.webp";
 
 const BannerSection = () => {
@@ -45,7 +46,7 @@ const BannerSection = () => {
     >
       <div className="banner-wrapper">
         <div className="image-container image-zoom">
-          <img src={entireTeam.src || entireTeam} alt="Banner" />
+          <Image src={entireTeam} alt="Banner" fill style={{ objectFit: 'cover' }} />
         </div>
       </div>
     </section>

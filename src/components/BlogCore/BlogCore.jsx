@@ -63,29 +63,30 @@ function BlogCore({ postURLId }) {
 
         // Initialize scroll snap on the container
         try {
-          if (element && typeof window !== "undefined") {
-            // Dynamic import to prevent SSR issues
-            import("scroll-snap").then(({ default: createScrollSnap }) => {
-              const snapInstance = createScrollSnap(element, {
-                snapDestinationX: "0%",
-                snapDestinationY: "100%",
-                timeout: 100,
-                duration: 300,
-                threshold: 0.1,
-              });
-              if (element.style) {
-                element.style.scrollSnapType = "y mandatory";
-              }
-              snapInstance.bind();
-
-              // Cleanup if needed on unmount
-              return () => {
-                snapInstance.unbind();
-              };
-            }).catch((error) => {
-              console.warn("ScrollSnap import error:", error);
-            });
-          }
+            // Scroll snap disabled
+            // if (element && typeof window !== "undefined") {
+            //   // Dynamic import to prevent SSR issues
+            //   import("scroll-snap").then(({ default: createScrollSnap }) => {
+            //   const snapInstance = createScrollSnap(element, {
+            //     snapDestinationX: "0%",
+            //     snapDestinationY: "100%",
+            //     timeout: 100,
+            //     duration: 300,
+            //     threshold: 0.1,
+            //   });
+            //   if (element.style) {
+            //     element.style.scrollSnapType = "y mandatory";
+            //   }
+            //   snapInstance.bind();
+            //
+            //   // Cleanup if needed on unmount
+            //   return () => {
+            //     snapInstance.unbind();
+            //   };
+            // }).catch((error) => {
+            //   console.warn("ScrollSnap import error:", error);
+            // });
+            // }
         } catch (error) {
           console.warn("ScrollSnap error:", error);
         }

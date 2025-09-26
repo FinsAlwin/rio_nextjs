@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const PropertyDescription = ({
   property_name,
@@ -63,7 +64,7 @@ const PropertyDescription = ({
             className="image reveal-image reveal-image-active"
             ref={imageRef}
           >
-            <img
+            <Image
               src={
                 typeof property_brief_cover_img === "string"
                   ? property_brief_cover_img
@@ -71,6 +72,8 @@ const PropertyDescription = ({
               }
               alt="Aerial view of Rumah Hutan"
               className="image-zoom"
+              fill
+              style={{ objectFit: 'cover' }}
             />
           </div>
         </div>

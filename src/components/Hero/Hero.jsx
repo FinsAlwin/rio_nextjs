@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import thumbnailImage from "../../assets/homepage_images/Website.webp";
 import thumbnailImageMobile from "../../assets/homepage_images/new_image_phone.webp";
 
@@ -74,10 +75,14 @@ function Hero() {
     >
       <div className="video-container">
         {isLoading && (
-          <img
+          <Image
             src={isMobileView ? (thumbnailImageMobile.src || thumbnailImageMobile) : (thumbnailImage.src || thumbnailImage)}
-            alt="Loading Thumbnail"
+            alt="RIO Luxury Homes - Loading Thumbnail"
             className="thumbnail-poster"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
           />
         )}
         <div

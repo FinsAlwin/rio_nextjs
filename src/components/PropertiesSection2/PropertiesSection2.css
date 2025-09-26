@@ -3,3 +3,16 @@
     height: 90vh !important;
   }
 }
+
+/* Override the image-zoom transform for PropertiesSection2 - same as SingleSelect */
+.properties-content-image .image-container.image-zoom {
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Ensure proper background image handling */
+.properties-content-image .image-container {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}

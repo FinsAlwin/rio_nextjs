@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "./FounderSection.css";
 import founderImage from "../../assets/about_us_founder/founder_image.webp";
+import Image from "next/image";
 import { useRef } from "react";
 
 const FounderSection = ({ sidebarTitle }) => {
@@ -57,7 +58,7 @@ const FounderSection = ({ sidebarTitle }) => {
                   ref={imageRef}
                   className="image-container reveal-image reveal-image-active"
                 >
-                  <img src={founderImage.src || founderImage} alt="Founder" className="" />
+                  <Image src={founderImage} alt="Founder" className="" fill style={{ objectFit: 'cover' }} />
                 </div>
               </div>
               <div className="right fadeup">

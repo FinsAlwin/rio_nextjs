@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./PropertiesSection2.css";
 import "animate.css";
+import Image from "next/image";
 const PropertiesSection2 = ({ property_tagline_1_img, property_tagline_1 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -49,8 +50,16 @@ const PropertiesSection2 = ({ property_tagline_1_img, property_tagline_1 }) => {
       data-sidebar-title=""
     >
       <div className="intro-image-container properties-content-image">
-        <div className="image-container image-zoom image reveal-image reveal-image-active">
-          <img src={property_tagline_1_img.src || property_tagline_1_img} alt="Rumah Hutan Facade" />
+        <div className="image-container image reveal-image reveal-image-active">
+          <Image 
+            src={property_tagline_1_img.src || property_tagline_1_img} 
+            alt="Rumah Hutan Facade"
+            fill
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+            loading="lazy"
+            quality={90}
+          />
         </div>
       </div>
       <div className="intro-image-footer withline bgblack">

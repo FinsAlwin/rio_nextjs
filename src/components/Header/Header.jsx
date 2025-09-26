@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import "./Header.css";
 import Link from "next/link";
+import Image from "next/image";
 import whiteLogo from "../../assets/homepage_images/logo-white-2.svg";
 import darkLogo from "../../assets/homepage_images/logo-dark.svg";
 function Header({ logoType }) {
@@ -42,8 +43,22 @@ function Header({ logoType }) {
               <div className={`logo ${logoType}`}>
                 <Link href={"/"} onClick={scrollToTop} className="uni-link">
                 </Link>
-                <img src={whiteLogo.src || whiteLogo} alt="" className="logo-white" />
-                <img src={darkLogo.src || darkLogo} alt="" className="logo-dark" />
+                <Image 
+                  src={whiteLogo.src || whiteLogo} 
+                  alt="RIO Luxury Homes Logo" 
+                  className="logo-white"
+                  width={120}
+                  height={40}
+                  priority
+                />
+                <Image 
+                  src={darkLogo.src || darkLogo} 
+                  alt="RIO Luxury Homes Logo" 
+                  className="logo-dark"
+                  width={120}
+                  height={40}
+                  priority
+                />
               </div>
             </div>
           </div>

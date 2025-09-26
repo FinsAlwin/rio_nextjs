@@ -4,6 +4,7 @@
 import "./SectionSlick1.css";
 import leftImage from "../../assets/homepage_images/new_image_have_what.webp";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 function SectionSlick1() {
@@ -85,7 +86,7 @@ function SectionSlick1() {
               //   backgroundRepeat: "no-repeat",
               // }}
             >
-              <img className="image-zoom" src={leftImage.src || leftImage} alt="Hills Estate" />
+              <Image className="image-zoom" src={leftImage} alt="Hills Estate" fill style={{ objectFit: 'cover' }} />
             </div>
           </div>
         </div>

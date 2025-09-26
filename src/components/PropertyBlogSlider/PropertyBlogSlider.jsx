@@ -11,35 +11,27 @@ import { fetchDataPost } from "../../utils/fetchData";
 import endpoints from "../../config/endpoints";
 
 const PreviousArrow = ({ className, onClick, currentSlide }) => (
-  <button
-    className={`${className} custom-arrow property-arrow-prev-blog  ${
+  <span 
+    className={`arrow-icon ${className} custom-arrow property-arrow-prev-blog ${
       currentSlide === 0 ? "slick-disabled" : ""
     }`}
-    aria-label="Previous"
-    type="button"
-    aria-disabled={currentSlide === 0}
     onClick={onClick}
+    style={{ cursor: 'pointer' }}
   >
-    <span className="arrow-icon">
-      <GrPrevious style={{ color: "#fff", fontSize: "45px" }} />
-    </span>
-  </button>
+    <GrPrevious style={{ color: "#fff", fontSize: "45px" }} />
+  </span>
 );
 
 const NextArrow = ({ className, onClick, slideCount, currentSlide }) => (
-  <button
-    className={`${className} custom-arrow property-arrow-next-blog  ${
+  <span 
+    className={`arrow-icon ${className} custom-arrow property-arrow-next-blog ${
       currentSlide === slideCount - 1 ? "slick-disabled" : ""
     }`}
-    aria-label="Next"
-    type="button"
-    aria-disabled={currentSlide === slideCount - 1}
     onClick={onClick}
+    style={{ cursor: 'pointer' }}
   >
-    <span className="arrow-icon">
-      <GrNext style={{ color: "#fff", fontSize: "45px" }} />
-    </span>
-  </button>
+    <GrNext style={{ color: "#fff", fontSize: "45px" }} />
+  </span>
 );
 
 const PropertyBlogSlider = () => {

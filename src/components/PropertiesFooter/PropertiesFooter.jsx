@@ -6,6 +6,7 @@ import { fetchDataPost } from "../../utils/fetchData";
 import PhoneInput from "../PhoneInput/PhoneInput";
 import "./PropertiesFooter.css";
 import Link from "next/link";
+import Image from "next/image";
 import {
   parsePhoneNumberFromString,
   getCountryCallingCode,
@@ -297,7 +298,7 @@ const PropertiesFooter = () => {
             className="image-container reveal-image reveal-image-active"
             ref={imageRef}
           >
-                <img src="/properties_image/properties-footer-2.webp" alt="Footer Image" />
+                <Image src="/properties_image/properties-footer-2.webp" alt="Footer Image" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className="left-footer-bottom">
             <div className="left-col">

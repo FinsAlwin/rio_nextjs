@@ -2,7 +2,18 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 import { GrNext, GrPrevious } from "react-icons/gr";
+
+// Custom styles to hide default slick arrows since we're using custom ones
+const sliderStyles = `
+  .gallery-slider .slick-arrow:not(.custom-arrow) {
+    display: none !important;
+  }
+  .gallery-slider .custom-arrow {
+    z-index: 10;
+  }
+`;
 
 const GallerySlider = ({ propertyGallery = [] }) => {
   // Custom previous arrow component
@@ -90,32 +101,37 @@ const GallerySlider = ({ propertyGallery = [] }) => {
   }
 
   return (
-    <section
-      className="text-change property-slider-container gallery-slider scroll-smooth sticky snap-scroll"
-      data-sidebar-title={
-        propertyGallery[0]?.property_name || "Property Gallery"
-      }
-    >
-      <Slider {...settings} className="single-slider">
-        {propertyGallery.map((item, index) => (
-          <div key={index} className="gallery-item bgblack">
-            <div className="gallery-item-top">
-              <div className="image-container">
-                <img
+    <>
+      <style>{sliderStyles}</style>
+      <section
+        className="text-change property-slider-container gallery-slider scroll-smooth sticky snap-scroll"
+        data-sidebar-title={
+          propertyGallery[0]?.property_name || "Property Gallery"
+        }
+      >
+        <Slider {...settings} className="single-slider">
+          {propertyGallery.map((item, index) => (
+            <div key={index} className="gallery-item bgblack">
+              <div className="gallery-item-top">
+                <div className="image-container">
+                <Image
                   src={item.image_name.src || item.image_name}
                   alt={item.image_title || "Property Image"}
+                  fill
+                  style={{ objectFit: 'cover' }}
                 />
+                </div>
+              </div>
+              <div className="gallery-item-bottom">
+                <div className="gallery-content-left">
+                  <h3 className="title">{item.image_title}</h3>
+                </div>
               </div>
             </div>
-            <div className="gallery-item-bottom">
-              <div className="gallery-content-left">
-                <h3 className="title">{item.image_title}</h3>
-              </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </section>
+          ))}
+        </Slider>
+      </section>
+    </>
   );
 };
 

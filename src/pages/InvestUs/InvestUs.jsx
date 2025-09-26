@@ -56,16 +56,17 @@ function InvestUs() {
             threshold: 0.1,
           };
           try {
-            if (element && typeof window !== "undefined") {
-              import("scroll-snap").then(({ default: createScrollSnap }) => {
-                createScrollSnap(element, config);
-                if (element.style) {
-                  element.style.scrollSnapType = "y mandatory";
-                }
-              }).catch((error) => {
-                console.warn("ScrollSnap import error:", error);
-              });
-            }
+            // Scroll snap disabled
+            // if (element && typeof window !== "undefined") {
+            //   import("scroll-snap").then(({ default: createScrollSnap }) => {
+            //     createScrollSnap(element, config);
+            //     if (element.style) {
+            //       element.style.scrollSnapType = "y mandatory";
+            //     }
+            //   }).catch((error) => {
+            //     console.warn("ScrollSnap import error:", error);
+            //   });
+            // }
           } catch (error) {
             console.warn("ScrollSnap error:", error);
           }

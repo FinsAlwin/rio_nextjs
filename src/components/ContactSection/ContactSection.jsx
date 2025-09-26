@@ -1,4 +1,5 @@
 import { RxDoubleArrowDown } from "react-icons/rx";
+import Image from "next/image";
 const ContactSection = () => {
   return (
     <section
@@ -8,10 +9,12 @@ const ContactSection = () => {
     >
       <div className="intro-image-container">
         <div className="image-container hero-zoom">
-          <img
+          <Image
             src="/contact_us_form_image/contact_landing_img.webp"
             alt=""
             className="zoomout animate__animated animate__zoomIn animate__slow"
+            fill
+            style={{ objectFit: 'cover' }}
           />
         </div>
         <div className="scroll-down-wrapper ">
@@ -27,8 +30,8 @@ const ContactSection = () => {
           <div className="inner-container">
             <div className="left zoomout">
               <div className="logo">
-                <img src="/homepage_images/logo-white-2.svg" alt="Logo White" className="logo-white" />
-                <img src="/homepage_images/logo-dark.svg" alt="Logo Dark" className="logo-dark" />
+                <Image src="/homepage_images/logo-white-2.svg" alt="Logo White" className="logo-white" width={200} height={50} />
+                <Image src="/homepage_images/logo-dark.svg" alt="Logo Dark" className="logo-dark" width={200} height={50} />
               </div>
             </div>
             <div className="center zoomout"></div>

@@ -139,15 +139,9 @@ function SingleSelect() {
                 className="image-container image-zoom image-container-single-select"
                 style={{
                   backgroundImage: `url(${slide.image.src || slide.image})`,
-                  // backgroundSize: isMobile ? "" : "cover",
-
-                  // width: "100%",
-                  // height: isMobile ? "" : "100vh",
-                  // minHeight: isMobile ? "320px" : "",
-                  // backgroundRepeat: "no-repeat",
                 }}
-                initial={{ scale: 1.2 }}
-                animate={{ scale: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
               ></motion.div>
             </div>

@@ -7,9 +7,12 @@ const BlogItem = ({ blog }) => {
   return (
     <Link href={postURLId || "/blog/"} style={{ textDecoration: "none" }}>
       <div className="blog-item">
-        {/* Remove the unnecessary anchor tag (a) with href */}
         <div className="image-container">
-          <img src={typeof blog.post_image_name === 'string' ? blog.post_image_name : (blog.post_image_name?.src || '/placeholder.jpg')} alt={blog.post_url} />
+          <img 
+            src={typeof blog.post_image_name === 'string' ? blog.post_image_name : (blog.post_image_name?.src || '/placeholder.jpg')} 
+            alt={blog.post_title || blog.post_url}
+            loading="lazy"
+          />
         </div>
         <div className="content-container">
           <h3 className="title" style={{ color: "black" }}>

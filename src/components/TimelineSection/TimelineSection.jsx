@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import timeLine1 from "../../assets/about_us_founder/timeline_image_1.webp";
 import timeLine2 from "../../assets/about_us_founder/timeline_image_2.webp";
 import timeLine3 from "../../assets/about_us_founder/timeline_image_3.webp";
@@ -187,7 +188,7 @@ const TimelineSection = () => {
                 >
                   <div className="top">
                     <div className="image-container">
-                      <img src={timeLine1.src || timeLine1} alt="RUMAH HUTAN" />
+                      <Image src={timeLine1} alt="RUMAH HUTAN" fill style={{ objectFit: 'cover' }} />
                     </div>
                   </div>
                   <div className="bottom">
@@ -213,7 +214,7 @@ const TimelineSection = () => {
                 >
                   <div className="top">
                     <div className="image-container">
-                      <img src={timeLine2.src || timeLine2} alt="CASA BRILHANTE" />
+                      <Image src={timeLine2} alt="CASA BRILHANTE" fill style={{ objectFit: 'cover' }} />
                     </div>
                   </div>
                   <div className="bottom">
@@ -241,7 +242,7 @@ const TimelineSection = () => {
                 >
                   <div className="top">
                     <div className="image-container">
-                      <img src={timeLine3.src || timeLine3} alt="BLACK FOREST" />
+                      <Image src={timeLine3} alt="BLACK FOREST" fill style={{ objectFit: 'cover' }} />
                     </div>
                   </div>
                   <div className="bottom">
@@ -270,7 +271,7 @@ const TimelineSection = () => {
                 >
                   <div className="top">
                     <div className="image-container">
-                      <img src={timeLine4.src || timeLine4} alt="RIO ESTILO" />
+                      <Image src={timeLine4} alt="RIO ESTILO" fill style={{ objectFit: 'cover' }} />
                     </div>
                   </div>
                   <div className="bottom">
@@ -295,7 +296,7 @@ const TimelineSection = () => {
                 >
                   <div className="top">
                     <div className="image-container">
-                      <img src={timeLine5.src || timeLine5} alt="RIO ROYALE" />
+                      <Image src={timeLine5} alt="RIO ROYALE" fill style={{ objectFit: 'cover' }} />
                     </div>
                   </div>
                   <div className="bottom">
@@ -326,7 +327,7 @@ const TimelineSection = () => {
                 >
                   <div className="top">
                     <div className="image-container">
-                      <img src={timeLine6.src || timeLine6} alt="RIO ESTADO" />
+                      <Image src={timeLine6} alt="RIO ESTADO" fill style={{ objectFit: 'cover' }} />
                     </div>
                   </div>
                   <div className="bottom">
@@ -354,7 +355,7 @@ const TimelineSection = () => {
                 >
                   <div className="top">
                     <div className="image-container">
-                      <img src={timeLine7.src || timeLine7} alt="A CAPPELLA" />
+                      <Image src={timeLine7} alt="A CAPPELLA" fill style={{ objectFit: 'cover' }} />
                     </div>
                   </div>
                   <div className="bottom">

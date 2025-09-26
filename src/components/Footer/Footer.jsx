@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 function Footer() {
   const scrollToTop = () => {
@@ -40,7 +41,14 @@ function Footer() {
             ref={imageRef}
             className="image-container reveal-image reveal-image-active"
           >
-            <img src="/homepage_images/goa_homepage_footer.webp" alt="" />
+            <Image 
+              src="/homepage_images/goa_homepage_footer.webp" 
+              alt="RIO Luxury Homes Goa Footer" 
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              style={{ objectFit: 'cover' }}
+              loading="lazy"
+            />
           </div>
           <div className="left-footer-bottom">
             <div className="left-col">
