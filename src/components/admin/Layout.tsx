@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { SidebarWithSkeleton, HeaderWithSkeleton } from "./LazyComponents";
 
 interface LayoutProps {
@@ -8,10 +10,21 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const { data: session, status } = useSession();
+  const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check authentication first
+    if (status === "loading") return; // Still loading
+
+    if (status === "unauthenticated") {
+      router.push("/admin/login");
+      return;
+    }
+
+    // Only set up mobile detection if authenticated
     const checkMobile = () => {
       const mobile = window.innerWidth < 768;
       setIsMobile(mobile);
@@ -25,11 +38,25 @@ export default function Layout({ children }: LayoutProps) {
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  }, [status, router]);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
+
+  // Show loading while checking authentication
+  if (status === "loading") {
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="text-white text-xl">Loading...</div>
+      </div>
+    );
+  }
+
+  // Don't render anything if not authenticated (will redirect)
+  if (status === "unauthenticated") {
+    return null;
+  }
 
   return (
     <div className="admin-layout">
