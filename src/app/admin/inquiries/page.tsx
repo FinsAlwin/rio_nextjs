@@ -197,13 +197,15 @@ export default function AdminInquiries() {
             <Link
               href="/admin/dashboard"
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-300 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors duration-200"
+              style={{ padding: 8 }}
             >
-              ← Back to Dashboard
+              Back to Dashboard
             </Link>
             <button
               onClick={() => exportInquiries("csv")}
               disabled={exportLoading}
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors duration-200 disabled:opacity-50"
+              style={{ padding: 8 }}
             >
               {exportLoading ? (
                 <>
@@ -219,7 +221,7 @@ export default function AdminInquiries() {
       </div>
 
       {/* Filters */}
-      <div className="mb-6">
+      <div className="mb-6" style={{ padding: 8 }}>
         <div className="bg-gray-800 rounded-xl p-4 border border-gray-700">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1">
@@ -244,7 +246,10 @@ export default function AdminInquiries() {
 
       {/* Inquiries Table */}
       <div>
-        <div className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden">
+        <div
+          className="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
+          style={{ padding: 8 }}
+        >
           {loading ? (
             <div className="p-8 text-center">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-4"></div>
@@ -283,7 +288,7 @@ export default function AdminInquiries() {
                   {inquiries.map((inquiry) => (
                     <tr key={inquiry._id} className="hover:bg-gray-750">
                       <td className="px-6 py-5">
-                        <div className="space-y-1">
+                        <div className="space-y-1" style={{ padding: 8 }}>
                           <div className="text-sm font-medium text-white">
                             {inquiry.name}
                           </div>
@@ -340,6 +345,7 @@ export default function AdminInquiries() {
                       </td>
                       <td className="px-6 py-5">
                         <button
+                          style={{ padding: 8 }}
                           onClick={() => handleNotesEdit(inquiry)}
                           className="inline-flex items-center px-3 py-2 text-sm font-medium text-blue-400 bg-blue-400/10 hover:bg-blue-400/20 rounded-lg transition-colors duration-200 hover:text-blue-300"
                         >

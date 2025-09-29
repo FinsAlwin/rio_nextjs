@@ -20,7 +20,7 @@ frontend:
         - env | grep -e NEXTAUTH_URL >> .env.production || true
         - env | grep -e NEXTAUTH_SECRET >> .env.production || true
         - env | grep -e MONGODB_URI >> .env.production || true
-        
+
         # Build the application
         - npm run build
   artifacts:
