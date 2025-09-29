@@ -12,11 +12,15 @@ frontend:
         - npm install --legacy-peer-deps
     build:
       commands:
-        - env | grep -e AMPLIFY_ >> .env.production
-        - env | grep -e NEXT_PUBLIC_ >> .env.production
-        - env | grep -e NEXTAUTH_URL >> .env.production
-        - env | grep -e NEXTAUTH_SECRET >> .env.production
-
+        # Create .env.production file
+        - touch .env.production
+        # Add environment variables (only if they exist)
+        - env | grep -e AMPLIFY_ >> .env.production || true
+        - env | grep -e NEXT_PUBLIC_ >> .env.production || true
+        - env | grep -e NEXTAUTH_URL >> .env.production || true
+        - env | grep -e NEXTAUTH_SECRET >> .env.production || true
+        - env | grep -e MONGODB_URI >> .env.production || true
+        
         # Build the application
         - npm run build
   artifacts:
