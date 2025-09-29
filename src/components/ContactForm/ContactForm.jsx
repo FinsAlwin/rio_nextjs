@@ -385,34 +385,34 @@ const ContactForm = () => {
                             <input
                               type="radio"
                               name="investment"
-                              value="50 - 70 MB"
-                              checked={formData.investment === "50 - 70 MB"}
+                              value="1 - 5 CR"
+                              checked={formData.investment === "1 - 5 CR"}
                               onChange={handleChange}
                               className="radio-investment-btn"
                             />
-                            50 - 70 MB
+                            1 - 5 CR
                           </label>
                           <label className="investment-option">
                             <input
                               type="radio"
                               name="investment"
-                              value="71 - 90 MB"
+                              value="5 - 15 CR"
                               className="radio-investment-btn"
-                              checked={formData.investment === "71 - 90 MB"}
+                              checked={formData.investment === "5 - 15 CR"}
                               onChange={handleChange}
                             />
-                            71 - 90 MB
+                            5 - 15 CR
                           </label>
                           <label className="investment-option">
                             <input
                               type="radio"
                               name="investment"
-                              value="91+ MB"
+                              value="15+ CR"
                               className="radio-investment-btn"
-                              checked={formData.investment === "91+ MB"}
+                              checked={formData.investment === "15+ CR"}
                               onChange={handleChange}
                             />
-                            91+ MB
+                            15+ CR
                           </label>
                         </div>
                         {errors.investment &&

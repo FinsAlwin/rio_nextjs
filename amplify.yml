@@ -12,8 +12,10 @@ frontend:
         - npm install --legacy-peer-deps
     build:
       commands:
-        # Critical Next.js fix for Amplify deployment
-        - echo "__NEXT_PRIVATE_PREBUNDLED_REACT=next" >> .env.production
+        - env | grep -e AMPLIFY_ >> .env.production
+        - env | grep -e NEXT_PUBLIC_ >> .env.production
+        - env | grep -e NEXTAUTH_URL >> .env.production
+        - env | grep -e NEXTAUTH_SECRET >> .env.production
 
         # Build the application
         - npm run build

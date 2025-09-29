@@ -8,6 +8,7 @@ import SliderBar from "../../components/SliderBar/SliderBar";
 // import createScrollSnap from "scroll-snap"; // Conditional import to prevent SSR issues
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
+import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 function Privacy() {
   const [logoType, setLogoType] = useState("logo-dark");
   const [sidebarTitle, setSidebarTitle] = useState("Privacy Policy");
@@ -102,6 +103,7 @@ function Privacy() {
           data-logo-type="logo-dark"
           data-sidebar-title="Privacy Policy"
         />
+        <ContactUsButton />
         <WhatsAppPopup />
         <SliderBar sidebarTitle={sidebarTitle} />
         <Footer />

@@ -17,6 +17,7 @@ import SliderBar from "../../components/SliderBar/SliderBar";
 import PropertiesFooter from "../../components/PropertiesFooter/PropertiesFooter";
 import PropertyDescription from "../../components/PropertyDescription/PropertyDescription";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
+import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 const stripHTMLTags = (htmlString) => {
   const doc = new DOMParser().parseFromString(htmlString, "text/html");
   return doc.body.textContent || "";
@@ -562,6 +563,7 @@ function PropertiesContent({ propertiesURLId }) {
       <section data-logo-type="logo-dark" data-sidebar-title="">
         <PropertiesFooter />
       </section>
+      <ContactUsButton />
       <WhatsAppPopup />
       <SliderBar sidebarTitle={sidebarTitle} backgroundType={backgroundType} />
     </>

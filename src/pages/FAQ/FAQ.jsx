@@ -8,6 +8,7 @@ import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 // import createScrollSnap from "scroll-snap"; // Conditional import to prevent SSR issues
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
+import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 function FAQ() {
   const [logoType, setLogoType] = useState("logo-dark");
   const containerRef = useRef(null);
@@ -104,6 +105,7 @@ function FAQ() {
         <Header logoType={logoType} />
         <FAQSection data-logo-type="logo-dark" data-sidebar-title="FAQ" />
         <SliderBar sidebarTitle={sidebarTitle} />
+        <ContactUsButton />
         <WhatsAppPopup />
         <Footer data-logo-type="logo-dark" data-sidebar-title="Contact Us" />
       </div>

@@ -1,0 +1,43 @@
+.contact-us-floating {
+  position: fixed;
+  bottom: 32px;
+  right: calc(14% + 62px); /* Position to the left of WhatsApp button */
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.contact-us-floating.fade-in {
+  opacity: 1;
+}
+
+.contact-us-button {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 12px;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.contact-us-button:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-2px);
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-us-floating {
+    right: calc(5% + 48px); /* Position to the left of WhatsApp button on mobile */
+  }
+  
+  .contact-us-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

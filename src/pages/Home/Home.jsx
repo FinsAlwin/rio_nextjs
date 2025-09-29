@@ -13,6 +13,7 @@ import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import { DynamicInteriors, DynamicProjects } from "../../components/DynamicComponents/DynamicComponents";
 import "./Home.css";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
+import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 
 function Home() {
   const containerRef = useRef(null);
@@ -179,6 +180,7 @@ function Home() {
         >
           <Footer />
         </section>
+        <ContactUsButton />
         <WhatsAppPopup />
         <SliderBar
           sidebarTitle={sidebarTitle}

@@ -1,0 +1,4 @@
+ID,Name,Phone,Email,Investment,Hear About Us,Country Code,Dialing Code,GPS Coordinates,Status,Notes,Source,Created At,Updated At
+"68da654b4e8dd86af70ea131","Jane Smith","9876543211","jane.smith@example.com","91+ MB","Instagram","in","+91","19.0760,72.8777","new","","contact-form","9/29/2025, 4:24:03 PM","9/29/2025, 4:24:03 PM"
+"68da65114e8dd86af70ea130","John Doe","9876543210","john.doe@example.com","71 - 90 MB","Facebook","in","+91","19.0760,72.8777","new","","contact-form","9/29/2025, 4:23:05 PM","9/29/2025, 4:23:05 PM"
+"68da64144e8dd86af70ea12f","Test User","9876543210","test@example.com","50 - 70 MB","Google","in","+91","19.0760,72.8777","contacted","Called customer and discussed requirements. Follow-up scheduled for next week.","contact-form","9/29/2025, 4:18:52 PM","9/29/2025, 4:27:19 PM"

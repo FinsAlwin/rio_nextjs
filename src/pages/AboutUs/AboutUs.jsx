@@ -15,6 +15,7 @@ import AboutUsFooter from "../../components/AboutUsFooter/AboutUsFooter";
 import TechnicalSection from "../../components/TechnicalSection/TechnicalSection";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
+import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 
 const AboutSection = () => {
   const containerRef = useRef(null);
@@ -140,6 +141,7 @@ const AboutSection = () => {
         <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
           <AboutUsFooter />
         </section>
+        <ContactUsButton />
         <WhatsAppPopup />
         <SliderBar sidebarTitle={sidebarTitle} />
       </div>

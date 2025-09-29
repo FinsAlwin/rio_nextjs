@@ -8,6 +8,7 @@ import BlogFooter from "../../components/BlogFooter/BlogFooter";
 import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
+import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 
 function Blog() {
   const containerRef = useRef(null);
@@ -135,6 +136,7 @@ function Blog() {
         <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
           <BlogFooter />
         </section>
+        <ContactUsButton />
         <WhatsAppPopup />
         <SliderBar sidebarTitle={sidebarTitle} />
       </>

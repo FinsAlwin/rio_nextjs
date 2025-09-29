@@ -13,6 +13,7 @@ import { DynamicProjects, DynamicPropertyBlogSlider } from "../../components/Dyn
 // import "react-responsive-modal/styles.css"; // Temporarily disabled due to ESM compatibility issue
 import ApplyNowForm from "../../components/ApplyForm/ApplyForm";
 import ApplyFormModal from "../../components/ApplyFormModal/ApplyFormModal";
+import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 
 function Properties() {
   const containerRef = useRef(null);
@@ -177,6 +178,8 @@ function Properties() {
       <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
         <FooterProperties />
       </section>
+
+      <ContactUsButton />
 
       <WhatsAppPopup />
 

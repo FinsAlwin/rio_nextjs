@@ -7,6 +7,7 @@ import CareersFooter from "../../components/CareersFooter/CareersFooter";
 import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
+import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 
 function Careers() {
   const containerRef = useRef(null);
@@ -135,6 +136,7 @@ function Careers() {
           data-logo-type="logo-dark"
           data-sidebar-title="Contact Us"
         />
+          <ContactUsButton />
         <WhatsAppPopup />
         <SliderBar sidebarTitle={sidebarTitle} />
       </>

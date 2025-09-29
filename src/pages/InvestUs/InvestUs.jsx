@@ -11,6 +11,7 @@ import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import InvestUs2 from "../../components/InvestUs2/InvestUs2";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
 import InvestContact from "../../components/InvestContact/InvestContact";
+import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 
 function InvestUs() {
   const containerRef = useRef(null);
@@ -166,6 +167,7 @@ function InvestUs() {
         <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
           <InvestFooter />
         </section>
+        <ContactUsButton />
         <WhatsAppPopup />
         <SliderBar sidebarTitle={sidebarTitle} />
       </div>
