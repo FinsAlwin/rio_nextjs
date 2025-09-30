@@ -228,7 +228,7 @@ function Properties() {
             >
               ×
             </button>
-            <ApplyFormModal />
+            <ApplyFormModal onClose={handleCloseModal} />
           </div>
         </div>
       )}

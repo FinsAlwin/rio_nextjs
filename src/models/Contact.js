@@ -12,6 +12,10 @@ export class Contact {
     this.status = data.status || "new"; // new, contacted, converted, closed
     this.notes = data.notes || "";
     this.source = data.source || "contact-form";
+    // Additional fields for invest form
+    this.investment_time = data.investment_time || "";
+    this.investment_type = data.investment_type || "";
+    this.location_options = data.location_options || "";
     this.createdAt = data.createdAt || new Date();
     this.updatedAt = data.updatedAt || new Date();
   }
@@ -31,6 +35,9 @@ export class Contact {
       status: this.status,
       notes: this.notes,
       source: this.source,
+      investment_time: this.investment_time,
+      investment_type: this.investment_type,
+      location_options: this.location_options,
       createdAt: this.createdAt,
       updatedAt: this.updatedAt,
     };

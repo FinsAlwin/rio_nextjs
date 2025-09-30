@@ -13,7 +13,7 @@ import {
   getCountryCallingCode,
 } from "libphonenumber-js";
 import { getLocalStorage, setLocalStorage } from "../../utils/localStorage";
-function ApplyFormModal() {
+function ApplyFormModal({ onClose }) {
   const [formData, setFormData] = useState({
     yourName: "",
     phone: "",
@@ -23,6 +23,7 @@ function ApplyFormModal() {
     dialingCode: "+91",
     agreeToTerms: false,
     gps_coordinates: "",
+    source: "properties-modal-form",
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
@@ -166,32 +167,49 @@ function ApplyFormModal() {
     e.preventDefault();
 
     const newErrors = {};
+    const missingFields = [];
+    
     if (!formData.yourName) {
       newErrors.yourName = "Please enter your name.";
+      missingFields.push("Name");
+      showToastError("Please enter your name.");
+      return;
     }
     if (!formData.phone) {
       newErrors.phone = "Please enter your phone number.";
+      missingFields.push("Phone");
+      showToastError("Please enter your phone number.");
+      return;
     }
     if (!formData.email) {
       newErrors.email = "Please enter your email.";
+      missingFields.push("Email");
+      showToastError("Please enter your email.");
+      return;
     }
     if (!formData.investment) {
       newErrors.investment = "Please select an investment bracket.";
+      missingFields.push("Investment Bracket");
+      showToastError("Please select an investment bracket.");
+      return;
     }
     if (!formData.agreeToTerms) {
       newErrors.agreeToTerms = "You must agree to the terms and conditions.";
-    }
-    if (!formData.hearAboutUs) {
-      // Add this validation check for the "How did you hear about us?" field
-      newErrors.hearAboutUs = "Please select how you heard about us.";
+      missingFields.push("Terms & Conditions");
+      showToastError("You must agree to the terms and conditions.");
+      return;
     }
     const phoneError = validatePhoneNumber();
     if (phoneError) {
       newErrors.phone = phoneError;
+      missingFields.push("Valid Phone Number");
+      showToastError(phoneError);
+      return;
     }
-    if (Object.keys(newErrors).length > 0) {
+    if (Object.keys(newErrors).length > 0 || missingFields.length > 0) {
+      console.error("❌ Validation Failed - Missing Fields:", missingFields);
+      console.log("📋 Current Form Data:", formData);
       setErrors(newErrors);
-      showToastError("Please fill all required fields.");
       return;
     }
     setLoading(true);
@@ -213,14 +231,20 @@ function ApplyFormModal() {
           agreeToTerms: false,
           hearAboutUs: "",
           gps_coordinates: "", // Reset this field as well
+          source: "properties-modal-form",
         });
         showToastSuccess("Form submitted successfully!");
         setErrors({});
+        
+        // Close modal after short delay
         setTimeout(() => {
+          if (onClose) {
+            onClose();
+          }
           if (redirect && redirect !== "") {
             window.location.href = redirect;
           }
-        }, 2000);
+        }, 1500);
       } else if (status === "failed") {
         setErrors((prevErrors) => ({
           ...prevErrors,

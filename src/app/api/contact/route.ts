@@ -6,18 +6,10 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    // Validate required fields
-    const { yourName, phone, email, investment, hearAboutUs, agreeToTerms } =
-      body;
+    // Validate required fields only
+    const { yourName, phone, email, investment, agreeToTerms } = body;
 
-    if (
-      !yourName ||
-      !phone ||
-      !email ||
-      !investment ||
-      !hearAboutUs ||
-      !agreeToTerms
-    ) {
+    if (!yourName || !phone || !email || !investment || !agreeToTerms) {
       return NextResponse.json(
         {
           status: "failed",
@@ -57,14 +49,18 @@ export async function POST(request: NextRequest) {
       phone: phone,
       email: email,
       investment: investment,
-      hearAboutUs: hearAboutUs,
+      hearAboutUs: body.hearAboutUs || "",
       countryCode: body.countryCode || "in",
       dialingCode: body.dialingCode || "+91",
       gps_coordinates: body.gps_coordinates || "",
       agreeToTerms: agreeToTerms,
       status: "new", // new, contacted, converted, closed
       notes: "",
-      source: "contact-form",
+      source: body.source || "contact-form", // Accept source from request or default to "contact-form"
+      // Additional fields for invest form (optional)
+      investment_time: body.investment_time || "",
+      investment_type: body.investment_type || "",
+      location_options: body.location_options || "",
     };
 
     // Save to database

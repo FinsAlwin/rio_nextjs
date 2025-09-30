@@ -24,6 +24,7 @@ const PropertiesFooter = () => {
     dialingCode: "+91",
     agreeToTerms: false,
     gps_coordinates: "",
+    source: "properties-footer-form",
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
@@ -175,37 +176,53 @@ const PropertiesFooter = () => {
     const newErrors = {};
 
     // Existing validations
+    const missingFields = [];
+    
     if (!formData.yourName) {
       newErrors.yourName = "Please enter your name.";
+      missingFields.push("Name");
+      showToastError("Please enter your name.");
+      return;
     }
     if (!formData.phone) {
       newErrors.phone = "Please enter your phone number.";
+      missingFields.push("Phone");
+      showToastError("Please enter your phone number.");
+      return;
     }
     if (!formData.email) {
       newErrors.email = "Please enter your email.";
+      missingFields.push("Email");
+      showToastError("Please enter your email.");
+      return;
     }
     if (!formData.investment) {
       newErrors.investment = "Please select an investment bracket.";
+      missingFields.push("Investment Bracket");
+      showToastError("Please select an investment bracket.");
+      return;
     }
     if (!formData.agreeToTerms) {
       newErrors.agreeToTerms = "You must agree to the terms and conditions.";
-    }
-
-    // New validation for "How did you hear about us?"
-    if (!formData.hearAboutUs) {
-      newErrors.hearAboutUs = "Please select how you heard about us.";
+      missingFields.push("Terms & Conditions");
+      showToastError("You must agree to the terms and conditions.");
+      return;
     }
 
     // Phone number validation (if applicable)
     const phoneError = validatePhoneNumber();
     if (phoneError) {
       newErrors.phone = phoneError;
+      missingFields.push("Valid Phone Number");
+      showToastError(phoneError);
+      return;
     }
 
     // Check if there are any errors and stop submission if needed
-    if (Object.keys(newErrors).length > 0) {
+    if (Object.keys(newErrors).length > 0 || missingFields.length > 0) {
+      console.error("❌ Validation Failed - Missing Fields:", missingFields);
+      console.log("📋 Current Form Data:", formData);
       setErrors(newErrors);
-      showToastError("Please fill all required fields.");
       return;
     }
 
@@ -229,6 +246,7 @@ const PropertiesFooter = () => {
           agreeToTerms: false,
           hearAboutUs: "", // Reset hearAboutUs field
           gps_coordinates: "",
+          source: "properties-footer-form",
         });
         showToastSuccess("Form submitted successfully!");
         setErrors({}); // Clear errors after successful submission

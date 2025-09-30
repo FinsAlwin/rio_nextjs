@@ -23,6 +23,7 @@ const InvestContact = () => {
     investment_time: "",
     investment_type: "",
     location_options: "",
+    source: "invest-form",
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
@@ -209,39 +210,45 @@ const InvestContact = () => {
     setIsFormSubmitted(true);
 
     const newErrors = {};
+    const missingFields = [];
+    
     // Validate form fields and display toast messages for each missing field
     if (!formData.yourName) {
+      missingFields.push("Name");
       showToastError("Please enter your name.");
       return; // Stop form submission on error
     }
     if (!formData.phone) {
+      missingFields.push("Phone");
       showToastError("Please enter your phone number.");
       return; // Stop form submission on error
     }
     if (!formData.email) {
+      missingFields.push("Email");
       showToastError("Please enter your email.");
       return; // Stop form submission on error
     }
-    if (!formData.hearAboutUs) {
-      showToastError("Please fill out this field.");
-      return; // Stop form submission on error
-    }
     if (!formData.investment) {
+      missingFields.push("Investment Bracket");
       showToastError("Please select an investment bracket.");
       return; // Stop form submission on error
     }
     if (!formData.agreeToTerms) {
+      missingFields.push("Terms & Conditions");
       showToastError("You must agree to the terms and conditions.");
       return; // Stop form submission on error
     }
 
     const phoneError = validatePhoneNumber();
     if (phoneError) {
+      missingFields.push("Valid Phone Number");
       showToastError(phoneError);
       return; // Stop form submission on error
     }
 
-    if (Object.keys(newErrors).length > 0) {
+    if (Object.keys(newErrors).length > 0 || missingFields.length > 0) {
+      console.error("❌ Validation Failed - Missing Fields:", missingFields);
+      console.log("📋 Current Form Data:", formData);
       setErrors(newErrors);
       showToastError("Please fill all required fields.");
       return;
@@ -268,6 +275,7 @@ const InvestContact = () => {
           investment_time: "",
           investment_type: "",
           location_options: "",
+          source: "invest-form",
         });
         showToastSuccess("Form submitted successfully!");
         setErrors({});
