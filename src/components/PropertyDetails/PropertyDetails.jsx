@@ -60,7 +60,7 @@ const PropertyDetails = ({
       <div className="property-details-container">
         <div className="left">
           <div
-            className="image-container reveal-image reveal-image-active"
+            className="image-container"
             ref={imageRef}
           >
             <Image

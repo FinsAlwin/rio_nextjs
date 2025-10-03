@@ -94,6 +94,12 @@
   }
 }
 
+/* Disable zoom effect for SectionSlick1 images */
+.projects-section .image-zoom {
+  transform: scale(1) !important; /* Disable zoom effect */
+  transition: none !important; /* Remove transition */
+}
+
 /* @media only screen and (max-width: 1370px) {
   .project-slick-explore {
     height: 88vh;

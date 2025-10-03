@@ -39,7 +39,7 @@ const BlogFooter = () => {
         <div className="left">
           <div
             ref={imageRef}
-            className="image-container reveal-image reveal-image-active"
+            className="image-container"
           >
             <Image src="/blogs_images/blog_image_footer.webp" alt="Footer Banner" fill style={{ objectFit: 'cover' }} />
           </div>

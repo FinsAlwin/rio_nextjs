@@ -152,7 +152,7 @@ function Projects() {
               <a href="https://www.riophuket.com/" target="_blank">
                 <div
                   ref={imageRef}
-                  className={`image-container scaleup image reveal-image reveal-image-active `}
+                  className={`image-container `}
                 >
                   {/* Render the video only when it enters the viewport */}
 
@@ -184,7 +184,7 @@ function Projects() {
               <a href="https://www.riodubai.co/ " target="_blank">
                 <div
                   ref={imageRef2}
-                  className={`image-container scaleup image reveal-image reveal-image-active `}
+                  className={`image-container`}
                 >
                   {/* Render the video only when it enters the viewport */}
                   <img

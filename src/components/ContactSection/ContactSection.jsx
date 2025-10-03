@@ -12,7 +12,7 @@ const ContactSection = () => {
           <Image
             src="/contact_us_form_image/contact_landing_img.webp"
             alt=""
-            className="zoomout animate__animated animate__zoomIn animate__slow"
+         
             fill
             style={{ objectFit: 'cover' }}
           />

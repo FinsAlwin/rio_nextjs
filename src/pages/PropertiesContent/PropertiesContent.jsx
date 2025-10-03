@@ -31,6 +31,7 @@ function PropertiesContent({ propertiesURLId }) {
   const containerRef = useRef(null);
   const [sidebarTitle, setSidebarTitle] = useState("");
   const [backgroundType, setBackgroundType] = useState("");
+  
   useEffect(() => {
     const sections = document.querySelectorAll("section[data-logo-type]");
     const observerOptions = {
@@ -535,14 +536,14 @@ function PropertiesContent({ propertiesURLId }) {
             />
           </section>
         )}
-      {propertyGallery && propertyGallery.length > 0 && (
+      {/* {propertyGallery && propertyGallery.length > 0 && (
         <section
           data-logo-type="logo-dark"
           data-sidebar-title={propertyDetails.property_name}
         >
           <GallerySlider propertyGallery={propertyGallery} />
         </section>
-      )}
+      )} */}
 
       {propertyVillas && propertyVillas.length > 0 && (
         <section

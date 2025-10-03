@@ -97,7 +97,7 @@ function TechnicalSection({ sidebarTitle }) {
             //   backgroundRepeat: "no-repeat",
             // }}
             ref={imageRef}
-            className="image reveal-image reveal-image-active image-new-technical"
+            className="image "
           >
             <img
               src={technicalImage.src || technicalImage}

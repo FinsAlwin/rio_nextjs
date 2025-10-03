@@ -1,3 +1,15 @@
+/* Disable all animations for ContactDetails */
+.contact-details * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.contact-details img {
+  transform: scale(1) !important; /* Disable zoom effect */
+  transition: none !important; /* Remove transition */
+}
+
 /* Map spacing to match original React.js app */
 .map {
     margin-top: 40px;

@@ -64,8 +64,10 @@ function Features() {
       ref={sectionRef}
       className="text-change project-features bgwhite scroll-smooth sticky snap-scroll"
       data-sidebar-title="Features"
+      
     >
-      <div className="wrapper">
+      {/* //animate__animated */}
+      <div className="wrapper" >
         <div className="inner-container">
           <div className="title-container">
             <h2 className="title">Living Large is in the Details</h2>
@@ -74,19 +76,19 @@ function Features() {
             <div
               className={`col zoomin ${
                 isVisible
-                  ? "animate__animated animate__zoomIn animate__slower"
+                  ? " animate__zoomIn animate__slower"
                   : ""
               }`}
             >
-              <div className="image-container">
-                <Image 
+              <div className="image-container" style={{backgroundColor: '#7f8a8d'}}>
+                {/* <Image 
                   src={images[0].src || images[0]} 
                   alt="Architecture" 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   style={{ objectFit: 'cover' }}
                   loading="lazy"
-                />
+                /> */}
               </div>
               <div className="title-container">
                 <h4 className="title">Architecture</h4>
@@ -102,21 +104,21 @@ function Features() {
             <div
               className={`col zoomin ${
                 isVisible
-                  ? "animate__animated animate__zoomIn animate__slower"
+                  ? " animate__zoomIn animate__slower"
                   : ""
               }`}
             >
-              <div className="image-container">
-                <Image 
+              <div className="image-container" style={{backgroundColor: '#7f8a8d'}}>
+                {/* <Image 
                   src={images[1].src || images[1]} 
                   alt="Guarantee & Warranty" 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   style={{ objectFit: 'cover' }}
                   loading="lazy"
-                />
+                /> */}
               </div>
-              <div className="title-container">
+              <div className="title-container" >
                 <h4 className="title">Guarantee & Warranty</h4>
                 <div className="desc sb-custom">
                   <p className="description-features">
@@ -130,19 +132,19 @@ function Features() {
             <div
               className={`col zoomin ${
                 isVisible
-                  ? "animate__animated animate__zoomIn animate__slower"
+                  ? " animate__zoomIn animate__slower"
                   : ""
               }`}
             >
-              <div className="image-container">
-                <Image 
+              <div className="image-container" style={{backgroundColor: '#7f8a8d'}}>
+                {/* <Image 
                   src={images[2].src || images[2]} 
                   alt="Housekeeping" 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   style={{ objectFit: 'cover' }}
                   loading="lazy"
-                />
+                /> */}
               </div>
               <div className="title-container">
                 <h4 className="title">Housekeeping</h4>
@@ -160,19 +162,19 @@ function Features() {
             <div
               className={`col zoomin ${
                 isVisible
-                  ? "animate__animated animate__zoomIn animate__slower"
+                  ? " animate__zoomIn animate__slower"
                   : ""
               }`}
             >
-              <div className="image-container">
-                <Image 
+              <div className="image-container" style={{backgroundColor: '#7f8a8d'}}>
+                {/* <Image 
                   src={images[3].src || images[3]} 
                   alt="Rental Management" 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   style={{ objectFit: 'cover' }}
                   loading="lazy"
-                />
+                /> */}
               </div>
               <div className="title-container">
                 <h4 className="title">Rental Management</h4>

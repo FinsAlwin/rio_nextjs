@@ -156,7 +156,7 @@ function Properties() {
       >
         <PropertiesListing />
       </section>
-
+{/* 
       <section
         data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
         data-sidebar-title="Overseas"
@@ -164,13 +164,13 @@ function Properties() {
         <Suspense fallback={<div className="loading-placeholder">Loading projects...</div>}>
           <DynamicProjects />
         </Suspense>
-      </section>
+      </section> */}
 
-      <section data-logo-type="logo-dark" data-sidebar-title="Blogs">
+      {/* <section data-logo-type="logo-dark" data-sidebar-title="Blogs">
         <Suspense fallback={<div className="loading-placeholder">Loading blog slider...</div>}>
           <DynamicPropertyBlogSlider />
         </Suspense>
-      </section>
+      </section> */}
 
       {/* Sidebar */}
       <SliderBar sidebarTitle={sidebarTitle} />

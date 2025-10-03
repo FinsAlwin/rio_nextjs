@@ -75,9 +75,7 @@ const TeamSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`team-members text-change scroll-smooth bgblack zindex-10 sticky snap-scroll ${
-        isVisible ? "animate__animated animate__zoomIn animate__slow" : ""
-      }`}
+      className={`team-members text-change scroll-smooth bgblack zindex-10 sticky snap-scroll `}
       data-sidebar-title="Team"
     >
       <div className="wrapper">

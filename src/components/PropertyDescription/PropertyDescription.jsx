@@ -61,8 +61,9 @@ const PropertyDescription = ({
         </div>
         <div className="right">
           <div
-            className="image reveal-image reveal-image-active"
+            className="image"
             ref={imageRef}
+            style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}
           >
             <Image
               src={
@@ -71,9 +72,9 @@ const PropertyDescription = ({
                   : (property_brief_cover_img?.src || "/placeholder.jpg")
               }
               alt="Aerial view of Rumah Hutan"
-              className="image-zoom"
-              fill
-              style={{ objectFit: 'cover' }}
+              width={800}
+              height={600}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
           </div>
         </div>

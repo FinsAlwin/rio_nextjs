@@ -39,13 +39,11 @@ const BannerSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`banner  bgblack scroll-smooth sticky snap-scroll ${
-        isVisible ? "animate__animated animate__zoomIn animate__slower" : ""
-      }`}
+      className={`banner  bgblack scroll-smooth sticky snap-scroll`}
       data-sidebar-title="Team"
     >
       <div className="banner-wrapper">
-        <div className="image-container image-zoom">
+        <div className="image-container">
           <Image src={entireTeam} alt="Banner" fill style={{ objectFit: 'cover' }} />
         </div>
       </div>

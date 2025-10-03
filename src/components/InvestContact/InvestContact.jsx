@@ -704,7 +704,7 @@ const InvestContact = () => {
         </div>
         <div className="right image-invest-contact">
           <div
-            className="image reveal-image reveal-image-active"
+            className="image"
             ref={imageRef}
           >
                 <img src={formImage.src || formImage} alt="" />

@@ -1,3 +1,158 @@
+/* NUCLEAR OPTION - Disable ALL animations, transitions, transforms for PropertiesContent page */
+.scroll-snap-container *,
+.scroll-snap-container *::before,
+.scroll-snap-container *::after,
+.scroll-snap-container section,
+.scroll-snap-container div,
+.scroll-snap-container img,
+.scroll-snap-container video,
+.scroll-snap-container iframe,
+.scroll-snap-container canvas,
+.scroll-snap-container svg {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+  animation-fill-mode: none !important;
+  animation-play-state: paused !important;
+  will-change: auto !important;
+}
+
+/* Disable all animations globally for this page */
+body *,
+html *,
+section *,
+div *,
+img *,
+video *,
+iframe *,
+canvas *,
+svg * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+  animation-fill-mode: none !important;
+  animation-play-state: paused !important;
+  will-change: auto !important;
+}
+
+/* Force disable any remaining animations */
+.scroll-snap-container .slick-slider,
+.scroll-snap-container .slick-track,
+.scroll-snap-container .slick-slide,
+.scroll-snap-container .slick-current,
+.scroll-snap-container .slick-active,
+.scroll-snap-container .slick-center {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+.scroll-snap-container .slick-slider,
+.scroll-snap-container .slick-track,
+.scroll-snap-container .slick-slide {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.scroll-snap-container img,
+.scroll-snap-container .image-zoom {
+  transform: scale(1) !important; /* Disable zoom effect */
+  transition: none !important; /* Remove transition */
+}
+
+/* Disable image revealing animations */
+.scroll-snap-container .reveal-image,
+.scroll-snap-container .reveal-image-active,
+.scroll-snap-container .image-container,
+.scroll-snap-container .left,
+.scroll-snap-container .right {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Disable slide-in animations from left */
+.scroll-snap-container .slide-in-left,
+.scroll-snap-container .fade-in-left,
+.scroll-snap-container .animate__slideInLeft,
+.scroll-snap-container .animate__fadeInLeft {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Disable scroll-triggered animations */
+.scroll-snap-container .animate__animated,
+.scroll-snap-container .animate__fadeIn,
+.scroll-snap-container .animate__fadeInUp,
+.scroll-snap-container .animate__fadeInDown,
+.scroll-snap-container .animate__fadeInLeft,
+.scroll-snap-container .animate__fadeInRight,
+.scroll-snap-container .animate__slideInUp,
+.scroll-snap-container .animate__slideInDown,
+.scroll-snap-container .animate__slideInLeft,
+.scroll-snap-container .animate__slideInRight,
+.scroll-snap-container .animate__zoomIn,
+.scroll-snap-container .animate__bounceIn,
+.scroll-snap-container .animate__pulse {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Disable intersection observer animations */
+.scroll-snap-container [data-aos],
+.scroll-snap-container .aos-animate,
+.scroll-snap-container .sr-animate,
+.scroll-snap-container .scroll-reveal {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Disable GallerySlider animations - same as PropertyDetails */
+.gallery-slider * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.gallery-slider .slick-slider,
+.gallery-slider .slick-track,
+.gallery-slider .slick-slide {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.gallery-slider img {
+  transform: scale(1) !important; /* Disable zoom effect */
+  transition: none !important; /* Remove transition */
+}
+
+/* Disable RentCalculator animations - same as PropertyDetails */
+.rent-calculator * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.rent-calculator img {
+  transform: scale(1) !important; /* Disable zoom effect */
+  transition: none !important; /* Remove transition */
+}
+
 .scroll-snap-container {
   /* scroll-snap-type: y mandatory; */ /* Disabled */
   overflow-y: scroll;

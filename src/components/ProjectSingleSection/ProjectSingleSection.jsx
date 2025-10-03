@@ -70,7 +70,7 @@ const ProjectSingleSection = () => {
           <div className="right">
             <div
               ref={imageRef}
-              className="image reveal-image reveal-image-active"
+              className="image"
             >
                 <img src={investImg2.src || investImg2} alt="" />
             </div>

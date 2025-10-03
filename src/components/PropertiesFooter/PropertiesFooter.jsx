@@ -313,7 +313,7 @@ const PropertiesFooter = () => {
       <div className="footer-container" data-sidebar-title="Footer">
         <div className="left">
           <div
-            className="image-container reveal-image reveal-image-active"
+            className="image-container"
             ref={imageRef}
           >
                 <Image src="/properties_image/properties-footer-2.webp" alt="Footer Image" fill style={{ objectFit: 'cover' }} />

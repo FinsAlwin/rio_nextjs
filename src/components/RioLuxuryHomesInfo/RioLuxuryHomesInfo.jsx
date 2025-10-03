@@ -85,7 +85,7 @@ function RioLuxuryHomesInfo({ sidebarTitle }) {
           </div>
         </div>
         <div className="right">
-          <div className="image reveal-image" ref={imageRef}>
+          <div className="image" ref={imageRef}>
             <img
               src={isMobile ? (rioHomeImageMobile.src || rioHomeImageMobile) : (rioHomeImage.src || rioHomeImage)}
               alt="RIO Luxury Homes"

@@ -1,3 +1,25 @@
+/* Disable all animations for InvestSection */
+.invest-section * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.invest-section .image-zoom {
+  transform: scale(1) !important; /* Disable zoom effect */
+  transition: none !important; /* Remove transition */
+}
+
+.invest-section img {
+  transform: scale(1) !important; /* Disable zoom effect */
+  transition: none !important; /* Remove transition */
+}
+
+.invest-section .animated-arrow {
+  animation: none !important;
+  transition: none !important;
+}
+
 .scroll-down-wrapper-invest-section {
   position: absolute;
   bottom: 9%;
@@ -5,7 +27,7 @@
   transform: translate(-60%, 0px);
   z-index: 10;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: none !important; /* Disable transition */
 }
 
 @media only screen and (max-width: 768px) {

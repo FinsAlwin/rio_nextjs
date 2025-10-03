@@ -526,10 +526,17 @@ const ContactForm = () => {
         </div>
         <div className="right">
           <div
-            className="image reveal-image reveal-image-active"
+            className="image"
             ref={imageRef}
+            style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}
           >
-                <Image src="/contact_us_form_image/contact_form_image_web.webp" alt="" fill style={{ objectFit: 'cover' }} />
+            <Image 
+              src="/contact_us_form_image/contact_form_image_web.webp" 
+              alt="" 
+              width={800}
+              height={600}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+            />
           </div>
         </div>
       </div>

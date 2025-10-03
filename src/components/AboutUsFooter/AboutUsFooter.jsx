@@ -38,7 +38,7 @@ const AboutUsFooter = () => {
       <div className="footer-container" data-sidebar-title="Footer">
         <div className="left">
           <div
-            className="image-container reveal-image reveal-image-active"
+            className="image-container"
             ref={imageRef}
           >
             <img src={aboutUsFooter.src || aboutUsFooter} alt="Footer Image" />

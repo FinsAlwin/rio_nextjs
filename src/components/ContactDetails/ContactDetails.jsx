@@ -42,13 +42,16 @@ const ContactDetails = () => {
         <div className="inner-container">
           <div className="contact-details-container">
             <div className="left-col">
-              <div className="image-container reveal-image reveal-image-active">
+              <div 
+                className="image-container"
+                style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}
+              >
                 <Image 
                   src="/contact_us_form_image/contact_office_facade.webp" 
                   alt="Contact Office Facade" 
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: 'cover' }}
+                  width={800}
+                  height={600}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   loading="lazy"
                 />
               </div>

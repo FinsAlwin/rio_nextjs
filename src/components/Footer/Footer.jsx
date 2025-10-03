@@ -39,7 +39,7 @@ function Footer() {
         <div className="left">
           <div
             ref={imageRef}
-            className="image-container reveal-image reveal-image-active"
+            className="image-container"
           >
             <Image 
               src="/homepage_images/goa_homepage_footer.webp" 

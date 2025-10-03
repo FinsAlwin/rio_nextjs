@@ -39,7 +39,7 @@ const CareersFooter = () => {
         <div className="left">
           <div
             ref={imageRef}
-            className="image-container reveal-image reveal-image-active"
+            className="image-container "
           >
             <Image src="/careers_images/careers-footer.webp" alt="Footer" fill style={{ objectFit: 'cover' }} />
           </div>

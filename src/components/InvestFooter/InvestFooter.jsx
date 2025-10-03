@@ -39,7 +39,7 @@ const InvestFooter = () => {
         <div className="left">
           <div
             ref={imageRef}
-            className="image-container reveal-image reveal-image-active"
+            className="image-container"
           >
             <img src={investFooter.src || investFooter} alt="Footer" />
           </div>

@@ -18,6 +18,8 @@ import slick_2_2 from "../../assets/homepage_images/rio-estado-villa-mob_web.web
 import slick_2_3 from "../../assets/homepage_images/rio-estado-master-bedroom_web.webp";
 import { useEffect, useState } from "react";
 import SliderBar from "../SliderBar/SliderBar";
+
+
 const PreviousArrow = ({ className, onClick, currentSlide }) => {
   return (
     <button
@@ -30,7 +32,7 @@ const PreviousArrow = ({ className, onClick, currentSlide }) => {
       onClick={onClick}
     >
       <span className="arrow-icon">
-        <GrPrevious style={{ fontSize: "45px" }} />
+        <GrPrevious style={{ fontSize: "20px" }} />
       </span>
     </button>
   );
@@ -49,7 +51,7 @@ const NextArrow = ({ className, onClick, slideCount, currentSlide }) => {
       onClick={onClick}
     >
       <span className="arrow-icon">
-        <GrNext style={{ fontSize: "45px" }} />
+        <GrNext style={{ fontSize: "20px" }} />
       </span>
     </button>
   );
@@ -59,7 +61,7 @@ function Interiors({ onSlideChange }) {
     dots: false,
     infinite: true,
     speed: 3000,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     slidesToShow: 1,
     pauseOnHover: false,
@@ -147,10 +149,10 @@ function Interiors({ onSlideChange }) {
                       outdoors.
                     </p>
                     <div
-                      style={{
-                        backgroundImage: `url(${slick_1_2.src || slick_1_2})`,
-                      }}
-                      className="image-container image-container-interior"
+                      // style={{
+                      //   backgroundImage: `url(${slick_1_2.src || slick_1_2})`,
+                      // }}
+                      // className="image-container image-container-interior"
                     >
                       {/* <img src={slick_1_2} alt="Palatial Nest" /> */}
                     </div>
@@ -189,10 +191,10 @@ function Interiors({ onSlideChange }) {
                       connected to nature through the roof garden and sun deck.
                     </p>
                     <div
-                      style={{
-                        backgroundImage: `url(${slick6_2.src || slick6_2})`,
-                      }}
-                      className="image-container image-container-interior"
+                      // style={{
+                      //   backgroundImage: `url(${slick6_2.src || slick6_2})`,
+                      // }}
+                      // className="image-container image-container-interior"
                     >
                       {/* <img src={slick6_2} alt="Hill Exterior" /> */}
                     </div>
@@ -234,10 +236,10 @@ function Interiors({ onSlideChange }) {
                       meets comfort like never before. The best is yet to come.{" "}
                     </p>
                     <div
-                      style={{
-                        backgroundImage: `url(${slick2.src || slick2})`,
-                      }}
-                      className="image-container image-container-interior"
+                      // style={{
+                      //   backgroundImage: `url(${slick2.src || slick2})`,
+                      // }}
+                      // className="image-container image-container-interior"
                     >
                       {/* <img src={slick2} alt="Rumah Hutan" /> */}
                     </div>
@@ -276,10 +278,10 @@ function Interiors({ onSlideChange }) {
                       bodies are the highlights of these Indo-Portugese villas
                     </p>
                     <div
-                      style={{
-                        backgroundImage: `url(${slick_2_2.src || slick_2_2})`,
-                      }}
-                      className="image-container image-container-interior"
+                      // style={{
+                      //   backgroundImage: `url(${slick_2_2.src || slick_2_2})`,
+                      // }}
+                      // className="image-container image-container-interior"
                     >
                       {/* <img src={slick_2_2} alt="Suspended in Solitude" /> */}
                     </div>

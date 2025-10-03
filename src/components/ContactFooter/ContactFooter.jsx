@@ -39,7 +39,7 @@ const ContactFooter = () => {
         <div className="left">
           <div
             ref={imageRef}
-            className="image-container reveal-image reveal-image-active"
+            className="image-container "
           >
             <Image src="/invest_page_image/Invest.webp" alt="Footer" fill style={{ objectFit: 'cover' }} />
           </div>

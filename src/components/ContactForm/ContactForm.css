@@ -1,3 +1,15 @@
+/* Disable all animations for ContactForm */
+.contact-form * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.contact-form img {
+  transform: scale(1) !important; /* Disable zoom effect */
+  transition: none !important; /* Remove transition */
+}
+
 .error-message {
   font-size: 11px;
   font-weight: 600 !important;

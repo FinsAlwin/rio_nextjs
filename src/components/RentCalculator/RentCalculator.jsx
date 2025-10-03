@@ -123,10 +123,17 @@ const RentCalculator = ({ propertiesURLId }) => {
       <div className="rent-calculator-container">
         <div className="left">
           <div
-            className="image-container reveal-image reveal-image-active"
+            className="image-container"
             ref={imageRef}
+            style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}
           >
-            <Image src="/properties_image/rumah_1-bedroom_image.webp" alt="Bedroom" fill style={{ objectFit: 'cover' }} />
+            <Image 
+              src="/properties_image/rumah_1-bedroom_image.webp" 
+              alt="Bedroom" 
+              width={800}
+              height={600}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+            />
           </div>
         </div>
         <div className="right">

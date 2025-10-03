@@ -40,7 +40,7 @@ const FooterProperties = () => {
         <div className="left">
           <div
             ref={imageRef}
-            className="image-container reveal-image reveal-image-active"
+            className="image-container"
           >
             <Image src={footerImage} alt="Footer Image" fill style={{ objectFit: 'cover' }} />
           </div>

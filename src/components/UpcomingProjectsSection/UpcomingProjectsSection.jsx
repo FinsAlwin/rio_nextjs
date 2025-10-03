@@ -151,7 +151,7 @@ const UpcomingProjectsSection = () => {
               <a href="https://www.riophuket.com/" target="_blank">
                 <div
                   ref={imageRef}
-                  className={`image-container scaleup image reveal-image reveal-image-active `}
+                  className={`image-container`}
                 >
                   {/* Lazy load Dubai video */}
                   <img
@@ -182,7 +182,7 @@ const UpcomingProjectsSection = () => {
               <a href="https://www.riodubai.co/ " target="_blank">
                 <div
                   ref={imageRef2}
-                  className={`image-container scaleup image reveal-image reveal-image-active `}
+                  className={`image-container`}
                 >
                   {/* Lazy load Phuket video */}
                   <img

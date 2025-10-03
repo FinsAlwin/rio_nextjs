@@ -1,0 +1,78 @@
+.zoom-transform {
+  transform: translate(0px, 0px) !important;
+}
+
+.zoom-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.zoom-hidden {
+  visibility: visible;
+  opacity: 0;
+  transform: matrix3d(1.2, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.left-title-global-explore {
+  color: #000;
+}
+
+.title-homepage {
+  font-size: 15px !important;
+  color: #fff !important;
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container-global-explore {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+/* Override the image-zoom transform for GlobalExplore */
+.image-container-global-explore.image-zoom {
+  transform: none !important;
+  transition: none !important;
+}
+
+.comment {
+  margin-right: 17px;
+  color: #000;
+}
+
+.btn {
+  white-space: nowrap;
+}
+
+
+@media only screen and (max-width: 390px) {
+  .intro-image .intro-image-container {
+    height: 74vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title-homepage {
+    font-size: 12px !important;
+  }
+  .intro-image-container-2 {
+    height: 43vh;
+  }
+  .image-container-global-explore {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 49vh;
+  }
+}
+

@@ -12,7 +12,7 @@ const PropertiesSection1 = ({ property_name, main_image }) => {
           <img
             src={main_image.src || main_image}
             alt="Rumah Hutan"
-            className="zoomout animate__animated animate__zoomIn animate__slow"
+        
           />
         </div>
       </div>

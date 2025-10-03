@@ -82,9 +82,7 @@ const TimelineSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`timeline text-change bgblack scroll-smooth sticky snap-scroll ${
-        isVisible ? "animate__animated animate__zoomIn animate__slow" : ""
-      }`}
+      className={`timeline text-change bgblack scroll-smooth sticky snap-scroll `}
       data-sidebar-title="Timeline"
     >
       <div className="wrapper wrapper-timeline">

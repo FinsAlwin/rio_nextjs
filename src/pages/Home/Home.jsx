@@ -14,6 +14,7 @@ import { DynamicInteriors, DynamicProjects } from "../../components/DynamicCompo
 import "./Home.css";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
 import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
+import GlobalExplore from "../../components/GlobalExplore/GlobalExplore";
 
 function Home() {
   const containerRef = useRef(null);
@@ -131,17 +132,18 @@ function Home() {
         >
           <Hero />
         </section>
-        <section
-          data-logo-type={isMobile ? "logo-dark" : "logo-dark"}
-          data-sidebar-title="Goa"
-        >
-          <Element name="single-select">
-            <SingleSelect />
-          </Element>
-        </section>
         <section data-logo-type="logo-dark" data-sidebar-title="Properties">
           <SectionSlick1 />
         </section>
+        <section
+          data-logo-type={isMobile ? "logo-dark" : "logo-dark"}
+          data-sidebar-title="Global"
+        >
+          <Element name="single-select">
+          <GlobalExplore />
+          </Element>
+        </section>
+      
 
         <section
           data-logo-type={currentSlide % 2 === 0 ? "logo-dark" : "logo-dark-v"}
@@ -157,21 +159,20 @@ function Home() {
         </section>
        
 
-
         <section
           data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
           data-sidebar-title="Features"
         >
           <Features />
         </section>
-        <section
+        {/* <section
           data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
           data-sidebar-title="Overseas"
         >
           <Suspense fallback={<div className="loading-placeholder">Loading projects...</div>}>
             <DynamicProjects />
           </Suspense>
-        </section>
+        </section> */}
 
         <section
           data-logo-type={isMobile ? "logo-dark" : "logo-dark"}

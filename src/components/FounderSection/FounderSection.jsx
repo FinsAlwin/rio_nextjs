@@ -56,7 +56,7 @@ const FounderSection = ({ sidebarTitle }) => {
               <div className="left">
                 <div
                   ref={imageRef}
-                  className="image-container reveal-image reveal-image-active"
+                  className="image-container"
                 >
                   <Image src={founderImage} alt="Founder" className="" fill style={{ objectFit: 'cover' }} />
                 </div>
@@ -133,7 +133,7 @@ const FounderSection = ({ sidebarTitle }) => {
               <div className="left">
                 <div
                   ref={imageRef}
-                  className="image image-container reveal-image reveal-image-active"
+                  className="image "
                 >
                   <img
                     src={founderImage.src || founderImage}

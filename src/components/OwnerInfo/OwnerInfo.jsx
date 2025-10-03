@@ -15,7 +15,7 @@ function OwnerInfo({ sidebarTitle }) {
         <img
           src={founderImage.src || founderImage}
           alt="Founder"
-          className="animate__animated animate__zoomIn animate__slow"
+          // className="animate__animated animate__zoomIn animate__slow"
           data-sr-id="7"
         />
       </div>

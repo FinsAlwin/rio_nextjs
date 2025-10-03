@@ -73,12 +73,13 @@ const InvestSection = () => {
         <div className="right">
           <div
             ref={imageRef}
-            className="image reveal-image larg-mobile reveal-image-active"
+            className="image"
+            style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}
           >
             <img
               src={investImage.src || investImage}
               alt="Why Invest with RIO"
-              className="image-zoom"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
             <div className="scroll-down-wrapper scroll-down-wrapper-invest-section">
               <div className="scroll-down-container">
