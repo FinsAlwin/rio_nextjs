@@ -2,11 +2,9 @@
 import React, { useState, useEffect, useRef } from "react";
 // import { useParams } from "react-router-dom"; // Removed for Next.js
 import Image from "next/image";
-import endpoints from "../../config/endpoints";
-import { fetchDataPost } from "../../utils/fetchData";
 import "./RentCalculator.css";
 
-const RentCalculator = ({ propertiesURLId }) => {
+const RentCalculator = ({ propertiesURLId, propertyVillas = [] }) => {
   const [villas, setVillas] = useState([]); // State to hold villa data
   const [selectedVilla, setSelectedVilla] = useState("");
   const [estimatedRent, setEstimatedRent] = useState(0);
@@ -52,6 +50,19 @@ const RentCalculator = ({ propertiesURLId }) => {
       }
     };
   }, []);
+  // Function to parse comma-separated numbers
+  const parseNumber = (value) => {
+    if (typeof value === 'string') {
+      return Number(value.replace(/,/g, '')) || 0;
+    }
+    return Number(value) || 0;
+  };
+
+  // Function to format numbers with commas
+  const formatNumber = (value) => {
+    return value.toLocaleString('en-IN');
+  };
+
   // Function to update estimates
   const updateEstimates = (villa, share) => {
     if (!villa || !share) {
@@ -59,13 +70,13 @@ const RentCalculator = ({ propertiesURLId }) => {
     }
 
     // Safely access villa properties with fallbacks
-    const dailyRent = Number(villa.daily_rent) || 0;
-    const monthlyIncome = villa.gross_monthly?.[`share_${share}`] || 0;
-    const yearlyIncome = villa.gross_yearly?.[`share_${share}`] || 0;
+    const dailyRent = parseNumber(villa.daily_rent);
+    const monthlyIncome = parseNumber(villa.gross_monthly?.[`share_${share}`]);
+    const yearlyIncome = parseNumber(villa.gross_yearly?.[`share_${share}`]);
 
     setEstimatedRent(dailyRent);
-    setMonthlyIncome(Number(monthlyIncome) || 0);
-    setYearlyIncome(Number(yearlyIncome) || 0);
+    setMonthlyIncome(monthlyIncome);
+    setYearlyIncome(yearlyIncome);
   };
 
   const handleVillaChange = (event) => {
@@ -84,26 +95,13 @@ const RentCalculator = ({ propertiesURLId }) => {
   };
 
   useEffect(() => {
-    const fetchVillas = async () => {
-      try {
-        const data = { property_url: `/properties/${propertiesURLId}/` };
-        const url = `${endpoints.getPropertiesDetails}`;
-        const response = await fetchDataPost(url, data);
-        
-        if (response && response.response_data && response.response_data.property_villas) {
-          setVillas(response.response_data.property_villas);
-        } else {
-          console.warn("Property villas data not found or API endpoint not available");
-          setVillas([]);
-        }
-      } catch (error) {
-        console.error("Error fetching villas:", error);
-        setVillas([]);
-      }
-    };
-
-    fetchVillas();
-  }, [propertiesURLId]);
+    // Use villa data passed as prop instead of fetching
+    if (propertyVillas && propertyVillas.length > 0) {
+      setVillas(propertyVillas);
+    } else {
+      setVillas([]);
+    }
+  }, [propertyVillas]);
 
   // Set initial estimates when villas are loaded and the default 40% is set
   useEffect(() => {
@@ -209,7 +207,7 @@ const RentCalculator = ({ propertiesURLId }) => {
                     <div className="price-col">
                       <div className="money-symb">₹</div>
                       <div className="amount rent estimatedRent">
-                        {estimatedRent}
+                        {formatNumber(estimatedRent)}
                       </div>
                       <div className="duration">/ night</div>
                     </div>
@@ -225,7 +223,7 @@ const RentCalculator = ({ propertiesURLId }) => {
                     <div className="price-col">
                       <div className="money-symb">₹</div>
                       <div className="amount rent monthlyIncome">
-                        {monthlyIncome}
+                        {formatNumber(monthlyIncome)}
                       </div>
                       <div className="duration">/ month</div>
                     </div>
@@ -241,7 +239,7 @@ const RentCalculator = ({ propertiesURLId }) => {
                     <div className="price-col">
                       <div className="money-symb">₹</div>
                       <div className="amount rent yearlyIncome">
-                        {yearlyIncome}
+                        {formatNumber(yearlyIncome)}
                       </div>
                       <div className="duration">/ year</div>
                     </div>

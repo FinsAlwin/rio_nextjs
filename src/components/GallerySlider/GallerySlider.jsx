@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import { GrNext, GrPrevious } from "react-icons/gr";
 
 // Custom styles to hide default slick arrows since we're using custom ones
 const sliderStyles = `
@@ -29,7 +28,9 @@ const GallerySlider = ({ propertyGallery = [] }) => {
         onClick={onClick}
       >
         <span className="arrow-icon">
-          <GrPrevious style={{ color: "#fff", fontSize: "45px" }} />
+          <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </span>
       </button>
     );
@@ -48,7 +49,9 @@ const GallerySlider = ({ propertyGallery = [] }) => {
         onClick={onClick}
       >
         <span className="arrow-icon">
-          <GrNext style={{ color: "#fff", fontSize: "45px" }} />
+          <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
         </span>
       </button>
     );
@@ -58,13 +61,13 @@ const GallerySlider = ({ propertyGallery = [] }) => {
     dots: false,
     infinite: propertyGallery.length > 1,
     speed: 1500,
-    autoplay: true,
+    autoplay: false, // Disable autoplay to allow manual navigation
     autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: propertyGallery.length > 1, // Only show arrows if more than one slide
     nextArrow: <NextArrow />,
     prevArrow: <PreviousArrow />,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -81,7 +84,7 @@ const GallerySlider = ({ propertyGallery = [] }) => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
-          arrows: true, // Hide arrows on smaller screens
+          arrows: propertyGallery.length > 1, // Show custom arrows on smaller screens
         },
       },
       {
@@ -89,7 +92,7 @@ const GallerySlider = ({ propertyGallery = [] }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: true, // Hide arrows on smaller screens
+          arrows: propertyGallery.length > 1, // Show custom arrows on smaller screens
         },
       },
     ],

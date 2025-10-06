@@ -18,16 +18,17 @@ export async function POST(request) {
       "the-hills-estate": {
         property_url: "/properties/the-hills-estate/",
         property_name: "The Hills Estate",
-        main_image: "/assets/properties/the-hills-estate.webp",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_Project_View.webp",
         property_tagline_1: "LEARN MORE ABOUT THIS PROJECT",
         property_tagline_1_img:
-          "/assets/properties/galleries/the-hills-estate-living.webp",
+          "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_Living.webp",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief: "",
         property_brief_cover_img: "",
         specs_cover_image:
-          "/assets/properties/galleries/the-hills-estate-vertical.webp",
+          "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_vertical.webp",
         configuration: "3 & 4 BHK Villas",
         land_area: "2 acres",
         features: "Gated Community, Clubhouse",
@@ -48,16 +49,17 @@ export async function POST(request) {
       "the-village": {
         property_url: "/properties/the-village/",
         property_name: "The Village",
-        main_image: "/assets/properties/the-village.jpg",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/The_Village_Overview.jpg",
         property_tagline_1: "LEARN MORE ABOUT THIS PROJECT",
         property_tagline_1_img:
-          "/assets/properties/galleries/the-village-entrance.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/The_Village_villa_entrance_view.jpg",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief: "",
         property_brief_cover_img: "",
         specs_cover_image:
-          "/assets/properties/galleries/the-village-vertical.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/The_Village_Vertical.jpg",
         configuration: "4 BHK Villas",
         land_area: "6000 sq.m",
         features: "Private courtyards",
@@ -77,14 +79,16 @@ export async function POST(request) {
       "stone-wall": {
         property_url: "/properties/stone-wall/",
         property_name: "Stone Wall",
-        main_image: "/assets/properties/stone-wall.jpg",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/9-Stone-Wall-scaled.jpg",
         property_tagline_1: "",
         property_tagline_1_img: "",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief: "",
         property_brief_cover_img: "",
-        specs_cover_image: "/assets/properties/stone-wall.jpg",
+        specs_cover_image:
+          "https://rioluxuryhomes.in/files/properties_images/Stone-Wall-scaled.jpg",
         configuration: "4 BHK Villas",
         land_area: "0.5 acre",
         features: "Close to Porvorim, Panjim, Aldona, Siolim, and Assagao",
@@ -104,18 +108,19 @@ export async function POST(request) {
       "casa-brilhante": {
         property_url: "/properties/casa-brilhante/",
         property_name: "Casa Brilhante",
-        main_image: "/assets/properties/casa-brilhante.jpg",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/casa_b-aerial.jpg",
         property_tagline_1: "A vintage Goan Whim",
         property_tagline_1_img:
-          "/assets/properties/galleries/casa-brilhante-pool-deck.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/casa_b-pool_deck.jpg",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief:
           'The word "brilhante" signifies brightness and unmatched luxury. Distinct from the transparency of Modernism and the starkness of tradition, it embraces a mystical Goan architectural philosophy, inviting visitors to explore its sun-dappled corridors, expansive arches and nostalgic courtyards, ultimately revealing its secrets through the interplay of light and shadow.',
         property_brief_cover_img:
-          "/assets/properties/galleries/casa-brilhante-facade.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/casa-brilhante-villa-c-facade-1200x1000-1.webp",
         specs_cover_image:
-          "/assets/properties/galleries/casa-brilhante-doors.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/casa_c-doors.jpg",
         configuration: "4 BHK Villas",
         land_area: "610 - 615 sq m each",
         features: "Portuguese & Mediterranean",
@@ -136,18 +141,19 @@ export async function POST(request) {
       "rumah-hutan-1": {
         property_url: "/properties/rumah-hutan-1/",
         property_name: "Rumah Hutan",
-        main_image: "/assets/properties/rumah-hutan.webp",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/rumah-hutan-gazebo-2000x15000-1.webp",
         property_tagline_1: "No room for the ordinary",
         property_tagline_1_img:
-          "/assets/properties/galleries/rumah-hutan-facade.webp",
+          "https://rioluxuryhomes.in/files/properties_images/rumah-hutan-facade-4-2000x1000-1.webp",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief:
           "Skylights bring daylight into our signature new age luxury homes across Goa. Private pools that rejuvenate, understated modern interiors, and the lush outdoors. This is what you can expect in our eight stunning Rumah Hutan villas.",
         property_brief_cover_img:
-          "/assets/properties/galleries/rumah-hutan-aerial.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/rumah-aerial.jpg",
         specs_cover_image:
-          "/assets/properties/galleries/rumah-hutan-living-room.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/rumah_1-living_room.jpg",
         configuration: "3 & 4 BHK Villas",
         land_area: "1 Acre",
         features: "Private pool & lawn",
@@ -168,18 +174,19 @@ export async function POST(request) {
       "rio-estado": {
         property_url: "/properties/rio-estado/",
         property_name: "RIO ESTADO",
-        main_image: "/assets/properties/rio-estado.webp",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/rio-estado-cover.webp",
         property_tagline_1: "Suspended in Solitude",
         property_tagline_1_img:
-          "/assets/properties/galleries/rio-estado-dining.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/Dining.jpg",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief:
           "Inspired by Indo-Portuguese architecture, tucked away on the meandering slopes of a quaint village in Ucassaim, these homes have been meticulously designed keeping your ultimate comforts in mind. These 11 independent luxury villas are dotted across the lush landscapes of Goa, with private pools and landscaped water bodies, encircled by large community spaces.",
         property_brief_cover_img:
-          "/assets/properties/galleries/rio-estado-villa-3.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/Villa_3.jpg",
         specs_cover_image:
-          "/assets/properties/galleries/rio-estado-villa-11.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/Villa_11.jpg",
         configuration: "4 BHK Villas",
         land_area: "3 Acre",
         features: "Private pool & car park",
@@ -199,16 +206,19 @@ export async function POST(request) {
       "rio-royale": {
         property_url: "/properties/rio-royale/",
         property_name: "RIO Royale",
-        main_image: "/assets/properties/rio-royale.jpg",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/Royale-1-2000x1200-1.jpg",
         property_tagline_1: "A location of unprecedented natural beauty",
-        property_tagline_1_img: "/assets/properties/galleries/rio-royale-2.jpg",
+        property_tagline_1_img:
+          "https://rioluxuryhomes.in/files/properties_images/Royale-2-2000x1000-1.jpg",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief:
           "Set back from the shore, with direct access to the beach and turquoise sea, RIO unveils its exclusive gated community, RIO Royale. Influenced by modern Mediterranean architecture, styled with chequered retro windows, enhanced by fresh terrazzo floorings, double-height ceilings and intimate bedroom settings, RIO Royale presents a panorama of scenic views. Natural light floods into spacious rooms, set with high ceilings and custom furnishings. Sophistication has never looked so good.",
         property_brief_cover_img:
-          "/assets/properties/galleries/rio-royale-8.jpg",
-        specs_cover_image: "/assets/properties/galleries/rio-royale-5.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/Royale-8-1200-x1000.jpg",
+        specs_cover_image:
+          "https://rioluxuryhomes.in/files/properties_images/Royale-5-750x1000-1.jpg",
         configuration: "1, 2 & 3 BHK Apartments",
         land_area: "1.1 Acre",
         features: "Fully furnished",
@@ -229,18 +239,19 @@ export async function POST(request) {
       "black-forest": {
         property_url: "/properties/black-forest/",
         property_name: "Black Forest",
-        main_image: "/assets/properties/black-forest.jpg",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/black_forest-exterior_5.jpg",
         property_tagline_1: "Have yourself a hill",
         property_tagline_1_img:
-          "/assets/properties/galleries/black-forest-rooftop.webp",
+          "https://rioluxuryhomes.in/files/properties_images/black-forest-rooftop-2000x1000-1.webp",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief:
           "This 4 bedroom property offers awe-inspiring, panoramic views of the forest around Siolim, without compromising your privacy. Designed to leverage the light and wonder of Goa, each bedroom is interwoven into the tropical ecosystem. A seamless open-plan layout, floor-to-ceiling windows and verdant roof gardens accompanied by an expansive pool and sundeck form a central space to enjoy the best of indoor-outdoor living.",
         property_brief_cover_img:
-          "/assets/properties/galleries/black-forest-exterior-2.webp",
+          "https://rioluxuryhomes.in/files/properties_images/black-forest-exterior-2-1200x1000-1.webp",
         specs_cover_image:
-          "/assets/properties/galleries/black-forest-common-area.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/black_forest-common_area.jpg",
         configuration: "4 BHK Private Villa",
         land_area: "1900 sq m",
         features: "",
@@ -260,17 +271,19 @@ export async function POST(request) {
       "rio-estilo": {
         property_url: "/properties/rio-estilo/",
         property_name: "RIO Estilo",
-        main_image: "/assets/properties/rio-estilo.jpg",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/RIO-Estilo-Main-Pool-Deck-1.jpg",
         property_tagline_1: "Stand wide-eyed in awe",
         property_tagline_1_img:
-          "/assets/properties/galleries/rio-estilo-pool-deck-2.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/RIO-Estilo-Main-Pool-Deck-2.jpg",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief:
           "Designed in the spirit of Bali's idyllic climate, with a seamless flow between indoor and outdoor living spaces, these villas feature modern, chic pavilions that open into magnificent, expansive swimming pools.",
         property_brief_cover_img:
-          "/assets/properties/galleries/rio-estilo-tile-2.jpg",
-        specs_cover_image: "/assets/properties/galleries/rio-estilo-tile-1.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/RIO-Estilo-Tile-2.jpg",
+        specs_cover_image:
+          "https://rioluxuryhomes.in/files/properties_images/RIO-Estilo-Tile-1.jpg",
         configuration: "3 BHK Villas",
         land_area: "1800 sq m",
         features: "Private pool & lawn",
@@ -291,18 +304,20 @@ export async function POST(request) {
       "a-cappella": {
         property_url: "/properties/a-cappella/",
         property_name: "A Cappella",
-        main_image: "/assets/properties/a-cappella.jpg",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/A-Cappella_1-2000x1200-1.jpg",
         property_tagline_1: "Blissfully marooned in paradise",
         property_tagline_1_img:
-          "/assets/properties/galleries/a-cappella-living-room-2.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/A-Cappella_Living-Room-2.jpg",
         property_tagline_2: "Tuned to the seductively slow pace of luxury",
         property_tagline_2_img:
-          "/assets/properties/galleries/a-cappella-living-room-1.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/A-Cappella_Living-Room-1",
         property_brief:
           "Set across 4 lush acres, this property offers stunning views that will leave you speechless. Situated within an oasis of palm trees and postcard blue skies, A Cappella lies just minutes from the beaches of Morjim, Ashwem, and Mandrem, and a mere 30 minute drive from the MOPA Airport. These distinctive 4 bedroom villas have extended terraces and patios accompanied by private patches of green and private pools. RIO's A Cappella provides you with an immersive Goan experience without compromising on your supreme comfort and privacy.",
         property_brief_cover_img:
-          "/assets/properties/galleries/a-cappella-4.jpg",
-        specs_cover_image: "/assets/properties/galleries/a-cappella-5.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/A-Cappella-4_1200x1000.jpg",
+        specs_cover_image:
+          "https://rioluxuryhomes.in/files/properties_images/A-Cappella-5_750x1000.jpg",
         configuration: "4 BHK Villas",
         land_area: "4 acres",
         features: "Recreational block & areas",
@@ -323,16 +338,20 @@ export async function POST(request) {
       "6-assagao": {
         property_url: "/properties/6-assagao/",
         property_name: "6 Assagao",
-        main_image: "/assets/properties/6-assagao.jpg",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/6-Assagaon_1-2000x1200-2.jpg",
         property_tagline_1: "A hidden forest gem",
-        property_tagline_1_img: "/assets/properties/galleries/6-assagao-2.jpg",
+        property_tagline_1_img:
+          "https://rioluxuryhomes.in/files/properties_images/6-Assagaon_2-2000x1000-1.jpg",
         property_tagline_2: "The address becomes the landmark",
-        property_tagline_2_img: "/assets/properties/galleries/6-assagao-3.jpg",
+        property_tagline_2_img:
+          "https://rioluxuryhomes.in/files/properties_images/6-Assagaon_3-2000x1000-1",
         property_brief:
           "A rare architectural marvel, 6 Assagao is your dream home come alive. The interiors of its thoughtfully designed living spaces define the true essence of what contemporary living looks like. Avant-garde interiors and trendy furniture design provide a nuanced, high-end fusion of structure and style. Full height windows allow you to breathe in excellence, right in the lap of nature.",
         property_brief_cover_img:
-          "/assets/properties/galleries/6-assagao-7.jpg",
-        specs_cover_image: "/assets/properties/galleries/6-assagao-4.jpg",
+          "https://rioluxuryhomes.in/files/properties_images/6-Assagaon_7-1200x1000-1.jpg",
+        specs_cover_image:
+          "https://rioluxuryhomes.in/files/properties_images/6-Assagaon_4-750x1000-1.jpg",
         configuration: "4 BHK Villas",
         land_area: "3000 sq.m",
         features: "Private pool & deck",
@@ -352,14 +371,16 @@ export async function POST(request) {
       amanta: {
         property_url: "/properties/amanta/",
         property_name: "Amanta",
-        main_image: "/assets/properties/amanta.jpg",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/amanta-4.jpg",
         property_tagline_1: "",
         property_tagline_1_img: "",
         property_tagline_2: "",
         property_tagline_2_img: "",
         property_brief: "",
         property_brief_cover_img: "",
-        specs_cover_image: "/assets/properties/galleries/amanta-2.jpg",
+        specs_cover_image:
+          "https://rioluxuryhomes.in/files/properties_images/amanta-2.jpg",
         configuration: "2 & 3 BHK Villas",
         land_area: "0.5 acre",
         features: "Private pool & lawn",
@@ -379,17 +400,19 @@ export async function POST(request) {
       "rio-foresta": {
         property_url: "/properties/rio-foresta/",
         property_name: "RIO Foresta",
-        main_image: "/assets/properties/rio-foresta.webp",
+        main_image:
+          "https://rioluxuryhomes.in/files/properties_images/rio-foresta-main.webp",
         property_tagline_1: "TROPICAL MODERN HOMES",
         property_tagline_1_img: "",
         property_tagline_2: "Where Modern Living Meets Nature",
-        property_tagline_2_img: "/assets/properties/rio-foresta.webp",
+        property_tagline_2_img:
+          "https://rioluxuryhomes.in/files/properties_images/rio-foresta-main.webp",
         property_brief:
           "Indulge in the ultimate ecosystem of palatial aesthetics and a sanctuary of tranquility. With floor-to-ceiling glass walls, Foresta is a truly curated, bespoke home that combines global architectural inspiration with the best of contemporary aesthetics in the lap of nature.",
         property_brief_cover_img:
-          "/assets/properties/galleries/rio-foresta-brief-cover.webp",
+          "https://rioluxuryhomes.in/files/properties_images/rio-foresta-brief-cover.webp",
         specs_cover_image:
-          "/assets/properties/galleries/rio-foresta-specs.webp",
+          "https://rioluxuryhomes.in/files/properties_images/rio-foresta-specs.webp",
         configuration: "4 BHK Villas",
         land_area: "",
         features:
@@ -409,161 +432,195 @@ export async function POST(request) {
       },
     };
 
-    // Gallery images for each property
-    const galleries = {
+    // Get property data or default to the-hills-estate
+    const propertyData =
+      properties[propertyName] || properties["the-hills-estate"];
+
+    // Property gallery images
+    const galleryImages = {
       "the-hills-estate": [
         {
           image_title: "External View",
           image_name:
-            "/assets/properties/galleries/the-hills-estate-external-1.jpg",
+            "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_ Villa_External_1.jpg",
         },
         {
           image_title: "Bedroom",
           image_name:
-            "/assets/properties/galleries/the-hills-estate-bedroom.jpg",
+            "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_ bedroom.jpg",
         },
         {
           image_title: "External View",
           image_name:
-            "/assets/properties/galleries/the-hills-estate-external.jpg",
+            "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_Villa_external.jpg",
         },
         {
           image_title: "Kitchen",
           image_name:
-            "/assets/properties/galleries/the-hills-estate-kitchen.jpg",
+            "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_Kitchen.jpg",
         },
         {
           image_title: "Overview",
-          image_name: "/assets/properties/galleries/the-hills-estate-view.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_view.jpg",
         },
         {
           image_title: "Close Up",
           image_name:
-            "/assets/properties/galleries/the-hills-estate-close-up-2.jpg",
+            "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_villa_close_up_2.jpg",
         },
         {
           image_title: "Close Up",
           image_name:
-            "/assets/properties/galleries/the-hills-estate-close-up.jpg",
+            "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_Close_up.jpg",
         },
         {
           image_title: "Living Room",
           image_name:
-            "/assets/properties/galleries/the-hills-estate-living.jpg",
+            "https://rioluxuryhomes.in/files/properties_images/The_Hills_Estate_living.jpg",
         },
       ],
       "the-village": [
         {
           image_title: "Outdoor",
-          image_name: "/assets/properties/galleries/the-village-outdoor-1.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/1_The_Village_Villa_ outdoor.jpg",
         },
         {
           image_title: "Outdoor",
-          image_name: "/assets/properties/galleries/the-village-outdoor-2.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/2_The_Village_Villa_ outdoor.jpg",
         },
         {
           image_title: "Outdoor",
-          image_name: "/assets/properties/galleries/the-village-outdoor-3.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/3_The_Village_Villa_ outdoor.jpg",
         },
         {
           image_title: "Outdoor",
-          image_name: "/assets/properties/galleries/the-village-outdoor-4.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/4_The_Village_Villa_outdoor.jpg",
         },
         {
           image_title: "Outdoor",
-          image_name: "/assets/properties/galleries/the-village-outdoor-5.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/5_The_Village_Villa_outdoor.jpg",
         },
         {
           image_title: "Outdoor",
-          image_name: "/assets/properties/galleries/the-village-outdoor-6.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/6_The_Village_Villa_outdoor.jpg",
         },
         {
           image_title: "Outdoor",
-          image_name: "/assets/properties/galleries/the-village-outdoor-7.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/7_The_Village_Villa_outdoor.jpg",
         },
         {
           image_title: "Living Room",
-          image_name: "/assets/properties/galleries/the-village-living.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/8_The_Village_Living.jpg",
         },
         {
           image_title: "Bathroom",
-          image_name: "/assets/properties/galleries/the-village-bathroom.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/9_The_Village_Bathroom.jpg",
         },
         {
           image_title: "Bedroom",
-          image_name: "/assets/properties/galleries/the-village-bedroom.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/10_The_Village_Bedroom.jpg",
         },
       ],
       "casa-brilhante": [
         {
           image_title: "POOL SIDE",
           image_name:
-            "/assets/properties/galleries/casa-brilhante-poolside.jpg",
+            "https://rioluxuryhomes.in/files/properties_images/Casa-Brilhante-Poolside.jpg",
         },
         {
           image_title: "FOYER",
-          image_name: "/assets/properties/galleries/casa-brilhante-foyer.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/Casa-Brilhante-Foyer.jpg",
         },
         {
           image_title: "BALCONY",
-          image_name: "/assets/properties/galleries/casa-brilhante-balcony.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/Casa-Brilhante-Balcony.jpg",
         },
         {
           image_title: "BEDROOM",
-          image_name: "/assets/properties/galleries/casa-brilhante-bedroom.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/Casa-Brilhante-Bedroom.jpg",
         },
       ],
       "rumah-hutan-1": [
         {
           image_title: "POOL SIDE",
-          image_name: "/assets/properties/galleries/rumah-hutan-pool-deck.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/rumah_1-pool_deck.jpg",
         },
         {
           image_title: "BEDROOM",
           image_name:
-            "/assets/properties/galleries/rumah-hutan-master-bedroom.webp",
+            "https://rioluxuryhomes.in/files/properties_images/rumah-hutan-master-bedroom-2000x1000-1.webp",
         },
         {
           image_title: "KITCHEN",
-          image_name: "/assets/properties/galleries/rumah-hutan-kitchen.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/rumah-kitchen.jpg",
         },
       ],
       "rio-royale": [
         {
           image_title: "LIVING ROOM",
-          image_name: "/assets/properties/galleries/rio-royale-living-room.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/RIO-Royale-Living-Room.jpg",
         },
         {
           image_title: "BATHROOM",
-          image_name: "/assets/properties/galleries/rio-royale-bathroom.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/RIO-Royale-Bathroom.jpg",
         },
         {
           image_title: "KITCHEN",
-          image_name: "/assets/properties/galleries/rio-royale-kitchen.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/RIO-Royale-Kitchen.jpg",
         },
       ],
       "rio-estilo": [
         {
           image_title: "POOL",
-          image_name: "/assets/properties/rio-estilo.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/RIO-Estilo-Main-Pool-Deck-1.jpg",
         },
         {
           image_title: "LIVING ROOM",
-          image_name: "/assets/properties/galleries/rio-estilo-living-room.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/RIO-Estilo-Living-Room.jpg",
         },
         {
           image_title: "DINING ROOM",
-          image_name: "/assets/properties/galleries/rio-estilo-dining-room.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/RIO-Estilo-Dining-Room.jpg",
         },
         {
           image_title: "BATHROOM",
-          image_name: "/assets/properties/galleries/rio-estilo-bathroom.jpg",
+          image_name:
+            "https://rioluxuryhomes.in/files/properties_images/RIO-Estilo-Bathroom.jpg",
         },
       ],
+      "rio-foresta": [],
+      "stone-wall": [],
+      "rio-estado": [],
+      "black-forest": [],
+      "a-cappella": [],
+      "6-assagao": [],
+      amanta: [],
     };
 
-    // Villa details for properties that have them
-    const villas = {
+    // Property villas data
+    const villaData = {
       "casa-brilhante": [
         {
           villa_id: "OGxkcW52aFNEbUdUdFEyZEo1dm1TUT09",
@@ -816,20 +873,21 @@ export async function POST(request) {
           },
         },
       ],
+      "rio-foresta": [],
+      "the-hills-estate": [],
+      "the-village": [],
+      "stone-wall": [],
+      "a-cappella": [],
+      "6-assagao": [],
+      amanta: [],
     };
-
-    // Get property data or default to The Hills Estate
-    const propertyData =
-      properties[propertyName] || properties["the-hills-estate"];
-    const propertyGallery = galleries[propertyName] || [];
-    const propertyVillas = villas[propertyName] || [];
 
     const dummyData = {
       status: "success",
       response_data: {
         property_details: propertyData,
-        property_gallery: propertyGallery,
-        property_villas: propertyVillas,
+        property_gallery: galleryImages[propertyName] || [],
+        property_villas: villaData[propertyName] || [],
       },
       message: "",
     };
