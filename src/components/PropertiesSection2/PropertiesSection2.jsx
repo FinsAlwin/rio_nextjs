@@ -44,16 +44,14 @@ const PropertiesSection2 = ({ property_tagline_1_img, property_tagline_1 }) => {
     <section
       id="anchor-down"
       ref={sectionRef}
-      className={`text-change intro-image bgblack scroll-smooth sticky snap-scroll  ${
-        isVisible ? "animate__animated animate__zoomIn animate__slow" : ""
-      }`}
+      className={`text-change intro-image bgblack scroll-smooth sticky snap-scroll `}
       data-sidebar-title=""
     >
       <div className="intro-image-container properties-content-image">
         <div className="image-container image reveal-image reveal-image-active">
           <Image 
             src={property_tagline_1_img.src || property_tagline_1_img} 
-            alt="Rumah Hutan Facade"
+            alt={property_tagline_1 || "Property Image"}
             fill
             sizes="100vw"
             style={{ objectFit: 'cover' }}

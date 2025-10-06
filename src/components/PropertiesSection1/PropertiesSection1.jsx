@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import "animate.css";
 const PropertiesSection1 = ({ property_name, main_image }) => {
   return (
@@ -9,10 +10,13 @@ const PropertiesSection1 = ({ property_name, main_image }) => {
     >
       <div className="intro-image-container">
         <div className="image-container hero-zoom">
-          <img
+          <Image
             src={main_image.src || main_image}
-            alt="Rumah Hutan"
-        
+            alt={property_name || "Property Image"}
+            fill
+            priority
+            quality={90}
+            style={{ objectFit: 'cover' }}
           />
         </div>
       </div>

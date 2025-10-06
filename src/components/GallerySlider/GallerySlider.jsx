@@ -122,6 +122,9 @@ const GallerySlider = ({ propertyGallery = [] }) => {
                   alt={item.image_title || "Property Image"}
                   fill
                   style={{ objectFit: 'cover' }}
+                  priority={index === 0}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  quality={85}
                 />
                 </div>
               </div>
