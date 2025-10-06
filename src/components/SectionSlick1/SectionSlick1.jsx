@@ -43,25 +43,25 @@ function SectionSlick1() {
     };
   }, []);
   return (
-    <section className="projects-section" data-sidebar-title="Properties">
-      <div className="projects-dual flip  project-slick-explore" style={{ backgroundColor: '#7f8a8d' }}>
+    <section className="projects-section " data-sidebar-title="Properties">
+      <div className="projects-dual flip  project-slick-explore" style={{ backgroundColor: '#ffffffff' }}>
         <div className="projects-container">
           <div className="left">
             <div className="content-container">
               <div className="content content-section-slick">
-                <h2 className="title uppercase"  style={{ color: '#ffffff' }}>Have what no one has</h2>
+                <h2 className="title uppercase" style={{ color: '#000000ff' }}>Have what no one has</h2>
 
                 <div className="sb-custom ">
                   <div
-                   style={{ color: '#ffffff' }}
-                      className="have-no-what-one-has-2"
-                      dangerouslySetInnerHTML={{ __html: post_content }}
+                    style={{ color: '#000000ff' }}
+                    className="have-no-what-one-has-2"
+                    dangerouslySetInnerHTML={{ __html: post_content }}
                   />
                 </div>
                 <div className="btn-container center">
                   <Link
                     href={"/properties/"}
-                    className="btn white"
+                    className="btn black"
                     onClick={scrollToTop}
                   >
                     Explore Our Properties
@@ -72,18 +72,18 @@ function SectionSlick1() {
           </div>
           <div className="right">
 
-          {/* reveal-image reveal-image-active */}
+            {/* reveal-image reveal-image-active */}
             <div
               className="image"
               ref={imageRef}
-              // style={{
-              //   backgroundImage: `url(${leftImage})`,
-              //   backgroundPosition: "center right",
-              //   backgroundSize: "70%",
-              //   height: "100%",
-              //   width: "100%",
-              //   backgroundRepeat: "no-repeat",
-              // }}
+            // style={{
+            //   backgroundImage: `url(${leftImage})`,
+            //   backgroundPosition: "center right",
+            //   backgroundSize: "70%",
+            //   height: "100%",
+            //   width: "100%",
+            //   backgroundRepeat: "no-repeat",
+            // }}
             >
               <Image className="image-zoom" src={leftImage} alt="Hills Estate" fill style={{ objectFit: 'cover' }} />
             </div>

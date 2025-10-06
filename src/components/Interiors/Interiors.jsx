@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "./Interiors.css";
 import Link from "next/link";
 import Image from "next/image";
-import slick1 from "../../assets/homepage_images/assagao_main.webp";
+import slick1 from "../../assets/homepage_images/assagao_main-new.jpg";
 import slick2 from "../../assets/homepage_images/assagao_thumb.webp";
 import slick6 from "../../assets/homepage_images/black-forest-rooftop.webp";
 import slick6_2 from "../../assets/homepage_images/slick_black_2.webp";
@@ -23,9 +23,8 @@ import SliderBar from "../SliderBar/SliderBar";
 const PreviousArrow = ({ className, onClick, currentSlide }) => {
   return (
     <button
-      className={`${className} custom-arrow  ${
-        currentSlide === 0 ? "slick-disabled" : ""
-      }`}
+      className={`${className} custom-arrow  ${currentSlide === 0 ? "slick-disabled" : ""
+        }`}
       aria-label="Previous"
       type="button"
       aria-disabled={currentSlide === 0}
@@ -42,9 +41,8 @@ const PreviousArrow = ({ className, onClick, currentSlide }) => {
 const NextArrow = ({ className, onClick, slideCount, currentSlide }) => {
   return (
     <button
-      className={`${className} custom-arrow  ${
-        currentSlide === slideCount - 1 ? "slick-disabled" : ""
-      }`}
+      className={`${className} custom-arrow  ${currentSlide === slideCount - 1 ? "slick-disabled" : ""
+        }`}
       aria-label="Next"
       type="button"
       aria-disabled={currentSlide === slideCount - 1}
@@ -130,7 +128,7 @@ function Interiors({ onSlideChange }) {
   //   ? [mobileCardImage1, mobileCardImage2, mobileCardImage3, mobileCardImage4]
   //   : [cardImage1, cardImage3, cardImage2, cardImage4];
   return (
-    <section className="properties-slider" data-sidebar-title="Properties">
+    <section className="properties-slider " data-sidebar-title="Properties">
       <Slider {...settings} className="single-slider">
         {/* Slide 1 */}
 
@@ -149,10 +147,10 @@ function Interiors({ onSlideChange }) {
                       outdoors.
                     </p>
                     <div
-                      // style={{
-                      //   backgroundImage: `url(${slick_1_2.src || slick_1_2})`,
-                      // }}
-                      // className="image-container image-container-interior"
+                    // style={{
+                    //   backgroundImage: `url(${slick_1_2.src || slick_1_2})`,
+                    // }}
+                    // className="image-container image-container-interior"
                     >
                       {/* <img src={slick_1_2} alt="Palatial Nest" /> */}
                     </div>
@@ -179,7 +177,7 @@ function Interiors({ onSlideChange }) {
           </div>
         </div>
         <div className="slick-slide">
-          <div className="projects-dual flip bgblack">
+          <div className="projects-dual flip bgwhite">
             <div className="projects-container projects-selects-container">
               <div className="left">
                 <div className="content-container content-container-interiors projects-content-overlap">
@@ -191,10 +189,10 @@ function Interiors({ onSlideChange }) {
                       connected to nature through the roof garden and sun deck.
                     </p>
                     <div
-                      // style={{
-                      //   backgroundImage: `url(${slick6_2.src || slick6_2})`,
-                      // }}
-                      // className="image-container image-container-interior"
+                    // style={{
+                    //   backgroundImage: `url(${slick6_2.src || slick6_2})`,
+                    // }}
+                    // className="image-container image-container-interior"
                     >
                       {/* <img src={slick6_2} alt="Hill Exterior" /> */}
                     </div>
@@ -204,7 +202,7 @@ function Interiors({ onSlideChange }) {
                           "https://rioluxuryhomes.myzow.in/properties/black-forest/"
                         }
                         onClick={scrollToTop}
-                        className="btn white"
+                        className="btn "
                       >
                         Indulge
                       </Link>
@@ -236,10 +234,10 @@ function Interiors({ onSlideChange }) {
                       meets comfort like never before. The best is yet to come.{" "}
                     </p>
                     <div
-                      // style={{
-                      //   backgroundImage: `url(${slick2.src || slick2})`,
-                      // }}
-                      // className="image-container image-container-interior"
+                    // style={{
+                    //   backgroundImage: `url(${slick2.src || slick2})`,
+                    // }}
+                    // className="image-container image-container-interior"
                     >
                       {/* <img src={slick2} alt="Rumah Hutan" /> */}
                     </div>
@@ -266,7 +264,7 @@ function Interiors({ onSlideChange }) {
           </div>
         </div>
         <div className="slick-slide">
-          <div className="projects-dual flip bgblack">
+          <div className="projects-dual flip bgwhite">
             <div className="projects-container projects-selects-container">
               <div className="left">
                 <div className="content-container projects-content-overlap">
@@ -278,10 +276,10 @@ function Interiors({ onSlideChange }) {
                       bodies are the highlights of these Indo-Portugese villas
                     </p>
                     <div
-                      // style={{
-                      //   backgroundImage: `url(${slick_2_2.src || slick_2_2})`,
-                      // }}
-                      // className="image-container image-container-interior"
+                    // style={{
+                    //   backgroundImage: `url(${slick_2_2.src || slick_2_2})`,
+                    // }}
+                    // className="image-container image-container-interior"
                     >
                       {/* <img src={slick_2_2} alt="Suspended in Solitude" /> */}
                     </div>
@@ -291,7 +289,7 @@ function Interiors({ onSlideChange }) {
                           "https://rioluxuryhomes.myzow.in/properties/rio-estado/"
                         }
                         onClick={scrollToTop}
-                        className="btn white"
+                        className="btn"
                       >
                         Indulge
                       </Link>

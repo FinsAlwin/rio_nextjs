@@ -45,7 +45,7 @@ const ProjectSingle = () => {
                     <Link
                       href={"/contact-us/#contactform"}
                       className="text-indulge"
-                      //   style={{ color: "#fff", textDecoration: "none" }}
+                    //   style={{ color: "#fff", textDecoration: "none" }}
                     >
                       Indulge
                     </Link>

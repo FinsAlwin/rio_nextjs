@@ -140,12 +140,12 @@ function Home() {
           data-sidebar-title="Global"
         >
           <Element name="single-select">
-          <GlobalExplore />
+            <GlobalExplore />
           </Element>
         </section>
-      
 
-        <section
+
+        <section className=""
           data-logo-type={currentSlide % 2 === 0 ? "logo-dark" : "logo-dark-v"}
           data-sidebar-title="Selects"
         >
@@ -157,7 +157,7 @@ function Home() {
             />
           </Suspense>
         </section>
-       
+
 
         <section
           data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
