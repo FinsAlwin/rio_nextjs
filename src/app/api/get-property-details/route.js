@@ -11,342 +11,827 @@ export async function POST(request) {
           .split("/")
           .filter((segment) => segment !== "")
           .pop()
-      : "rio-estado-villa";
+      : "the-hills-estate";
 
     // Define different properties based on URL
     const properties = {
+      "the-hills-estate": {
+        property_url: "/properties/the-hills-estate/",
+        property_name: "The Hills Estate",
+        main_image: "/assets/properties/the-hills-estate.webp",
+        property_tagline_1: "LEARN MORE ABOUT THIS PROJECT",
+        property_tagline_1_img:
+          "/assets/properties/galleries/the-hills-estate-living.webp",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
+        property_brief: "",
+        property_brief_cover_img: "",
+        specs_cover_image:
+          "/assets/properties/galleries/the-hills-estate-vertical.webp",
+        configuration: "3 & 4 BHK Villas",
+        land_area: "2 acres",
+        features: "Gated Community, Clubhouse",
+        location: "Calangute, Goa",
+        google_map_url: "Calangute, Goa",
+        possession: "Upcoming",
+        meta_title:
+          "The Hills Estate | Luxury Homes For Sale with Private Pool | RIO",
+        meta_description:
+          "Immerse yourself in the privacy and verdant expanse of The Hills Estate by RIO Luxury Homes, 3BHK and 4 BHK luxury homes for sale in Calangute, Goa.",
+        development_status: "upcoming",
+        is_sold_out: "n",
+        property_status: "a",
+        sort_order: "0",
+        canonical_url: "https://rioluxuryhomes.in/properties/the-hills-estate/",
+        redirect_301: "n",
+      },
       "the-village": {
-        id: 1,
-        property_name: "The Village",
-        location: "Goa, India",
-        price: "₹3.8 Cr",
-        main_image: "/homepage_images/rio-estado-master-bedroom_web.webp",
-        description:
-          "Experience luxury living in The Village, a premium residential development featuring modern villas with contemporary design and world-class amenities.",
-        gallery_images: [
-          "/homepage_images/rio-estado-master-bedroom_web.webp",
-          "/homepage_images/home_casa_rumah.webp",
-          "/homepage_images/black_forest_image.webp",
-          "/homepage_images/card_image_1.webp",
-          "/homepage_images/card_image_2.webp",
-        ],
-        bedrooms: 4,
-        bathrooms: 3,
-        area: "3200 sq ft",
-        features: [
-          "Private Pool",
-          "Modern Kitchen",
-          "Master Bedroom Suite",
-          "Garden",
-          "Parking",
-          "24/7 Security",
-        ],
-        amenities: [
-          "Swimming Pool",
-          "Gym & Fitness Center",
-          "Clubhouse",
-          "Security",
-          "Parking",
-          "Garden",
-          "Children's Play Area",
-        ],
-        // Additional fields for PropertyDetails component
-        configuration: "4 BHK Villa",
-        land_area: "3200 sq ft",
-        features_text:
-          "Private Pool, Modern Kitchen, Master Bedroom Suite, Garden, Parking, 24/7 Security",
-        possession: "Ready to Move In",
-        specs_cover_image:
-          "/homepage_images/rio-estado-master-bedroom_web.webp",
-        google_map_url: "https://maps.google.com/?q=Goa,India",
-        // Additional fields for PropertyDescription component
-        property_brief:
-          "The Village represents the pinnacle of luxury living in Goa. Each villa is meticulously designed with contemporary architecture, featuring spacious layouts, premium finishes, and modern amenities. The development offers a perfect blend of privacy and community living, with beautifully landscaped gardens, recreational facilities, and round-the-clock security.",
-        property_brief_cover_img: "/homepage_images/home_casa_rumah.webp",
-        // Additional fields for PropertiesSection2 component
-        property_tagline_1: "Where Luxury Meets Serenity",
-        property_tagline_1_img: "/homepage_images/black_forest_image.webp",
         property_url: "/properties/the-village/",
-        meta_title: "The Village | Luxury Villas in Goa | RIO Luxury Homes",
-        meta_description:
-          "Discover The Village - premium luxury villas in Goa with modern amenities, private pools, and world-class facilities.",
-        canonical_url: "https://rioluxuryhomes.com/properties/the-village/",
-      },
-      "rio-estado-villa": {
-        id: 2,
-        property_name: "Rio Estado Villa",
-        location: "Goa, India",
-        price: "₹2.5 Cr",
-        main_image: "/homepage_images/rio-estado-master-bedroom_web.webp",
-        description:
-          "Luxury villa with modern amenities and stunning views in the heart of Goa.",
-        gallery_images: [
-          "/homepage_images/rio-estado-master-bedroom_web.webp",
-          "/homepage_images/home_casa_rumah.webp",
-          "/homepage_images/black_forest_image.webp",
-        ],
-        bedrooms: 3,
-        bathrooms: 2,
-        area: "2500 sq ft",
-        features: [
-          "Private Pool",
-          "Garden",
-          "Parking",
-          "Security",
-          "Modern Kitchen",
-          "Master Bedroom",
-        ],
-        amenities: [
-          "Swimming Pool",
-          "Gym",
-          "Clubhouse",
-          "Security",
-          "Parking",
-          "Garden",
-        ],
-        // Additional fields for PropertyDetails component
-        configuration: "3 BHK Villa",
-        land_area: "2500 sq ft",
-        features_text:
-          "Private Pool, Garden, Parking, Security, Modern Kitchen, Master Bedroom",
-        possession: "Ready to Move In",
+        property_name: "The Village",
+        main_image: "/assets/properties/the-village.jpg",
+        property_tagline_1: "LEARN MORE ABOUT THIS PROJECT",
+        property_tagline_1_img:
+          "/assets/properties/galleries/the-village-entrance.jpg",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
+        property_brief: "",
+        property_brief_cover_img: "",
         specs_cover_image:
-          "/homepage_images/rio-estado-master-bedroom_web.webp",
-        google_map_url: "https://maps.google.com/?q=Goa,India",
-        // Additional fields for PropertyDescription component
-        property_brief:
-          "Rio Estado Villa offers an exceptional living experience in the heart of Goa. This beautifully designed villa combines modern architecture with traditional Goan charm, featuring spacious interiors, premium amenities, and stunning views of the surrounding landscape.",
-        property_brief_cover_img:
-          "/homepage_images/rio-estado-master-bedroom_web.webp",
-        // Additional fields for PropertiesSection2 component
-        property_tagline_1: "Modern Living in Traditional Goa",
-        property_tagline_1_img: "/homepage_images/home_casa_rumah.webp",
-        property_url: "/properties/rio-estado-villa/",
-        meta_title: "Rio Estado Villa | Luxury Villa in Goa",
+          "/assets/properties/galleries/the-village-vertical.jpg",
+        configuration: "4 BHK Villas",
+        land_area: "6000 sq.m",
+        features: "Private courtyards",
+        location: "Bastora, Goa",
+        google_map_url: "Bastora, Goa",
+        possession: "Ongoing",
+        meta_title: "The Village | 4 BHK Villas in Goa for Sale | RIO",
         meta_description:
-          "Experience luxury living in Rio Estado Villa, Goa. Modern amenities, stunning views, and premium location.",
-        canonical_url:
-          "https://rioluxuryhomes.com/properties/rio-estado-villa/",
+          "Discover The Village by RIO Luxury Homes, 4BHK luxury villas for sale in Bastora, Goa. The address becomes the landmark.",
+        development_status: "ongoing",
+        is_sold_out: "n",
+        property_status: "a",
+        sort_order: "0",
+        canonical_url: "https://rioluxuryhomes.in/properties/the-village/",
+        redirect_301: "n",
       },
-      "casa-rumah": {
-        id: 3,
-        property_name: "Casa Rumah",
-        location: "Goa, India",
-        price: "₹3.2 Cr",
-        main_image: "/homepage_images/home_casa_rumah.webp",
-        description:
-          "Premium villa with pool and garden, offering the perfect blend of luxury and comfort.",
-        gallery_images: [
-          "/homepage_images/home_casa_rumah.webp",
-          "/homepage_images/rio-estado-master-bedroom_web.webp",
-          "/homepage_images/black_forest_image.webp",
-          "/homepage_images/card_image_3.webp",
-          "/homepage_images/card_image_4.webp",
-        ],
-        bedrooms: 4,
-        bathrooms: 3,
-        area: "3200 sq ft",
-        features: [
-          "Private Pool",
-          "Premium Kitchen",
-          "Master Suite",
-          "Garden",
-          "Parking",
-          "Security",
-        ],
-        amenities: [
-          "Swimming Pool",
-          "Gym",
-          "Clubhouse",
-          "Security",
-          "Parking",
-          "Garden",
-        ],
-        // Additional fields for PropertyDetails component
-        configuration: "4 BHK Villa",
-        land_area: "3200 sq ft",
-        features_text:
-          "Private Pool, Premium Kitchen, Master Suite, Garden, Parking, Security",
-        possession: "Ready to Move In",
-        specs_cover_image: "/homepage_images/home_casa_rumah.webp",
-        google_map_url: "https://maps.google.com/?q=Goa,India",
-        // Additional fields for PropertyDescription component
-        property_brief:
-          "Casa Rumah embodies the essence of luxury living in Goa. This exquisite villa features contemporary design elements, premium finishes, and thoughtfully planned spaces that maximize comfort and functionality. The property offers a perfect retreat for families seeking both privacy and community living.",
-        property_brief_cover_img: "/homepage_images/home_casa_rumah.webp",
-        // Additional fields for PropertiesSection2 component
-        property_tagline_1: "Premium Living Redefined",
-        property_tagline_1_img: "/homepage_images/card_image_3.webp",
-        property_url: "/properties/casa-rumah/",
-        meta_title: "Casa Rumah | Premium Villa in Goa | RIO Luxury Homes",
+      "stone-wall": {
+        property_url: "/properties/stone-wall/",
+        property_name: "Stone Wall",
+        main_image: "/assets/properties/stone-wall.jpg",
+        property_tagline_1: "",
+        property_tagline_1_img: "",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
+        property_brief: "",
+        property_brief_cover_img: "",
+        specs_cover_image: "/assets/properties/stone-wall.jpg",
+        configuration: "4 BHK Villas",
+        land_area: "0.5 acre",
+        features: "Close to Porvorim, Panjim, Aldona, Siolim, and Assagao",
+        location: "Salvador, Goa",
+        google_map_url: "Salvador do Mundo",
+        possession: "Upcoming",
+        meta_title: "Stone Wall | Buy Luxury Homes in North Goa | RIO",
         meta_description:
-          "Discover Casa Rumah - premium villa with pool and garden in Goa. Luxury living with modern amenities.",
-        canonical_url: "https://rioluxuryhomes.com/properties/casa-rumah/",
+          "Explore the exclusive Stone Wall by RIO Luxury Homes, luxury 3BHK and 4 BHK villas for sale in Salvador do Mundo, Goa. Welcome to your natural getaway.",
+        development_status: "upcoming",
+        is_sold_out: "n",
+        property_status: "a",
+        sort_order: "0",
+        canonical_url: "https://rioluxuryhomes.in/properties/stone-wall/",
+        redirect_301: "n",
+      },
+      "casa-brilhante": {
+        property_url: "/properties/casa-brilhante/",
+        property_name: "Casa Brilhante",
+        main_image: "/assets/properties/casa-brilhante.jpg",
+        property_tagline_1: "A vintage Goan Whim",
+        property_tagline_1_img:
+          "/assets/properties/galleries/casa-brilhante-pool-deck.jpg",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
+        property_brief:
+          'The word "brilhante" signifies brightness and unmatched luxury. Distinct from the transparency of Modernism and the starkness of tradition, it embraces a mystical Goan architectural philosophy, inviting visitors to explore its sun-dappled corridors, expansive arches and nostalgic courtyards, ultimately revealing its secrets through the interplay of light and shadow.',
+        property_brief_cover_img:
+          "/assets/properties/galleries/casa-brilhante-facade.jpg",
+        specs_cover_image:
+          "/assets/properties/galleries/casa-brilhante-doors.jpg",
+        configuration: "4 BHK Villas",
+        land_area: "610 - 615 sq m each",
+        features: "Portuguese & Mediterranean",
+        location: "Verla, Goa",
+        google_map_url: "https://maps.app.goo.gl/BopebCctF84soQty6",
+        possession: "Ready",
+        meta_title:
+          "Casa Brilhante | Luxury Villas in Goa for Sale & Rent with Private Pool | RIO",
+        meta_description:
+          "Welcome to your vintage Goan whim, the Indo-Portugese inspired Casa Brilhante by RIO Luxury Homes. Luxury villas with private pool for sale in Verla, Goa.",
+        development_status: "completed",
+        is_sold_out: "y",
+        property_status: "a",
+        sort_order: "0",
+        canonical_url: "https://rioluxuryhomes.in/properties/casa-brilhante/",
+        redirect_301: "n",
+      },
+      "rumah-hutan-1": {
+        property_url: "/properties/rumah-hutan-1/",
+        property_name: "Rumah Hutan",
+        main_image: "/assets/properties/rumah-hutan.webp",
+        property_tagline_1: "No room for the ordinary",
+        property_tagline_1_img:
+          "/assets/properties/galleries/rumah-hutan-facade.webp",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
+        property_brief:
+          "Skylights bring daylight into our signature new age luxury homes across Goa. Private pools that rejuvenate, understated modern interiors, and the lush outdoors. This is what you can expect in our eight stunning Rumah Hutan villas.",
+        property_brief_cover_img:
+          "/assets/properties/galleries/rumah-hutan-aerial.jpg",
+        specs_cover_image:
+          "/assets/properties/galleries/rumah-hutan-living-room.jpg",
+        configuration: "3 & 4 BHK Villas",
+        land_area: "1 Acre",
+        features: "Private pool & lawn",
+        location: "Siolim, Goa",
+        google_map_url: "https://maps.app.goo.gl/LQ86XyLyREaS7gy58",
+        possession: "Ready",
+        meta_title:
+          "Rumah Hutan | Luxury Villas in Goa for Sale & Rent with Private Pool | RIO",
+        meta_description:
+          "Rumah Hutan by RIO Luxury Homes, your Balinese dream home, now in Goa. Luxury villas with private pool for sale in Siolim, Goa. Step into the sublime.",
+        development_status: "completed",
+        is_sold_out: "y",
+        property_status: "a",
+        sort_order: "0",
+        canonical_url: "https://rioluxuryhomes.in/properties/rumah-hutan-1/",
+        redirect_301: "n",
+      },
+      "rio-estado": {
+        property_url: "/properties/rio-estado/",
+        property_name: "RIO ESTADO",
+        main_image: "/assets/properties/rio-estado.webp",
+        property_tagline_1: "Suspended in Solitude",
+        property_tagline_1_img:
+          "/assets/properties/galleries/rio-estado-dining.jpg",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
+        property_brief:
+          "Inspired by Indo-Portuguese architecture, tucked away on the meandering slopes of a quaint village in Ucassaim, these homes have been meticulously designed keeping your ultimate comforts in mind. These 11 independent luxury villas are dotted across the lush landscapes of Goa, with private pools and landscaped water bodies, encircled by large community spaces.",
+        property_brief_cover_img:
+          "/assets/properties/galleries/rio-estado-villa-3.jpg",
+        specs_cover_image:
+          "/assets/properties/galleries/rio-estado-villa-11.jpg",
+        configuration: "4 BHK Villas",
+        land_area: "3 Acre",
+        features: "Private pool & car park",
+        location: "Ucassaim, Goa",
+        google_map_url: "https://maps.app.goo.gl/VxMeo4kht3wsw2uh7",
+        possession: "Under construction",
+        meta_title: "RIO Estado | Buy Luxury Homes in North Goa | RIO",
+        meta_description:
+          "Indulge in RIO Estado, luxury 4 BHK villas with private pool, for sale in Goa. Indo-Portugese architecture, tucked away in Ucassaim. Soliltude for the select.",
+        development_status: "ongoing",
+        is_sold_out: "y",
+        property_status: "a",
+        sort_order: "1",
+        canonical_url: "https://rioluxuryhomes.in/properties/rio-estado/",
+        redirect_301: "n",
+      },
+      "rio-royale": {
+        property_url: "/properties/rio-royale/",
+        property_name: "RIO Royale",
+        main_image: "/assets/properties/rio-royale.jpg",
+        property_tagline_1: "A location of unprecedented natural beauty",
+        property_tagline_1_img: "/assets/properties/galleries/rio-royale-2.jpg",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
+        property_brief:
+          "Set back from the shore, with direct access to the beach and turquoise sea, RIO unveils its exclusive gated community, RIO Royale. Influenced by modern Mediterranean architecture, styled with chequered retro windows, enhanced by fresh terrazzo floorings, double-height ceilings and intimate bedroom settings, RIO Royale presents a panorama of scenic views. Natural light floods into spacious rooms, set with high ceilings and custom furnishings. Sophistication has never looked so good.",
+        property_brief_cover_img:
+          "/assets/properties/galleries/rio-royale-8.jpg",
+        specs_cover_image: "/assets/properties/galleries/rio-royale-5.jpg",
+        configuration: "1, 2 & 3 BHK Apartments",
+        land_area: "1.1 Acre",
+        features: "Fully furnished",
+        location: "Candolim, Goa",
+        google_map_url: "https://maps.app.goo.gl/c4CiubEWbZdqmJfy9",
+        possession: "Under construction",
+        meta_title:
+          "RIO Royale | Luxury Apartments for Sale in Goa Near Beach | RIO",
+        meta_description:
+          "Own a slice of paradise at RIO Royale by RIO Luxury Homes, luxury apartments for sale in Candolim, Goa. Exclusive flats with direct access to the beach.",
+        development_status: "ongoing",
+        is_sold_out: "n",
+        property_status: "a",
+        sort_order: "2",
+        canonical_url: "https://rioluxuryhomes.in/properties/rio-royale/",
+        redirect_301: "n",
       },
       "black-forest": {
-        id: 4,
-        property_name: "Black Forest",
-        location: "Goa, India",
-        price: "₹4.1 Cr",
-        main_image: "/homepage_images/black_forest_image.webp",
-        description:
-          "Exclusive villa in forest setting, offering privacy and tranquility in nature's embrace.",
-        gallery_images: [
-          "/homepage_images/black_forest_image.webp",
-          "/homepage_images/rio-estado-master-bedroom_web.webp",
-          "/homepage_images/home_casa_rumah.webp",
-          "/homepage_images/card_image_1.webp",
-          "/homepage_images/card_image_2.webp",
-        ],
-        bedrooms: 5,
-        bathrooms: 4,
-        area: "4500 sq ft",
-        features: [
-          "Private Pool",
-          "Forest View",
-          "Master Suite",
-          "Garden",
-          "Parking",
-          "Security",
-        ],
-        amenities: [
-          "Swimming Pool",
-          "Gym",
-          "Clubhouse",
-          "Security",
-          "Parking",
-          "Garden",
-          "Nature Trail",
-        ],
-        // Additional fields for PropertyDetails component
-        configuration: "5 BHK Villa",
-        land_area: "4500 sq ft",
-        features_text:
-          "Private Pool, Forest View, Master Suite, Garden, Parking, Security",
-        possession: "Ready to Move In",
-        specs_cover_image: "/homepage_images/black_forest_image.webp",
-        google_map_url: "https://maps.google.com/?q=Goa,India",
-        // Additional fields for PropertyDescription component
-        property_brief:
-          "Black Forest offers a unique living experience surrounded by nature's beauty. This exclusive villa provides the perfect escape from city life while maintaining all modern conveniences. The property features expansive spaces, premium amenities, and breathtaking views of the surrounding forest landscape.",
-        property_brief_cover_img: "/homepage_images/black_forest_image.webp",
-        // Additional fields for PropertiesSection2 component
-        property_tagline_1: "Nature's Luxury Retreat",
-        property_tagline_1_img: "/homepage_images/card_image_1.webp",
         property_url: "/properties/black-forest/",
-        meta_title: "Black Forest | Exclusive Villa in Goa | RIO Luxury Homes",
-        meta_description:
-          "Experience Black Forest - exclusive villa in forest setting. Privacy and tranquility in Goa.",
-        canonical_url: "https://rioluxuryhomes.com/properties/black-forest/",
-      },
-      "phuket-resort": {
-        id: 5,
-        property_name: "Rio Phuket Resort",
-        location: "Phuket, Thailand",
-        price: "₹5.8 Cr",
-        main_image: "/homepage_images/phuket_image.webp",
-        description:
-          "Beachfront luxury resort offering unparalleled ocean views and world-class amenities in the heart of Phuket.",
-        gallery_images: [
-          "/homepage_images/phuket_image.webp",
-          "/homepage_images/rio-estado-master-bedroom_web.webp",
-          "/homepage_images/home_casa_rumah.webp",
-          "/homepage_images/black_forest_image.webp",
-          "/homepage_images/card_image_1.webp",
-        ],
-        bedrooms: 6,
-        bathrooms: 5,
-        area: "6000 sq ft",
-        features: [
-          "Private Beach Access",
-          "Ocean View",
-          "Master Suite",
-          "Garden",
-          "Parking",
-          "Security",
-        ],
-        amenities: [
-          "Swimming Pool",
-          "Gym",
-          "Clubhouse",
-          "Security",
-          "Parking",
-          "Garden",
-          "Beach Access",
-        ],
-        // Additional fields for PropertyDetails component
-        configuration: "6 BHK Villa",
-        land_area: "6000 sq ft",
-        features_text:
-          "Private Beach Access, Ocean View, Master Suite, Garden, Parking, Security",
-        possession: "Ready to Move In",
-        specs_cover_image: "/homepage_images/phuket_image.webp",
-        google_map_url: "https://maps.google.com/?q=Phuket,Thailand",
-        // Additional fields for PropertyDescription component
+        property_name: "Black Forest",
+        main_image: "/assets/properties/black-forest.jpg",
+        property_tagline_1: "Have yourself a hill",
+        property_tagline_1_img:
+          "/assets/properties/galleries/black-forest-rooftop.webp",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
         property_brief:
-          "Rio Phuket Resort represents the ultimate in beachfront luxury living. This magnificent villa offers direct beach access, panoramic ocean views, and world-class amenities. Experience the perfect blend of tropical paradise and modern luxury in one of Thailand's most prestigious locations.",
-        property_brief_cover_img: "/homepage_images/phuket_image.webp",
-        // Additional fields for PropertiesSection2 component
-        property_tagline_1: "Beachfront Paradise Awaits",
-        property_tagline_1_img: "/homepage_images/phuket_image.webp",
-        property_url: "/properties/phuket-resort/",
-        meta_title:
-          "Rio Phuket Resort | Beachfront Luxury Resort | RIO Luxury Homes",
+          "This 4 bedroom property offers awe-inspiring, panoramic views of the forest around Siolim, without compromising your privacy. Designed to leverage the light and wonder of Goa, each bedroom is interwoven into the tropical ecosystem. A seamless open-plan layout, floor-to-ceiling windows and verdant roof gardens accompanied by an expansive pool and sundeck form a central space to enjoy the best of indoor-outdoor living.",
+        property_brief_cover_img:
+          "/assets/properties/galleries/black-forest-exterior-2.webp",
+        specs_cover_image:
+          "/assets/properties/galleries/black-forest-common-area.jpg",
+        configuration: "4 BHK Private Villa",
+        land_area: "1900 sq m",
+        features: "",
+        location: "Siolim, Goa",
+        google_map_url: "",
+        possession: "Under construction",
+        meta_title: "Black Forest | Buy Luxury Villas in North Goa | RIO",
         meta_description:
-          "Experience Rio Phuket Resort - beachfront luxury resort with ocean views and world-class amenities in Phuket.",
-        canonical_url: "https://rioluxuryhomes.com/properties/phuket-resort/",
+          "Experience Black Forest at RIO Luxury Homes, a luxury villa for sale in Siolim, Goa. 4 BHK property with lush, panoramic views. Have yourself a hill.",
+        development_status: "ongoing",
+        is_sold_out: "y",
+        property_status: "a",
+        sort_order: "3",
+        canonical_url: "https://rioluxuryhomes.in/properties/black-forest/",
+        redirect_301: "n",
+      },
+      "rio-estilo": {
+        property_url: "/properties/rio-estilo/",
+        property_name: "RIO Estilo",
+        main_image: "/assets/properties/rio-estilo.jpg",
+        property_tagline_1: "Stand wide-eyed in awe",
+        property_tagline_1_img:
+          "/assets/properties/galleries/rio-estilo-pool-deck-2.jpg",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
+        property_brief:
+          "Designed in the spirit of Bali's idyllic climate, with a seamless flow between indoor and outdoor living spaces, these villas feature modern, chic pavilions that open into magnificent, expansive swimming pools.",
+        property_brief_cover_img:
+          "/assets/properties/galleries/rio-estilo-tile-2.jpg",
+        specs_cover_image: "/assets/properties/galleries/rio-estilo-tile-1.jpg",
+        configuration: "3 BHK Villas",
+        land_area: "1800 sq m",
+        features: "Private pool & lawn",
+        location: "Vagator, Goa",
+        google_map_url: "https://maps.app.goo.gl/jaWCXQiCLKpBcXow5",
+        possession: "Under construction",
+        meta_title:
+          "RIO Estilo | Luxury Villas in Goa for Sale with Private Pool | RIO",
+        meta_description:
+          "Immerse yourself in RIO Estilo, Balinese-inspired 3BHK villas with private pool, for sale in Vagator, Goa.",
+        development_status: "completed",
+        is_sold_out: "y",
+        property_status: "a",
+        sort_order: "4",
+        canonical_url: "https://rioluxuryhomes.in/properties/rio-estilo/",
+        redirect_301: "n",
+      },
+      "a-cappella": {
+        property_url: "/properties/a-cappella/",
+        property_name: "A Cappella",
+        main_image: "/assets/properties/a-cappella.jpg",
+        property_tagline_1: "Blissfully marooned in paradise",
+        property_tagline_1_img:
+          "/assets/properties/galleries/a-cappella-living-room-2.jpg",
+        property_tagline_2: "Tuned to the seductively slow pace of luxury",
+        property_tagline_2_img:
+          "/assets/properties/galleries/a-cappella-living-room-1.jpg",
+        property_brief:
+          "Set across 4 lush acres, this property offers stunning views that will leave you speechless. Situated within an oasis of palm trees and postcard blue skies, A Cappella lies just minutes from the beaches of Morjim, Ashwem, and Mandrem, and a mere 30 minute drive from the MOPA Airport. These distinctive 4 bedroom villas have extended terraces and patios accompanied by private patches of green and private pools. RIO's A Cappella provides you with an immersive Goan experience without compromising on your supreme comfort and privacy.",
+        property_brief_cover_img:
+          "/assets/properties/galleries/a-cappella-4.jpg",
+        specs_cover_image: "/assets/properties/galleries/a-cappella-5.jpg",
+        configuration: "4 BHK Villas",
+        land_area: "4 acres",
+        features: "Recreational block & areas",
+        location: "Siolim, Goa",
+        google_map_url: "Oxel, Goa",
+        possession: "Under construction",
+        meta_title:
+          "A Cappella | Luxurious Villas with Private Pools Near Goa's Beaches",
+        meta_description:
+          "Indulge in A Capella by RIO Luxury Homes, luxury 4BHK villas for sale in Oxel, Goa. Exclusive properties with easy access to the beach.",
+        development_status: "ongoing",
+        is_sold_out: "n",
+        property_status: "a",
+        sort_order: "5",
+        canonical_url: "https://rioluxuryhomes.in/properties/a-cappella/",
+        redirect_301: "n",
+      },
+      "6-assagao": {
+        property_url: "/properties/6-assagao/",
+        property_name: "6 Assagao",
+        main_image: "/assets/properties/6-assagao.jpg",
+        property_tagline_1: "A hidden forest gem",
+        property_tagline_1_img: "/assets/properties/galleries/6-assagao-2.jpg",
+        property_tagline_2: "The address becomes the landmark",
+        property_tagline_2_img: "/assets/properties/galleries/6-assagao-3.jpg",
+        property_brief:
+          "A rare architectural marvel, 6 Assagao is your dream home come alive. The interiors of its thoughtfully designed living spaces define the true essence of what contemporary living looks like. Avant-garde interiors and trendy furniture design provide a nuanced, high-end fusion of structure and style. Full height windows allow you to breathe in excellence, right in the lap of nature.",
+        property_brief_cover_img:
+          "/assets/properties/galleries/6-assagao-7.jpg",
+        specs_cover_image: "/assets/properties/galleries/6-assagao-4.jpg",
+        configuration: "4 BHK Villas",
+        land_area: "3000 sq.m",
+        features: "Private pool & deck",
+        location: "Assagao, Goa",
+        google_map_url: "Assagao, Goa",
+        possession: "Under construction",
+        meta_title: "6 Assagao | 4 BHK Villa in Goa for Sale | RIO",
+        meta_description:
+          "The best is yet to come, with 6 Assagao by RIO Luxury Homes. Luxury 4BHK villas with private pool & lawn for sale in Goa. Crafted for the 0.0001%.",
+        development_status: "ongoing",
+        is_sold_out: "n",
+        property_status: "a",
+        sort_order: "6",
+        canonical_url: "https://rioluxuryhomes.in/properties/6-assagao/",
+        redirect_301: "n",
+      },
+      amanta: {
+        property_url: "/properties/amanta/",
+        property_name: "Amanta",
+        main_image: "/assets/properties/amanta.jpg",
+        property_tagline_1: "",
+        property_tagline_1_img: "",
+        property_tagline_2: "",
+        property_tagline_2_img: "",
+        property_brief: "",
+        property_brief_cover_img: "",
+        specs_cover_image: "/assets/properties/galleries/amanta-2.jpg",
+        configuration: "2 & 3 BHK Villas",
+        land_area: "0.5 acre",
+        features: "Private pool & lawn",
+        location: "Saligao, Goa",
+        google_map_url: "",
+        possession: "Under construction",
+        meta_title: "Amanta | Luxury Homes for Sale in Goa | RIO",
+        meta_description:
+          "Step into luxury with Amanta by RIO Luxury Homes, premium villas with private pool for sale in Saligao, Goa. For those who never settle.",
+        development_status: "ongoing",
+        is_sold_out: "n",
+        property_status: "a",
+        sort_order: "7",
+        canonical_url: "https://rioluxuryhomes.in/properties/amanta/",
+        redirect_301: "n",
+      },
+      "rio-foresta": {
+        property_url: "/properties/rio-foresta/",
+        property_name: "RIO Foresta",
+        main_image: "/assets/properties/rio-foresta.webp",
+        property_tagline_1: "TROPICAL MODERN HOMES",
+        property_tagline_1_img: "",
+        property_tagline_2: "Where Modern Living Meets Nature",
+        property_tagline_2_img: "/assets/properties/rio-foresta.webp",
+        property_brief:
+          "Indulge in the ultimate ecosystem of palatial aesthetics and a sanctuary of tranquility. With floor-to-ceiling glass walls, Foresta is a truly curated, bespoke home that combines global architectural inspiration with the best of contemporary aesthetics in the lap of nature.",
+        property_brief_cover_img:
+          "/assets/properties/galleries/rio-foresta-brief-cover.webp",
+        specs_cover_image:
+          "/assets/properties/galleries/rio-foresta-specs.webp",
+        configuration: "4 BHK Villas",
+        land_area: "",
+        features:
+          "Flat roofs, indoor-outdoor concept, natural light; Near Assagao, Siolim, and Moira",
+        location: "Nachinola, Goa",
+        google_map_url: "",
+        possession: "Under construction",
+        meta_title: "RIO Foresta | Premium Villas for Sale in Goa | RIO",
+        meta_description:
+          "Be extraordinary at RIO Foresta, luxury homes for sale in Nachinola, Goa. Bathed in natural light, near Assagao, Siolim, and Moira.",
+        development_status: "ongoing",
+        is_sold_out: "n",
+        property_status: "a",
+        sort_order: "8",
+        canonical_url: "https://rioluxuryhomes.in/properties/rio-foresta/",
+        redirect_301: "n",
       },
     };
 
-    // Get property data or default to Rio Estado Villa
+    // Gallery images for each property
+    const galleries = {
+      "the-hills-estate": [
+        {
+          image_title: "External View",
+          image_name:
+            "/assets/properties/galleries/the-hills-estate-external-1.jpg",
+        },
+        {
+          image_title: "Bedroom",
+          image_name:
+            "/assets/properties/galleries/the-hills-estate-bedroom.jpg",
+        },
+        {
+          image_title: "External View",
+          image_name:
+            "/assets/properties/galleries/the-hills-estate-external.jpg",
+        },
+        {
+          image_title: "Kitchen",
+          image_name:
+            "/assets/properties/galleries/the-hills-estate-kitchen.jpg",
+        },
+        {
+          image_title: "Overview",
+          image_name: "/assets/properties/galleries/the-hills-estate-view.jpg",
+        },
+        {
+          image_title: "Close Up",
+          image_name:
+            "/assets/properties/galleries/the-hills-estate-close-up-2.jpg",
+        },
+        {
+          image_title: "Close Up",
+          image_name:
+            "/assets/properties/galleries/the-hills-estate-close-up.jpg",
+        },
+        {
+          image_title: "Living Room",
+          image_name:
+            "/assets/properties/galleries/the-hills-estate-living.jpg",
+        },
+      ],
+      "the-village": [
+        {
+          image_title: "Outdoor",
+          image_name: "/assets/properties/galleries/the-village-outdoor-1.jpg",
+        },
+        {
+          image_title: "Outdoor",
+          image_name: "/assets/properties/galleries/the-village-outdoor-2.jpg",
+        },
+        {
+          image_title: "Outdoor",
+          image_name: "/assets/properties/galleries/the-village-outdoor-3.jpg",
+        },
+        {
+          image_title: "Outdoor",
+          image_name: "/assets/properties/galleries/the-village-outdoor-4.jpg",
+        },
+        {
+          image_title: "Outdoor",
+          image_name: "/assets/properties/galleries/the-village-outdoor-5.jpg",
+        },
+        {
+          image_title: "Outdoor",
+          image_name: "/assets/properties/galleries/the-village-outdoor-6.jpg",
+        },
+        {
+          image_title: "Outdoor",
+          image_name: "/assets/properties/galleries/the-village-outdoor-7.jpg",
+        },
+        {
+          image_title: "Living Room",
+          image_name: "/assets/properties/galleries/the-village-living.jpg",
+        },
+        {
+          image_title: "Bathroom",
+          image_name: "/assets/properties/galleries/the-village-bathroom.jpg",
+        },
+        {
+          image_title: "Bedroom",
+          image_name: "/assets/properties/galleries/the-village-bedroom.jpg",
+        },
+      ],
+      "casa-brilhante": [
+        {
+          image_title: "POOL SIDE",
+          image_name:
+            "/assets/properties/galleries/casa-brilhante-poolside.jpg",
+        },
+        {
+          image_title: "FOYER",
+          image_name: "/assets/properties/galleries/casa-brilhante-foyer.jpg",
+        },
+        {
+          image_title: "BALCONY",
+          image_name: "/assets/properties/galleries/casa-brilhante-balcony.jpg",
+        },
+        {
+          image_title: "BEDROOM",
+          image_name: "/assets/properties/galleries/casa-brilhante-bedroom.jpg",
+        },
+      ],
+      "rumah-hutan-1": [
+        {
+          image_title: "POOL SIDE",
+          image_name: "/assets/properties/galleries/rumah-hutan-pool-deck.jpg",
+        },
+        {
+          image_title: "BEDROOM",
+          image_name:
+            "/assets/properties/galleries/rumah-hutan-master-bedroom.webp",
+        },
+        {
+          image_title: "KITCHEN",
+          image_name: "/assets/properties/galleries/rumah-hutan-kitchen.jpg",
+        },
+      ],
+      "rio-royale": [
+        {
+          image_title: "LIVING ROOM",
+          image_name: "/assets/properties/galleries/rio-royale-living-room.jpg",
+        },
+        {
+          image_title: "BATHROOM",
+          image_name: "/assets/properties/galleries/rio-royale-bathroom.jpg",
+        },
+        {
+          image_title: "KITCHEN",
+          image_name: "/assets/properties/galleries/rio-royale-kitchen.jpg",
+        },
+      ],
+      "rio-estilo": [
+        {
+          image_title: "POOL",
+          image_name: "/assets/properties/rio-estilo.jpg",
+        },
+        {
+          image_title: "LIVING ROOM",
+          image_name: "/assets/properties/galleries/rio-estilo-living-room.jpg",
+        },
+        {
+          image_title: "DINING ROOM",
+          image_name: "/assets/properties/galleries/rio-estilo-dining-room.jpg",
+        },
+        {
+          image_title: "BATHROOM",
+          image_name: "/assets/properties/galleries/rio-estilo-bathroom.jpg",
+        },
+      ],
+    };
+
+    // Villa details for properties that have them
+    const villas = {
+      "casa-brilhante": [
+        {
+          villa_id: "OGxkcW52aFNEbUdUdFEyZEo1dm1TUT09",
+          villa_name: "Casa Brilhante",
+          daily_rent: "40,000",
+          gross_monthly: {
+            share_40: "4,80,000",
+            share_60: "7,20,000",
+            share_80: "9,60,000",
+          },
+          gross_yearly: {
+            share_40: "57,60,000",
+            share_60: "86,40,000",
+            share_80: "1,15,20,000",
+          },
+        },
+      ],
+      "rumah-hutan-1": [
+        {
+          villa_id: "RXZDRDN3aFRHM040Q0xmakJEMno5dz09",
+          villa_name: "Rumah Hutan Villa 1",
+          daily_rent: "60,000",
+          gross_monthly: {
+            share_40: "7,20,000",
+            share_60: "10,80,000",
+            share_80: "14,40,000",
+          },
+          gross_yearly: {
+            share_40: "86,40,000",
+            share_60: "1,29,60,000",
+            share_80: "1,72,80,000",
+          },
+        },
+        {
+          villa_id: "aWZueFdNTjJ5TGY2R2NmOFlVNGlYQT09",
+          villa_name: "Rumah Hutan Villa 2",
+          daily_rent: "30,000",
+          gross_monthly: {
+            share_40: "3,60,000",
+            share_60: "5,40,000",
+            share_80: "7,20,000",
+          },
+          gross_yearly: {
+            share_40: "43,20,000",
+            share_60: "64,80,000",
+            share_80: "86,40,000",
+          },
+        },
+        {
+          villa_id: "dkg2K3BpUWZYYjE0Q2VneEJZRVVTdz09",
+          villa_name: "Rumah Hutan Villa 3",
+          daily_rent: "30,000",
+          gross_monthly: {
+            share_40: "3,60,000",
+            share_60: "5,40,000",
+            share_80: "7,20,000",
+          },
+          gross_yearly: {
+            share_40: "43,20,000",
+            share_60: "64,80,000",
+            share_80: "86,40,000",
+          },
+        },
+        {
+          villa_id: "REdZU0Q1RHZ5dUhvcTMvQUdoUlROUT09",
+          villa_name: "Rumah Hutan Villa 4",
+          daily_rent: "40,000",
+          gross_monthly: {
+            share_40: "4,80,000",
+            share_60: "7,20,000",
+            share_80: "9,60,000",
+          },
+          gross_yearly: {
+            share_40: "57,60,000",
+            share_60: "86,40,000",
+            share_80: "1,15,20,000",
+          },
+        },
+        {
+          villa_id: "V2hkclU5R1JUbDd6ay9Ta0dRVzdJQT09",
+          villa_name: "Rumah Hutan Villa 5",
+          daily_rent: "35,000",
+          gross_monthly: {
+            share_40: "4,20,000",
+            share_60: "6,30,000",
+            share_80: "8,40,000",
+          },
+          gross_yearly: {
+            share_40: "50,40,000",
+            share_60: "75,60,000",
+            share_80: "1,00,80,000",
+          },
+        },
+        {
+          villa_id: "aG4xOGZYT2dkZnFZbjN0N2JVK1RlUT09",
+          villa_name: "Rumah Hutan Villa 6",
+          daily_rent: "35,000",
+          gross_monthly: {
+            share_40: "4,20,000",
+            share_60: "6,30,000",
+            share_80: "8,40,000",
+          },
+          gross_yearly: {
+            share_40: "50,40,000",
+            share_60: "75,60,000",
+            share_80: "1,00,80,000",
+          },
+        },
+        {
+          villa_id: "NUlyTE5scUl5ZWVIb1hhbXhsenhBQT09",
+          villa_name: "Rumah Hutan Villa 7",
+          daily_rent: "35,000",
+          gross_monthly: {
+            share_40: "4,20,000",
+            share_60: "6,30,000",
+            share_80: "8,40,000",
+          },
+          gross_yearly: {
+            share_40: "50,40,000",
+            share_60: "75,60,000",
+            share_80: "1,00,80,000",
+          },
+        },
+        {
+          villa_id: "TUZ0Qkd3TmoyeEd2eVM4QktqY1dwZz09",
+          villa_name: "Rumah Hutan Villa 8",
+          daily_rent: "35,000",
+          gross_monthly: {
+            share_40: "4,20,000",
+            share_60: "6,30,000",
+            share_80: "8,40,000",
+          },
+          gross_yearly: {
+            share_40: "50,40,000",
+            share_60: "75,60,000",
+            share_80: "1,00,80,000",
+          },
+        },
+      ],
+      "rio-estado": [
+        {
+          villa_id: "ODVDeDQvOHhGdTZjckdRZlVlMlNRdz09",
+          villa_name: "RIO ESTADO",
+          daily_rent: "30,000",
+          gross_monthly: {
+            share_40: "3,60,000",
+            share_60: "5,40,000",
+            share_80: "7,20,000",
+          },
+          gross_yearly: {
+            share_40: "43,20,000",
+            share_60: "64,80,000",
+            share_80: "86,40,000",
+          },
+        },
+      ],
+      "rio-royale": [
+        {
+          villa_id: "cTQzL2NyQWcwNDFWN0lNQ0N0ZVhhdz09",
+          villa_name: "RIO ROYAL 1 BHK",
+          daily_rent: "6,000",
+          gross_monthly: {
+            share_40: "72,000",
+            share_60: "1,08,000",
+            share_80: "1,44,000",
+          },
+          gross_yearly: {
+            share_40: "8,64,000",
+            share_60: "12,96,000",
+            share_80: "17,28,000",
+          },
+        },
+        {
+          villa_id: "RFVSaTRmUWZNQXBmQWN3c0tHVUhvZz09",
+          villa_name: "RIO ROYAL 2 BHK",
+          daily_rent: "10,000",
+          gross_monthly: {
+            share_40: "1,20,000",
+            share_60: "1,80,000",
+            share_80: "2,40,000",
+          },
+          gross_yearly: {
+            share_40: "14,40,000",
+            share_60: "21,60,000",
+            share_80: "28,80,000",
+          },
+        },
+        {
+          villa_id: "SitGREVpMFRoLzdVSjB0NWhiSnhaQT09",
+          villa_name: "RIO ROYAL DUPLEXES",
+          daily_rent: "12,000",
+          gross_monthly: {
+            share_40: "1,44,000",
+            share_60: "2,16,000",
+            share_80: "2,88,000",
+          },
+          gross_yearly: {
+            share_40: "17,28,000",
+            share_60: "25,92,000",
+            share_80: "34,56,000",
+          },
+        },
+        {
+          villa_id: "c0hhVHhVS0NUZnRmQnZkMlB3eGtSQT09",
+          villa_name: "RIO ROYAL 3BHK Penthouses",
+          daily_rent: "15,000",
+          gross_monthly: {
+            share_40: "1,80,000",
+            share_60: "2,70,000",
+            share_80: "3,60,000",
+          },
+          gross_yearly: {
+            share_40: "21,60,000",
+            share_60: "32,40,000",
+            share_80: "43,20,000",
+          },
+        },
+      ],
+      "black-forest": [
+        {
+          villa_id: "RGFjaDBNZlZjdHA3MlJwL0grMXo1Zz09",
+          villa_name: "Black Forest",
+          daily_rent: "60,000",
+          gross_monthly: {
+            share_40: "7,20,000",
+            share_60: "10,80,000",
+            share_80: "14,40,000",
+          },
+          gross_yearly: {
+            share_40: "86,40,000",
+            share_60: "1,29,60,000",
+            share_80: "1,72,80,000",
+          },
+        },
+      ],
+      "rio-estilo": [
+        {
+          villa_id: "aFR1dko2UmpJV25mVTdSSGdya1YyZz09",
+          villa_name: "RIO Estio 3 BHk",
+          daily_rent: "30,000",
+          gross_monthly: {
+            share_40: "3,60,000",
+            share_60: "5,40,000",
+            share_80: "7,20,000",
+          },
+          gross_yearly: {
+            share_40: "43,20,000",
+            share_60: "64,80,000",
+            share_80: "86,40,000",
+          },
+        },
+      ],
+    };
+
+    // Get property data or default to The Hills Estate
     const propertyData =
-      properties[propertyName] || properties["rio-estado-villa"];
+      properties[propertyName] || properties["the-hills-estate"];
+    const propertyGallery = galleries[propertyName] || [];
+    const propertyVillas = villas[propertyName] || [];
 
     const dummyData = {
       status: "success",
       response_data: {
         property_details: propertyData,
-        property_gallery: propertyData.gallery_images.map((image, index) => {
-          const roomTitles = [
-            "MASTER BEDROOM",
-            "LIVING ROOM",
-            "KITCHEN",
-            "BATHROOM",
-            "GARDEN VIEW",
-          ];
-          return {
-            id: index + 1,
-            image_url: image,
-            image_name: image,
-            image_title: roomTitles[index] || `Room ${index + 1}`,
-            alt_text: `${propertyData.property_name} - ${
-              roomTitles[index] || `Image ${index + 1}`
-            }`,
-          };
-        }),
-        property_villas: [
-          {
-            id: 1,
-            villa_name: "Villa A",
-            bedrooms: propertyData.bedrooms,
-            bathrooms: propertyData.bathrooms,
-            area: propertyData.area,
-            price: propertyData.price,
-            image: propertyData.main_image,
-          },
-          {
-            id: 2,
-            villa_name: "Villa B",
-            bedrooms: propertyData.bedrooms + 1,
-            bathrooms: propertyData.bathrooms,
-            area: `${parseInt(propertyData.area) + 200} sq ft`,
-            price: `₹${
-              parseInt(propertyData.price.replace(/[₹,Cr]/g, "")) + 0.5
-            } Cr`,
-            image: propertyData.gallery_images[1] || propertyData.main_image,
-          },
-        ],
+        property_gallery: propertyGallery,
+        property_villas: propertyVillas,
       },
+      message: "",
     };
 
     return NextResponse.json(dummyData);
