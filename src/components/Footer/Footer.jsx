@@ -41,9 +41,9 @@ function Footer() {
             ref={imageRef}
             className="image-container"
           >
-            <Image 
-              src="/homepage_images/goa_homepage_footer.webp" 
-              alt="RIO Luxury Homes Goa Footer" 
+            <Image
+              src="/homepage_images/goa_homepage_footer.webp"
+              alt="RIO Luxury Homes Goa Footer"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               style={{ objectFit: 'cover' }}

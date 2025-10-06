@@ -1,14 +1,26 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import cardImage1 from "../../assets/homepage_images/card_image_1.webp";
+import cardImage1 from "../../assets/homepage_images/new_images/card-images/feature-architecture.jpg";
+import cardImage2 from "../../assets/homepage_images/new_images/card-images/feature-guarantee-warranty.jpg";
+import cardImage3 from "../../assets/homepage_images/new_images/card-images/feature-housekeeping.jpg";
+import cardImage4 from "../../assets/homepage_images/new_images/card-images/feature-rental-management.jpg";
+
+/* 
+import cardImage2 from "../../assets/homepage_images/card_image_1.webp";
 import cardImage2 from "../../assets/homepage_images/card_image_2.webp";
 import cardImage3 from "../../assets/homepage_images/card_image_3.webp";
-import cardImage4 from "../../assets/homepage_images/card_image_4.webp";
-import mobileCardImage1 from "../../assets/homepage_images/card_image_mobile_1.webp";
+import cardImage4 from "../../assets/homepage_images/card_image_4.webp"; */
+
+import mobileCardImage1 from "../../assets/homepage_images/new_images/card-images/feature-architecture.jpg";
+import mobileCardImage2 from "../../assets/homepage_images/new_images/card-images/feature-guarantee-warranty.jpg";
+import mobileCardImage3 from "../../assets/homepage_images/new_images/card-images/feature-housekeeping.jpg";
+import mobileCardImage4 from "../../assets/homepage_images/new_images/card-images/feature-rental-management.jpg";
+
+/* import mobileCardImage1 from "../../assets/homepage_images/card_image_mobile_1.webp";
 import mobileCardImage2 from "../../assets/homepage_images/card_image_mobile_2.webp";
 import mobileCardImage3 from "../../assets/homepage_images/card_image_mobile_3.webp";
-import mobileCardImage4 from "../../assets/homepage_images/card_image_mobile_4.webp";
+import mobileCardImage4 from "../../assets/homepage_images/card_image_mobile_4.webp"; */
 import "./Features.css";
 
 function Features() {
@@ -64,7 +76,7 @@ function Features() {
       ref={sectionRef}
       className="text-change project-features bgwhite scroll-smooth sticky snap-scroll"
       data-sidebar-title="Features"
-      
+
     >
       {/* //animate__animated */}
       <div className="wrapper" >
@@ -74,21 +86,20 @@ function Features() {
           </div>
           <div className="features-container">
             <div
-              className={`col zoomin ${
-                isVisible
-                  ? " animate__zoomIn animate__slower"
-                  : ""
-              }`}
+              className={`col zoomin ${isVisible
+                ? " animate__zoomIn animate__slower"
+                : ""
+                }`}
             >
-              <div className="image-container" style={{backgroundColor: '#7f8a8d'}}>
-                {/* <Image 
-                  src={images[0].src || images[0]} 
-                  alt="Architecture" 
+              <div className="image-container" /* style={{ backgroundColor: '#7f8a8d' }} */>
+                <Image
+                  src={images[0].src || images[0]}
+                  alt="Architecture"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   style={{ objectFit: 'cover' }}
                   loading="lazy"
-                /> */}
+                />
               </div>
               <div className="title-container">
                 <h4 className="title">Architecture</h4>
@@ -102,21 +113,20 @@ function Features() {
               </div>
             </div>
             <div
-              className={`col zoomin ${
-                isVisible
-                  ? " animate__zoomIn animate__slower"
-                  : ""
-              }`}
+              className={`col zoomin ${isVisible
+                ? " animate__zoomIn animate__slower"
+                : ""
+                }`}
             >
-              <div className="image-container" style={{backgroundColor: '#7f8a8d'}}>
-                {/* <Image 
-                  src={images[1].src || images[1]} 
-                  alt="Guarantee & Warranty" 
+              <div className="image-container" /* style={{ backgroundColor: '#7f8a8d' }} */>
+                <Image
+                  src={images[1].src || images[1]}
+                  alt="Guarantee & Warranty"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   style={{ objectFit: 'cover' }}
                   loading="lazy"
-                /> */}
+                />
               </div>
               <div className="title-container" >
                 <h4 className="title">Guarantee & Warranty</h4>
@@ -130,21 +140,20 @@ function Features() {
               </div>
             </div>
             <div
-              className={`col zoomin ${
-                isVisible
-                  ? " animate__zoomIn animate__slower"
-                  : ""
-              }`}
+              className={`col zoomin ${isVisible
+                ? " animate__zoomIn animate__slower"
+                : ""
+                }`}
             >
-              <div className="image-container" style={{backgroundColor: '#7f8a8d'}}>
-                {/* <Image 
-                  src={images[2].src || images[2]} 
-                  alt="Housekeeping" 
+              <div className="image-container" /* style={{ backgroundColor: '#7f8a8d' }} */>
+                <Image
+                  src={images[2].src || images[2]}
+                  alt="Housekeeping"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   style={{ objectFit: 'cover' }}
                   loading="lazy"
-                /> */}
+                />
               </div>
               <div className="title-container">
                 <h4 className="title">Housekeeping</h4>
@@ -160,21 +169,20 @@ function Features() {
               </div>
             </div>
             <div
-              className={`col zoomin ${
-                isVisible
-                  ? " animate__zoomIn animate__slower"
-                  : ""
-              }`}
+              className={`col zoomin ${isVisible
+                ? " animate__zoomIn animate__slower"
+                : ""
+                }`}
             >
-              <div className="image-container" style={{backgroundColor: '#7f8a8d'}}>
-                {/* <Image 
-                  src={images[3].src || images[3]} 
-                  alt="Rental Management" 
+              <div className="image-container" /* style={{ backgroundColor: '#7f8a8d' }} */>
+                <Image
+                  src={images[3].src || images[3]}
+                  alt="Rental Management"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   style={{ objectFit: 'cover' }}
                   loading="lazy"
-                /> */}
+                />
               </div>
               <div className="title-container">
                 <h4 className="title">Rental Management</h4>
