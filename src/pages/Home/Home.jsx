@@ -15,6 +15,7 @@ import "./Home.css";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
 import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
 import GlobalExplore from "../../components/GlobalExplore/GlobalExplore";
+import PressHighlights from "../../components/PressHighlights/PressHighlights";
 
 function Home() {
   const containerRef = useRef(null);
@@ -173,6 +174,17 @@ function Home() {
             <DynamicProjects />
           </Suspense>
         </section> */}
+
+        {/* <section
+          data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
+          data-sidebar-title="Press"
+        >
+          <Suspense fallback={<div className="loading-placeholder">Loading projects...</div>}>
+            <PressHighlights />
+
+          </Suspense>
+        </section> */}
+
 
         <section
           data-logo-type={isMobile ? "logo-dark" : "logo-dark"}
