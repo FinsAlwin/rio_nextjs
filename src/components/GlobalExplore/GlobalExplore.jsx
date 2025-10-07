@@ -41,9 +41,12 @@ function GlobalExplore() {
             </div>
             <div className="center"></div>
             <div className="right">
-              <button className="btn">
-                Explore Global
-              </button>
+              <div className="btn-container center">
+                <button className="btn ">
+                  Explore Global
+                </button>
+              </div>
+
             </div>
           </div>
         </div>
