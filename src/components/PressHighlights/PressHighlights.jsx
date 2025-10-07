@@ -3,8 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import "./PressHighlights.css";
 // import DubaiVideo from "../../assets/dubai_and_phuket_video/Dubai.mp4";
 // import PhuketVideo from "../../assets/dubai_and_phuket_video/Thailand.mp4";
-import DubaiThumbnail from "../../assets/dubai_and_phuket_video/dubai_image.webp";
+/* import DubaiThumbnail from "../../assets/dubai_and_phuket_video/dubai_image.webp";
 import PhuketThumbnail from "../../assets/dubai_and_phuket_video/phuket_image.webp";
+ */
+import PressThumbnail from "../../assets/homepage_images/press-highlights/press-left.jpg";
+import PressTextThumbnail from "../../assets/homepage_images/press-highlights/press-right.jpg";
 
 function PressHighlights() {
     const dubaiVideoRef = useRef(null);
@@ -159,13 +162,13 @@ function PressHighlights() {
                                     <img
                                         // ref={dubaiVideoRef}
                                         // src={isDubaiInView ? DubaiVideo : undefined}
-                                        className="phuket-video-section"
+                                        className=""
                                         // loop
                                         // muted
                                         // playsInline
                                         // preload="auto"
                                         style={{
-                                            backgroundImage: `url(${PhuketThumbnail.src || PhuketThumbnail})`,
+                                            backgroundImage: `url(${PressThumbnail.src || PressThumbnail})`,
                                             backgroundSize: "cover",
                                             backgroundPosition: "center",
                                         }}
@@ -196,7 +199,7 @@ function PressHighlights() {
                                         // playsInline
                                         // preload="auto"
                                         style={{
-                                            backgroundImage: `url(${DubaiThumbnail.src || DubaiThumbnail})`,
+                                            backgroundImage: `url(${PressTextThumbnail.src || PressTextThumbnail})`,
                                             backgroundSize: "cover",
                                             backgroundPosition: "center",
                                         }}
@@ -207,9 +210,9 @@ function PressHighlights() {
                             </a>
                         </div>
                         <div className="header flip">
-                            <div className="title-container">
+                            {/* <div className="title-container">
                                 <h3 className="title">Now in PHUKET & DUBAI</h3>
-                            </div>
+                            </div> */}
                             <div className="line"></div>
                         </div>
                     </div>

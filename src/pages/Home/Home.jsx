@@ -175,7 +175,7 @@ function Home() {
           </Suspense>
         </section> */}
 
-        {/* <section
+        <section
           data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
           data-sidebar-title="Press"
         >
@@ -183,7 +183,7 @@ function Home() {
             <PressHighlights />
 
           </Suspense>
-        </section> */}
+        </section>
 
 
         <section

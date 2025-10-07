@@ -32,7 +32,7 @@ function Footer() {
   }, []);
   return (
     <footer
-      className="text-change bgblack scroll-smooth sticky snap-scroll"
+      className="text-change bgwhite scroll-smooth sticky snap-scroll"
       data-sidebar-title="Footer"
     >
       <div className="footer-container">
@@ -74,7 +74,7 @@ function Footer() {
                   <Link
                     href={"/contact-us/"}
                     onClick={scrollToTop}
-                    className="btn white"
+                    className="btn black"
                   >
                     Contact us
                   </Link>
@@ -120,28 +120,28 @@ function Footer() {
           <div className="sections-titles">
             <div className="about-us-titles">
               <Link
-                style={{ textDecoration: "none", color: "#fff" }}
+                style={{ textDecoration: "none", color: "#000000ff" }}
                 href="/blog/"
                 onClick={scrollToTop}
               >
-                <p className="title-new">Blog</p>
+                <p className="title-new">Press</p>
               </Link>
               <Link
-                style={{ textDecoration: "none", color: "#fff" }}
+                style={{ textDecoration: "none", color: "#000000ff" }}
                 href="/career/"
                 onClick={scrollToTop}
               >
                 <p className="title-new">Careers</p>
               </Link>
               <Link
-                style={{ textDecoration: "none", color: "#fff" }}
+                style={{ textDecoration: "none", color: "#000000ff" }}
                 href="/faq/"
                 onClick={scrollToTop}
               >
                 <p className="title-new">FAQ</p>
               </Link>
               <Link
-                style={{ textDecoration: "none", color: "#fff" }}
+                style={{ textDecoration: "none", color: "#000000ff" }}
                 href="/privacy-policy/"
                 onClick={scrollToTop}
               >
