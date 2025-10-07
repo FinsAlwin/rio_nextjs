@@ -134,7 +134,7 @@ function Interiors({ onSlideChange }) {
 
         {/* Slide 2 */}
         <div className="slick-slide ">
-          <div className="projects-dual flip bgwhite">
+          <div className="projects-dual flip bgwhite has-project-image">
             <div className="projects-container projects-selects-container">
               <div className="left">
                 <div className="content-container projects-content-overlap">
@@ -177,7 +177,7 @@ function Interiors({ onSlideChange }) {
           </div>
         </div>
         <div className="slick-slide">
-          <div className="projects-dual flip bgwhite">
+          <div className="projects-dual flip bgwhite has-project-image">
             <div className="projects-container projects-selects-container">
               <div className="left">
                 <div className="content-container content-container-interiors projects-content-overlap">
@@ -222,7 +222,7 @@ function Interiors({ onSlideChange }) {
 
         {/* Slide 4 */}
         <div className="slick-slide">
-          <div className="projects-dual flip bgwhite">
+          <div className="projects-dual flip bgwhite has-project-image">
             <div className="projects-container projects-selects-container">
               <div className="left">
                 <div className="content-container projects-content-overlap">
@@ -264,7 +264,7 @@ function Interiors({ onSlideChange }) {
           </div>
         </div>
         <div className="slick-slide">
-          <div className="projects-dual flip bgwhite">
+          <div className="projects-dual flip bgwhite has-project-image">
             <div className="projects-container projects-selects-container">
               <div className="left">
                 <div className="content-container projects-content-overlap">

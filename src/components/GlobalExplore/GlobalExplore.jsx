@@ -1,7 +1,8 @@
 "use client";
 import "./GlobalExplore.css";
 import desktopView1 from "../../assets/homepage_images/new_images/desktop_view_1.jpg";
-import mobileView1 from "../../assets/homepage_images/new_images/mobile_view_1.webp";
+import mobileView1 from "../../assets/homepage_images/new_images/desktop_view_1.jpg";
+/* import mobileView1 from "../../assets/homepage_images/new_images/mobile_view_1.webp"; */
 import { useState, useEffect } from "react";
 
 function GlobalExplore() {
