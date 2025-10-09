@@ -32,7 +32,7 @@ function Footer() {
   }, []);
   return (
     <footer
-      className="text-change bgwhite scroll-smooth sticky snap-scroll"
+      className="text-change  scroll-smooth sticky snap-scroll" style={{ backgroundColor: '#F0F0F1' }}
       data-sidebar-title="Footer"
     >
       <div className="footer-container">

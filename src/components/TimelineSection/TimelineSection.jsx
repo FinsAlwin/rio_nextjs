@@ -82,7 +82,7 @@ const TimelineSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`timeline text-change bgblack scroll-smooth sticky snap-scroll `}
+      className={`timeline text-change bgwhite scroll-smooth sticky snap-scroll `}
       data-sidebar-title="Timeline"
     >
       <div className="wrapper wrapper-timeline">
@@ -105,9 +105,8 @@ const TimelineSection = () => {
             <div className="timeline-items">
               <div className="dates-container sb-custom">
                 <div
-                  className={`date-item ${
-                    activeItem === "#timeitem1" ? "active" : ""
-                  }`}
+                  className={`date-item ${activeItem === "#timeitem1" ? "active" : ""
+                    }`}
                   data-target="#timeitem1"
                   onClick={() => handleItemClick("#timeitem1")}
                 >
@@ -115,9 +114,8 @@ const TimelineSection = () => {
                   <h3 className="title">RUMAH HUTAN</h3>
                 </div>
                 <div
-                  className={`date-item ${
-                    activeItem === "#timeitem2" ? "active" : ""
-                  }`}
+                  className={`date-item ${activeItem === "#timeitem2" ? "active" : ""
+                    }`}
                   data-target="#timeitem2"
                   onClick={() => handleItemClick("#timeitem2")}
                 >
@@ -125,9 +123,8 @@ const TimelineSection = () => {
                   <h3 className="title">CASA BRILHANTE</h3>
                 </div>
                 <div
-                  className={`date-item ${
-                    activeItem === "#timeitem3" ? "active" : ""
-                  }`}
+                  className={`date-item ${activeItem === "#timeitem3" ? "active" : ""
+                    }`}
                   data-target="#timeitem3"
                   onClick={() => handleItemClick("#timeitem3")}
                 >
@@ -135,9 +132,8 @@ const TimelineSection = () => {
                   <h3 className="title">BLACK FOREST</h3>
                 </div>
                 <div
-                  className={`date-item ${
-                    activeItem === "#timeitem4" ? "active" : ""
-                  }`}
+                  className={`date-item ${activeItem === "#timeitem4" ? "active" : ""
+                    }`}
                   data-target="#timeitem4"
                   onClick={() => handleItemClick("#timeitem4")}
                 >
@@ -145,9 +141,8 @@ const TimelineSection = () => {
                   <h3 className="title">RIO ESTILO</h3>
                 </div>
                 <div
-                  className={`date-item ${
-                    activeItem === "#timeitem5" ? "active" : ""
-                  }`}
+                  className={`date-item ${activeItem === "#timeitem5" ? "active" : ""
+                    }`}
                   data-target="#timeitem5"
                   onClick={() => handleItemClick("#timeitem5")}
                 >
@@ -155,9 +150,8 @@ const TimelineSection = () => {
                   <h3 className="title">RIO ROYALE</h3>
                 </div>
                 <div
-                  className={`date-item ${
-                    activeItem === "#timeitem6" ? "active" : ""
-                  }`}
+                  className={`date-item ${activeItem === "#timeitem6" ? "active" : ""
+                    }`}
                   data-target="#timeitem6"
                   onClick={() => handleItemClick("#timeitem6")}
                 >
@@ -165,9 +159,8 @@ const TimelineSection = () => {
                   <h3 className="title">RIO ESTADO</h3>
                 </div>
                 <div
-                  className={`date-item ${
-                    activeItem === "#timeitem7" ? "active" : ""
-                  }`}
+                  className={`date-item ${activeItem === "#timeitem7" ? "active" : ""
+                    }`}
                   data-target="#timeitem7"
                   onClick={() => handleItemClick("#timeitem7")}
                 >
@@ -180,9 +173,8 @@ const TimelineSection = () => {
               <div className="timeline-content-container scaleup namob">
                 <div
                   id="timeitem1"
-                  className={`timeline-content-item ${
-                    activeItem === "#timeitem1" ? "active" : ""
-                  }`}
+                  className={`timeline-content-item ${activeItem === "#timeitem1" ? "active" : ""
+                    }`}
                 >
                   <div className="top">
                     <div className="image-container">
@@ -206,9 +198,8 @@ const TimelineSection = () => {
                 </div>
                 <div
                   id="timeitem2"
-                  className={`timeline-content-item ${
-                    activeItem === "#timeitem2" ? "active" : ""
-                  }`}
+                  className={`timeline-content-item ${activeItem === "#timeitem2" ? "active" : ""
+                    }`}
                 >
                   <div className="top">
                     <div className="image-container">
@@ -234,9 +225,8 @@ const TimelineSection = () => {
                 </div>
                 <div
                   id="timeitem3"
-                  className={`timeline-content-item ${
-                    activeItem === "#timeitem3" ? "active" : ""
-                  }`}
+                  className={`timeline-content-item ${activeItem === "#timeitem3" ? "active" : ""
+                    }`}
                 >
                   <div className="top">
                     <div className="image-container">
@@ -263,9 +253,8 @@ const TimelineSection = () => {
                 </div>
                 <div
                   id="timeitem4"
-                  className={`timeline-content-item ${
-                    activeItem === "#timeitem4" ? "active" : ""
-                  }`}
+                  className={`timeline-content-item ${activeItem === "#timeitem4" ? "active" : ""
+                    }`}
                 >
                   <div className="top">
                     <div className="image-container">
@@ -288,9 +277,8 @@ const TimelineSection = () => {
                 </div>
                 <div
                   id="timeitem5"
-                  className={`timeline-content-item ${
-                    activeItem === "#timeitem5" ? "active" : ""
-                  }`}
+                  className={`timeline-content-item ${activeItem === "#timeitem5" ? "active" : ""
+                    }`}
                 >
                   <div className="top">
                     <div className="image-container">
@@ -319,9 +307,8 @@ const TimelineSection = () => {
                 </div>
                 <div
                   id="timeitem6"
-                  className={`timeline-content-item ${
-                    activeItem === "#timeitem6" ? "active" : ""
-                  }`}
+                  className={`timeline-content-item ${activeItem === "#timeitem6" ? "active" : ""
+                    }`}
                 >
                   <div className="top">
                     <div className="image-container">
@@ -347,9 +334,8 @@ const TimelineSection = () => {
                 </div>
                 <div
                   id="timeitem7"
-                  className={`timeline-content-item ${
-                    activeItem === "#timeitem7" ? "active" : ""
-                  }`}
+                  className={`timeline-content-item ${activeItem === "#timeitem7" ? "active" : ""
+                    }`}
                 >
                   <div className="top">
                     <div className="image-container">

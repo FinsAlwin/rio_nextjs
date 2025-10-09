@@ -75,17 +75,17 @@ const TeamSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`team-members text-change scroll-smooth bgblack zindex-10 sticky snap-scroll `}
+      className={`team-members text-change scroll-smooth bgwhite zindex-10 sticky snap-scroll `}
       data-sidebar-title="Team"
     >
       <div className="wrapper">
         <div className="arrow-container">
           <div className="arrow" onClick={handlePrev}>
-            <MdOutlineArrowBackIosNew size={24} color="#fff" />{" "}
+            <MdOutlineArrowBackIosNew size={24} color="#000000ff" />{" "}
             {/* Using React Icon for left arrow */}
           </div>
           <div className="arrow" onClick={handleNext}>
-            <MdOutlineArrowForwardIos size={24} color="#fff" />{" "}
+            <MdOutlineArrowForwardIos size={24} color="#000000ff" />{" "}
             {/* Using React Icon for right arrow */}
           </div>
         </div>

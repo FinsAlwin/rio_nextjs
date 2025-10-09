@@ -944,11 +944,12 @@ header .wrapper .left .logo-container .logo:focus {
 }
 
 .sidebar.nav-active {
-  background: #050505;
+  /* background: #050505; */
+  background: #ffffff;
 }
 
 .sidebar.nav-active .sidebar-container .center .sidebar-text {
-  color: #fff;
+  color: #000000;
 }
 
 .sidebar.nav-active .sidebar-container .center .sidebar-text h3.menutext {
@@ -960,7 +961,7 @@ header .wrapper .left .logo-container .logo:focus {
 }
 
 .sidebar.nav-active .sidebar-container .bottom .glyph .line {
-  background-color: #fff !important;
+  background-color: #000000 !important;
 }
 .intro-section-titles {
   position: absolute !important;
@@ -2130,7 +2131,7 @@ footer .footer-bottom-section .backtotop {
   height: auto;
   /* max-height: 80%; */
   overflow: auto;
-  color: #fff;
+  color: #000000;
   display: flex;
   flex-direction: column;
 }
@@ -2173,13 +2174,15 @@ footer .footer-bottom-section .backtotop {
 
 .about-founder .wrapper .inner-container .right {
   flex: 1;
-  color: #fff;
+  color: #000000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 70px;
 }
-
+.wrapper.founder-wrapper {
+  padding-top: 170px;
+}
 .about-founder .wrapper .inner-container .right .top {
   text-align: center;
 }
@@ -2336,7 +2339,7 @@ footer .footer-bottom-section .backtotop {
   .timeline-items
   .dates-container
   .date-item.active {
-  color: #fff;
+  color: #000000;
 }
 
 .timeline
@@ -3648,7 +3651,7 @@ footer .footer-bottom-section .backtotop {
 }
 
 .top-blank-section .title-container h2 {
-  color: #fff;
+  color: #000000;
   text-transform: uppercase;
   margin: 0;
 }
@@ -3660,7 +3663,7 @@ footer .footer-bottom-section .backtotop {
 .top-blank-section.top-right .title-container {
   position: absolute;
   right: 50%;
-  top: 5%;
+  top: 8%;
 }
 
 .top-blank-section.center {
@@ -6102,9 +6105,11 @@ header .wrapper .left .logo-container .logo:focus {
   width: 100%;
   margin-left: 10px;
 }
-
+.properties-slider {
+  background-color: white;
+}
 .intro-image .intro-image-footer {
-  background-color: #fff;
+  background-color: #f0f0f1;
   /* height: 15vh; */
   min-height: auto;
   display: flex;
@@ -6262,7 +6267,7 @@ header .wrapper .left .logo-container .logo:focus {
 .sidebar .sidebar-container .top .menu-icon .hamburger span.line {
   width: 50px;
   height: 1px;
-  background-color: #fff;
+  background-color: #ffffff;
   transition: all 0.3s ease;
 }
 
@@ -6275,7 +6280,7 @@ header .wrapper .left .logo-container .logo:focus {
 }
 
 .sidebar .sidebar-container .top .menu-icon.open .hamburger .line {
-  background-color: #fff !important;
+  background-color: #000000 !important;
 }
 
 .sidebar .sidebar-container .top .menu-icon.open .hamburger .line:nth-child(1) {
@@ -6395,7 +6400,7 @@ header .wrapper .left .logo-container .logo:focus {
 }
 
 .sidebar.nav-active {
-  background: #050505;
+  background: #f0f0f1;
 }
 
 .sidebar.nav-active .sidebar-container .center .sidebar-text {
@@ -6457,8 +6462,8 @@ nav .nav-container .left .image-container img {
 nav .nav-container .right {
   flex: 1;
   padding-left: 100px;
-  background: #050505;
-  color: #fff;
+  background: #f0f0f1;
+  color: #000000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -6504,7 +6509,7 @@ nav .nav-container .right .center ul {
 }
 
 nav .nav-container .right .center ul li a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   font-size: 2rem;
   font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
@@ -6544,7 +6549,7 @@ nav .nav-container .right .bottom .touch .icon {
 }
 
 nav .nav-container .right .bottom .touch .icon a {
-  color: #fff;
+  color: #000000;
   transition: all 0.3s ease;
 }
 
@@ -7364,7 +7369,7 @@ footer .footer-container .left .left-footer-bottom {
   align-items: center;
   justify-content: space-between;
   padding: 30px 80px;
-  color: #fff;
+  color: #000000;
   font-size: 0.9rem;
   gap: 10px;
 }
@@ -7552,7 +7557,7 @@ footer .footer-bottom-section .backtotop {
   height: auto;
   /* max-height: 80%; */
   overflow: auto;
-  color: #fff;
+  color: #000000;
   display: flex;
   flex-direction: column;
 }
@@ -7595,7 +7600,7 @@ footer .footer-bottom-section .backtotop {
 
 .about-founder .wrapper .inner-container .right {
   flex: 1;
-  color: #fff;
+  color: #000000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7758,7 +7763,7 @@ footer .footer-bottom-section .backtotop {
   .timeline-items
   .dates-container
   .date-item.active {
-  color: #fff;
+  color: #000000;
 }
 
 .timeline
@@ -7769,8 +7774,8 @@ footer .footer-bottom-section .backtotop {
   .dates-container
   .date-item.active
   .title::before {
-  background: #fff;
-  border: 1px solid #fff;
+  background: #000000;
+  border: 1px solid #000000;
 }
 
 .timeline
@@ -7780,7 +7785,7 @@ footer .footer-bottom-section .backtotop {
   .timeline-items
   .dates-container
   .date-item:hover {
-  color: #fff;
+  color: #000000;
 }
 
 .timeline
@@ -7791,7 +7796,7 @@ footer .footer-bottom-section .backtotop {
   .dates-container
   .date-item:hover
   .title::before {
-  border: 1px solid #fff;
+  border: 1px solid #000000;
 }
 
 .timeline
@@ -7872,7 +7877,7 @@ footer .footer-bottom-section .backtotop {
   .timeline-content-container
   .timeline-content-item
   .bottom {
-  color: #fff;
+  color: #000000;
   display: flex;
   gap: 30px;
 }
@@ -7966,7 +7971,7 @@ footer .footer-bottom-section .backtotop {
   .teams-container
   .team-item
   .team-item-details {
-  color: #fff;
+  color: #000000;
 }
 
 .team-members
@@ -8882,7 +8887,7 @@ footer .footer-bottom-section .backtotop {
 } */
 
 .top-blank-section .title-container h2 {
-  color: #fff;
+  color: #000000;
   text-transform: uppercase;
   margin: 0;
 }
@@ -11489,6 +11494,7 @@ figcaption {
   }
 
   .sidebar.nav-active {
+    /* border-bottom: 1px solid #212121; */
     border-bottom: 1px solid #212121;
   }
 
@@ -14189,6 +14195,14 @@ figcaption {
   /* h3 {
     font-size: 1.1rem;
   } */
+  .about-founder
+    .wrapper
+    .inner-container
+    .left
+    .image-container
+    img.founder-img-single {
+    position: relative !important;
+  }
   .intl-tel-input.separate-dial-code .selected-dial-code.new-career-dial-code {
     display: flex;
     vertical-align: middle;
@@ -17728,7 +17742,7 @@ figcaption {
     position: absolute;
     bottom: 40;
     padding: 0 0 36px 0px;
-    color: #fff;
+    color: #000000;
   }
 }
 
