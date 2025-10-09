@@ -46,7 +46,7 @@ const FounderSection = ({ sidebarTitle }) => {
 
   return (
     <section
-      className="text-change about-founder founder-height bgblack scroll-smooth sticky snap-scroll"
+      className="text-change about-founder founder-height  scroll-smooth sticky snap-scroll" style={{ backgroundColor: '#f0f0f1' }}
       data-sidebar-title={sidebarTitle}
     >
       <div className="wrapper founder-wrapper">
@@ -58,7 +58,7 @@ const FounderSection = ({ sidebarTitle }) => {
                   ref={imageRef}
                   className="image-container"
                 >
-                  <Image src={founderImage} alt="Founder" className="" fill style={{ objectFit: 'cover' }} />
+                  <Image src={founderImage} alt="Founder" className="founder-img-single" fill style={{ objectFit: 'cover' }} />
                 </div>
               </div>
               <div className="right fadeup">

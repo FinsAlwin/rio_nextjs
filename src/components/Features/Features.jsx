@@ -69,7 +69,7 @@ function Features() {
 
   const images = isMobile
     ? [mobileCardImage1, mobileCardImage2, mobileCardImage3, mobileCardImage4]
-    : [cardImage1, cardImage3, cardImage2, cardImage4];
+    : [cardImage1, cardImage2, cardImage3, cardImage4];
 
   return (
     <section

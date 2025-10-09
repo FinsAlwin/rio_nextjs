@@ -46,7 +46,7 @@ function RioLuxuryHomesInfo({ sidebarTitle }) {
 
   return (
     <section
-      className="text-change default-height about-intro bgblack scroll-smooth sticky snap-scroll"
+      className="text-change default-height about-intro bgwhite scroll-smooth sticky snap-scroll"
       data-sidebar-title={sidebarTitle}
     >
       <div className="dual-container dual-container-2">
