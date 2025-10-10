@@ -7361,7 +7361,7 @@ footer .footer-container .left .image-container::before {
   left: 0;
 }
 
-footer .footer-container .left .left-footer-bottom {
+footer .footer-container .left .left-footer-bottom { 
   position: absolute;
   bottom: 0;
   width: 100%;
