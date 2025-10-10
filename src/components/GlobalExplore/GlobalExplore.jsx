@@ -42,11 +42,11 @@ function GlobalExplore() {
             </div>
             <div className="center"></div>
             <div className="right">
-              <div className="btn-container center">
+              {/* <div className="btn-container center">
                 <button className="btn ">
                   Explore Global
                 </button>
-              </div>
+              </div> */}
 
             </div>
           </div>
