@@ -35,7 +35,7 @@ function SliderBar({ sidebarTitle, backgroundType }) {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5,
+      threshold: 0.3, // Lower threshold for earlier/better detection
     };
 
     const observerCallback = (entries) => {
@@ -45,6 +45,7 @@ function SliderBar({ sidebarTitle, backgroundType }) {
           const sidebarTitle = entry.target.getAttribute("data-sidebar-title");
           setCurrentSectionTitle(sidebarTitle);
           const isDarkVSection = logoType === "logo-dark-v";
+          console.log("SliderBar Observer - Section detected:", { logoType, isDarkVSection, sidebarTitle });
           setGlyphClass(isDarkVSection ? "dark-v" : "");
           setMenuIconClass(isDarkVSection ? "dark-v" : "");
         }

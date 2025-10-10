@@ -2,7 +2,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-function Footer() {
+
+function Footer({ 
+  imageSrc = "/homepage_images/goa_homepage_footer.webp",
+  backgroundColor = "light",
+  buttonStyle = "black",
+  linkColor = "#000000ff",
+  pressLinkText = "Press"
+}) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -30,9 +37,14 @@ function Footer() {
       }
     };
   }, []);
+  
+  const bgClass = backgroundColor === "dark" ? "bgblack" : "";
+  const bgStyle = backgroundColor === "light" ? { backgroundColor: '#F0F0F1' } : {};
+  
   return (
     <footer
-      className="text-change  scroll-smooth sticky snap-scroll" style={{ backgroundColor: '#F0F0F1' }}
+      className={`text-change scroll-smooth sticky snap-scroll ${bgClass}`}
+      style={bgStyle}
       data-sidebar-title="Footer"
     >
       <div className="footer-container">
@@ -42,8 +54,8 @@ function Footer() {
             className="image-container"
           >
             <Image
-              src="/homepage_images/goa_homepage_footer.webp"
-              alt="RIO Luxury Homes Goa Footer"
+              src={imageSrc}
+              alt="RIO Luxury Homes Footer"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               style={{ objectFit: 'cover' }}
@@ -74,7 +86,7 @@ function Footer() {
                   <Link
                     href={"/contact-us/"}
                     onClick={scrollToTop}
-                    className="btn black"
+                    className={`btn ${buttonStyle}`}
                   >
                     Contact us
                   </Link>
@@ -120,28 +132,28 @@ function Footer() {
           <div className="sections-titles">
             <div className="about-us-titles">
               <Link
-                style={{ textDecoration: "none", color: "#000000ff" }}
+                style={{ textDecoration: "none", color: linkColor }}
                 href="/blog/"
                 onClick={scrollToTop}
               >
-                <p className="title-new">Press</p>
+                <p className="title-new">{pressLinkText}</p>
               </Link>
               <Link
-                style={{ textDecoration: "none", color: "#000000ff" }}
+                style={{ textDecoration: "none", color: linkColor }}
                 href="/career/"
                 onClick={scrollToTop}
               >
                 <p className="title-new">Careers</p>
               </Link>
               <Link
-                style={{ textDecoration: "none", color: "#000000ff" }}
+                style={{ textDecoration: "none", color: linkColor }}
                 href="/faq/"
                 onClick={scrollToTop}
               >
                 <p className="title-new">FAQ</p>
               </Link>
               <Link
-                style={{ textDecoration: "none", color: "#000000ff" }}
+                style={{ textDecoration: "none", color: linkColor }}
                 href="/privacy-policy/"
                 onClick={scrollToTop}
               >

@@ -107,7 +107,8 @@ function FAQ() {
         <SliderBar sidebarTitle={sidebarTitle} />
         <ContactUsButton />
         <WhatsAppPopup />
-        <Footer data-logo-type="logo-dark" data-sidebar-title="Contact Us" />
+        {/* <Footer data-logo-type="logo-dark" data-sidebar-title="Contact Us" /> */}
+        <Footer />
       </div>
     </>
   );

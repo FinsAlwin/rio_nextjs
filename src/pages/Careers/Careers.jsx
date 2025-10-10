@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 // import createScrollSnap from "scroll-snap"; // Conditional import to prevent SSR issues
 import Header from "../../components/Header/Header";
 import CareersSection from "../../components/CareersSection/CareersSection";
-import CareersFooter from "../../components/CareersFooter/CareersFooter";
+import Footer from "../../components/Footer/Footer";
 import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
@@ -132,10 +132,16 @@ function Careers() {
           data-logo-type="logo-dark"
           data-sidebar-title="Careers"
         />
-        <CareersFooter
-          data-logo-type="logo-dark"
-          data-sidebar-title="Contact Us"
-        />
+        <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
+          {/* <Footer 
+            imageSrc="/careers_images/careers-footer.webp"
+            backgroundColor="dark"
+            buttonStyle="white"
+            linkColor="#fff"
+            pressLinkText="Blog"
+          /> */}
+          <Footer />
+        </section>
           <ContactUsButton />
         <WhatsAppPopup />
         <SliderBar sidebarTitle={sidebarTitle} />

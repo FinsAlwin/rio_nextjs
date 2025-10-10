@@ -18,6 +18,7 @@ import PropertiesFooter from "../../components/PropertiesFooter/PropertiesFooter
 import PropertyDescription from "../../components/PropertyDescription/PropertyDescription";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
 import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
+import Footer from "../../components/Footer/Footer";
 const stripHTMLTags = (htmlString) => {
   const doc = new DOMParser().parseFromString(htmlString, "text/html");
   return doc.body.textContent || "";
@@ -325,8 +326,9 @@ function PropertiesContent({ propertiesURLId }) {
         <Projects />
       </section>
 
-      <section data-logo-type="logo-dark" data-sidebar-title="">
-        <PropertiesFooter />
+      <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
+        {/* <PropertiesFooter /> */}
+        <Footer />
       </section>
       <ContactUsButton />
       <WhatsAppPopup />

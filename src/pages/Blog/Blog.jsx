@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import BlogSection from "../../components/BlogSection/BlogSection";
 import Header from "../../components/Header/Header";
-import BlogFooter from "../../components/BlogFooter/BlogFooter";
+import Footer from "../../components/Footer/Footer";
 import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
@@ -134,7 +134,14 @@ function Blog() {
           <BlogSection />
         </section>
         <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
-          <BlogFooter />
+          {/* <Footer 
+            imageSrc="/blogs_images/blog_image_footer.webp"
+            backgroundColor="dark"
+            buttonStyle="white"
+            linkColor="#fff"
+            pressLinkText="Blog"
+          /> */}  
+          <Footer />
         </section>
         <ContactUsButton />
         <WhatsAppPopup />

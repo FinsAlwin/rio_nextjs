@@ -5,12 +5,11 @@ import Header from "../../components/Header/Header";
 import ContactSection from "../../components/ContactSection/ContactSection";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import ContactDetails from "../../components/ContactDetails/ContactDetails";
-import ContactUsFooter from "../../components/ContactUsFooter/ContactUsFooter";
 import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
 
-import ContactFooter from "../../components/ContactFooter/ContactFooter";
+import Footer from "../../components/Footer/Footer";
 
 function ContactUs() {
   const containerRef = useRef(null);
@@ -161,8 +160,15 @@ function ContactUs() {
         >
           <ContactDetails />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
-          <ContactFooter />
+        <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
+          {/* <Footer 
+            imageSrc="/invest_page_image/Invest.webp"
+            backgroundColor="dark"
+            buttonStyle="white"
+            linkColor="#fff"
+            pressLinkText="Blog"
+          /> */}
+          <Footer />
         </section>
         <WhatsAppPopup />
         {/* <ContactUsFooter /> */}

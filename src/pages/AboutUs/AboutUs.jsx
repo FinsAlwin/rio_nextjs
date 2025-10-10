@@ -11,7 +11,7 @@ import Header from "../../components/Header/Header";
 import BannerSection from "../../components/BannerSection/BannerSection";
 import UpcomingProjectsSection from "../../components/UpcomingProjectsSection/UpcomingProjectsSection";
 import CTASection from "../../components/CTASection/CTASection";
-import AboutUsFooter from "../../components/AboutUsFooter/AboutUsFooter";
+import Footer from "../../components/Footer/Footer";
 import TechnicalSection from "../../components/TechnicalSection/TechnicalSection";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
@@ -119,27 +119,34 @@ const AboutSection = () => {
         <section data-logo-type="logo-dark" data-sidebar-title="About Us">
           <RioLuxuryHomesInfo />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="What We Do">
+        <section data-logo-type="logo-dark-v" data-sidebar-title="What We Do">
           <TechnicalSection />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="Founder">
+        <section data-logo-type="logo-dark-v" data-sidebar-title="Founder">
           <FounderSection />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="Team ">
+        <section data-logo-type="logo-dark-v" data-sidebar-title="Team ">
           <TeamSection />
         </section>
         <section data-logo-type="logo-dark">
           <BannerSection />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="Timeline">
+        <section data-logo-type="logo-dark-v" data-sidebar-title="Timeline">
           <TimelineSection />
         </section>
         <section data-logo-type="logo-dark" data-sidebar-title="Overseas">
           <UpcomingProjectsSection />
         </section>
         {/* <CTASection /> */}
-        <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
-          <AboutUsFooter />
+        <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
+          <Footer />
+          {/* <Footer 
+            imageSrc="/about_us_founder/about_us.webp"
+            backgroundColor="dark"
+            buttonStyle="white"
+            linkColor="#fff"
+            pressLinkText="Blog"
+          /> */}
         </section>
         <ContactUsButton />
         <WhatsAppPopup />

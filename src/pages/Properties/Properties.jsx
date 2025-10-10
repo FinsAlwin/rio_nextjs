@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header";
 import PropertiesIntroSection from "../../components/PropertiesIntroSection/PropertiesIntroSection";
 // import createScrollSnap from "scroll-snap"; // Conditional import to prevent SSR issues
 import PropertiesListing from "../../components/PropertiesListing/PropertiesListing";
-import FooterProperties from "../../components/FooterProperties/FooterProperties";
+import Footer from "../../components/Footer/Footer";
 import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
@@ -43,27 +43,32 @@ function Properties() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Intersection Observer for updating sidebar title
+  // Intersection Observer for updating logo type and sidebar title
   useEffect(() => {
-    const sections = document.querySelectorAll("section[data-sidebar-title]");
+    const sections = document.querySelectorAll("section[data-logo-type]");
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.6, // Increase threshold for better detection
+      threshold: 0.3, // Lower threshold for earlier detection
     };
-
-    let currentTitle = "Properties"; // Default title
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const newTitle =
-            entry.target.getAttribute("data-sidebar-title") || "";
-
-          if (newTitle !== currentTitle) {
-            console.log("Updating sidebarTitle:", newTitle); // Debug log
-            setSidebarTitle(newTitle);
-            currentTitle = newTitle;
+          const logoType = entry.target.getAttribute("data-logo-type");
+          const sidebarTitle = entry.target.getAttribute("data-sidebar-title");
+          
+          console.log("Properties Observer - Section intersecting:", {
+            logoType,
+            sidebarTitle,
+            className: entry.target.className
+          });
+          
+          if (logoType) {
+            setLogoType(logoType);
+          }
+          if (sidebarTitle) {
+            setSidebarTitle(sidebarTitle);
           }
         }
       });
@@ -147,10 +152,17 @@ function Properties() {
       <DynamicMeta title={title} description={description} />
       <Header logoType={logoType} />
 
+      <section
+      id="top"
+      className="text-change intro-image intro-image-new bgwhite"
+      data-logo-type="logo-dark"
+      data-sidebar-title="Properties"
+    >
       <PropertiesIntroSection />
+      </section>
 
       <section
-        data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
+        data-logo-type="logo-dark-v"
         data-sidebar-title="Properties"
         className="properties-section"
       >
@@ -175,8 +187,15 @@ function Properties() {
       {/* Sidebar */}
       <SliderBar sidebarTitle={sidebarTitle} />
 
-      <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
-        <FooterProperties />
+      <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
+        {/* <Footer 
+          imageSrc="/properties_image/Properties.webp"
+          backgroundColor="#f0f0f1"
+          buttonStyle="white"
+          linkColor="#fff"
+          pressLinkText="Blog"
+        /> */}
+        <Footer />
       </section>
 
       <ContactUsButton />

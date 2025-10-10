@@ -133,11 +133,11 @@ function Home() {
         >
           <Hero />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="Properties">
+        <section data-logo-type="logo-dark-v" data-sidebar-title="Properties">
           <SectionSlick1 />
         </section>
         <section
-          data-logo-type={isMobile ? "logo-dark" : "logo-dark"}
+          data-logo-type="logo-dark-v"
           data-sidebar-title="Global"
         >
           <Element name="single-select">
@@ -147,7 +147,7 @@ function Home() {
 
 
         <section className=""
-          data-logo-type={currentSlide % 2 === 0 ? "logo-dark" : "logo-dark-v"}
+          data-logo-type="logo-dark-v"
           data-sidebar-title="Selects"
         >
           <Suspense fallback={<div className="loading-placeholder">Loading interiors...</div>}>
@@ -161,7 +161,7 @@ function Home() {
 
 
         <section
-          data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
+          data-logo-type="logo-dark-v"
           data-sidebar-title="Features"
         >
           <Features />
@@ -176,7 +176,7 @@ function Home() {
         </section> */}
 
         <section
-          data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
+          data-logo-type="logo-dark-v"
           data-sidebar-title="Press"
         >
           <Suspense fallback={<div className="loading-placeholder">Loading projects...</div>}>
@@ -187,7 +187,7 @@ function Home() {
 
 
         <section
-          data-logo-type={isMobile ? "logo-dark" : "logo-dark"}
+          data-logo-type="logo-dark-v"
           data-sidebar-title="Contact Us"
           className="footer-home-section"
         >

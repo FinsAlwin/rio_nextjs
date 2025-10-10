@@ -5,7 +5,7 @@ import InvestSection from "../../components/InvestSection/InvestSection";
 import Header from "../../components/Header/Header";
 import RoiTrendsSection from "../../components/RioTrendsSection/RioTrendsSection";
 import ProjectSingleSection from "../../components/ProjectSingleSection/ProjectSingleSection";
-import InvestFooter from "../../components/InvestFooter/InvestFooter";
+import Footer from "../../components/Footer/Footer";
 import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import InvestUs2 from "../../components/InvestUs2/InvestUs2";
@@ -164,8 +164,15 @@ function InvestUs() {
         >
           <ProjectSingleSection />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
-          <InvestFooter />
+        <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
+          {/* <Footer 
+            imageSrc="/invest_page_image/Invest.webp"
+            backgroundColor="dark"
+            buttonStyle="white"
+            linkColor="#fff"
+            pressLinkText="Blog"
+          /> */}
+          <Footer />
         </section>
         <ContactUsButton />
         <WhatsAppPopup />

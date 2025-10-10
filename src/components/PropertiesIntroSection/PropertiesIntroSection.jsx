@@ -73,11 +73,7 @@ const PropertiesIntroSection = () => {
     return () => clearTimeout(timer);
   }, [isMobile]);
   return (
-    <section
-      id="top"
-      className="text-change intro-image intro-image-new bgwhite scroll-smooth sticky snap-scroll"
-      data-sidebar-title="Properties"
-    >
+    <>
       <div className="intro-image-container image-vertical-mobile-properties intro-video-properties">
         <div className="image-container hero-zoom">
           {isLoading && (
@@ -148,7 +144,7 @@ const PropertiesIntroSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
