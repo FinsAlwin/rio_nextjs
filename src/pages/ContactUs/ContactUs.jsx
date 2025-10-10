@@ -14,6 +14,7 @@ import Footer from "../../components/Footer/Footer";
 function ContactUs() {
   const containerRef = useRef(null);
   const [logoType, setLogoType] = useState("logo-dark");
+
   useEffect(() => {
     const sections = document.querySelectorAll("section[data-logo-type]");
     const observerOptions = {
@@ -41,6 +42,7 @@ function ContactUs() {
       sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
+
   useEffect(() => {
     const element = containerRef.current;
     console.log("snap-initialise");
@@ -69,7 +71,6 @@ function ContactUs() {
           } catch (error) {
             console.warn("ScrollSnap error:", error);
           }
-          
         } else {
           element.style.scrollSnapType = "none";
         }
@@ -84,6 +85,7 @@ function ContactUs() {
       window.removeEventListener("resize", applyScrollSnap);
     };
   }, []);
+
   const [sidebarTitle, setSidebarTitle] = useState("Properties");
 
   useEffect(() => {
