@@ -72,7 +72,6 @@ function InvestUs() {
           } catch (error) {
             console.warn("ScrollSnap error:", error);
           }
-
         } else {
           element.style.scrollSnapType = "none";
         }
@@ -165,7 +164,6 @@ function InvestUs() {
         >
           <ProjectSingleSection />
         </section> */}
-
         <section data-logo-type="logo-dark-v" data-sidebar-title="Properties">
           <SectionSlick1 />
         </section>
