@@ -42,13 +42,13 @@ const ContactDetails = () => {
         <div className="inner-container">
           <div className="contact-details-container">
             <div className="left-col">
-              <div 
+              <div
                 className="image-container"
                 style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}
               >
-                <Image 
-                  src="/contact_us_form_image/contact_office_facade.webp" 
-                  alt="Contact Office Facade" 
+                <Image
+                  src="/contact_us_form_image/contact_office_facade.webp"
+                  alt="Contact Office Facade"
                   width={800}
                   height={600}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -57,7 +57,7 @@ const ContactDetails = () => {
               </div>
             </div>
             <div className="right-col">
-              <div className="address-details-container">
+              {/* <div className="address-details-container">
                 <div className="main-title-container">
                   <h3 className="title">Contact Us</h3>
                 </div>
@@ -90,6 +90,40 @@ const ContactDetails = () => {
                     </div>
                   </div>
                 </div>
+              </div> */}
+              <div className="address-details-container">
+                <div className="main-title-container">
+                  <h3 className="title">Contact Us</h3>
+                </div>
+                <div className="contact-us">
+                  <div className="address-col">
+                    <div className="left">
+                      <h4 className="title">Address</h4>
+                    </div>
+                    <div className="right">
+                      <div className="address-detail">
+                        Aldeia Serenia, Block C, Bounta Vaddo, Mapusa Anjuna Main Road, Assagao, Goa - 403507
+                      </div>
+                    </div>
+
+                    <div className="left">
+                      <div className="business-type">
+                        {`// Real Estate and Investment`}
+                      </div>
+                    </div>
+                    <div className="right">
+                      <div className="contact-info">
+                        <a
+                          href="mailto:sales@rioluxuryhomes.in"
+                          className="email"
+                        >
+                          sales@rioluxuryhomes.in
+                        </a>
+                        <div className="phone">+91 88889 00073</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               {/* Created on 11-th March */}
               <div className="contact-team-details">
@@ -102,7 +136,7 @@ const ContactDetails = () => {
                   </div>
 
                   {/* Right Column - Contact Details */}
-                  <div className="right">
+                  {/* <div className="right">
                     <div className="contact-info">
                       <a
                         href="mailto:marketing@riophuket.com"
@@ -127,6 +161,32 @@ const ContactDetails = () => {
                       </a>
                       <div className="phone">+66 (0) 85 575 9222</div>
                     </div>
+                  </div> */}
+                  <div className="right">
+                    <div className="contact-info">
+                      <a
+                        href="mailto:marketing@rioluxuryhomes.in"
+                        className="email"
+                      >
+                        marketing@rioluxuryhomes.in
+                      </a>
+                      <div className="phone">+91 87999 15197</div>
+                    </div>
+                    <div className="contact-info">
+                      <a
+                        href="mailto:purchase@rioluxuryhomes.in"
+                        className="email"
+                      >
+                        purchase@rioluxuryhomes.in
+                      </a>
+                      <div className="phone">+91 92250 96994</div>
+                    </div>
+                    <div className="contact-info">
+                      <a href="mailto:hr@rioluxuryhomes.in" className="email">
+                        hr@rioluxuryhomes.in
+                      </a>
+                      <div className="phone">+91 87999 15195</div>
+                    </div>
                   </div>
                 </div>
                 {/* Created on 11-th March  for mobile view*/}
@@ -134,33 +194,33 @@ const ContactDetails = () => {
                   <div className="mobile-business-type">{`// Press and Collabs`}</div>
                   <div className="mobile-details">
                     <a
-                      href="mailto:marketing@riophuket.com"
+                      href="mailto:marketing@rioluxuryhomes.in"
                       className="email"
                     >
-                      marketing@riophuket.com
+                      marketing@rioluxuryhomes.in
                     </a>
-                    <div className="phone">+66 (0) 85 575 9222</div>
+                    <div className="phone">+91 87999 15197</div>
                   </div>
                 </div>
                 <div className="mobile-contact-info">
                   <div className="mobile-business-type">{`// Purchase`}</div>
                   <div className="mobile-details">
                     <a
-                      href="mailto:purchase@riophuket.com"
+                      href="mailto:purchase@rioluxuryhomes.in"
                       className="email"
                     >
-                      purchase@riophuket.com
+                      purchase@rioluxuryhomes.in
                     </a>
-                    <div className="phone">+66 (0) 85 575 9222</div>
+                    <div className="phone">+91 92250 96994</div>
                   </div>
                 </div>
                 <div className="mobile-contact-info">
                   <div className="mobile-business-type">{`// Careers`}</div>
                   <div className="mobile-details">
-                    <a href="mailto:hr@riophuket.com" className="email">
-                      hr@riophuket.com
+                    <a href="mailto:hr@rioluxuryhomes.in" className="email">
+                      hr@rioluxuryhomes.in
                     </a>
-                    <div className="phone">+66 (0) 85 575 9222</div>
+                    <div className="phone">+91 87999 15195</div>
                   </div>
                 </div>
                 {/* Created on 11-th March  for mobile view*/}
@@ -170,7 +230,7 @@ const ContactDetails = () => {
             </div>
           </div>
           <div className="map">
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.1234567890123!2d98.3456789012345!3d7.890123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30502c8c8c8c8c8c%3A0x1234567890abcdef!2s5%2F50%20The%20Plaza%20Surin%2C%20Unit%20G6%20Moo%203%2C%20Cherngtalay%20Sub-district%2C%20Thalang%20District%2C%20Phuket%2083110!5e0!3m2!1sen!2sth!4v1700464828098!5m2!1sen!2sth"
               width="100%"
               height="100%"
@@ -178,6 +238,15 @@ const ContactDetails = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps Location - Phuket Office"
+            ></iframe> */}
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.9865439666614!2d73.77008467629791!3d15.59236778502024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfeb0cfa5b2183%3A0xa7efd6fca9d74134!2sRIO%20Luxury%20Homes%20Private%20Limited!5e0!3m2!1sen!2sin!4v1760358654880!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
               title="Google Maps Location - Phuket Office"
             ></iframe>
           </div>
@@ -192,13 +261,13 @@ const ContactDetails = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-                <Image 
-                  src="/contact_us_form_image/whatsapp_black.webp" 
-                  alt="WhatsApp" 
-                  width={60}
-                  height={60}
-                  priority
-                />
+            <Image
+              src="/contact_us_form_image/whatsapp_black.webp"
+              alt="WhatsApp"
+              width={60}
+              height={60}
+              priority
+            />
           </a>
         </div>
       )}

@@ -7,6 +7,7 @@ import RoiTrendsSection from "../../components/RioTrendsSection/RioTrendsSection
 import ProjectSingleSection from "../../components/ProjectSingleSection/ProjectSingleSection";
 import Footer from "../../components/Footer/Footer";
 import SliderBar from "../../components/SliderBar/SliderBar";
+import SectionSlick1 from "../../components/SectionSlick1/SectionSlick1";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import InvestUs2 from "../../components/InvestUs2/InvestUs2";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
@@ -71,7 +72,7 @@ function InvestUs() {
           } catch (error) {
             console.warn("ScrollSnap error:", error);
           }
-          
+
         } else {
           element.style.scrollSnapType = "none";
         }
@@ -158,11 +159,15 @@ function InvestUs() {
         <section data-logo-type="logo-dark" data-sidebar-title="Invest">
           <InvestUs2 />
         </section>
-        <section
+        {/* <section
           data-logo-type={isMobile ? "logo-dark" : "logo-dark"}
           data-sidebar-title="Rumah Hutan"
         >
           <ProjectSingleSection />
+        </section> */}
+
+        <section data-logo-type="logo-dark-v" data-sidebar-title="Properties">
+          <SectionSlick1 />
         </section>
         <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
           {/* <Footer 

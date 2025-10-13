@@ -1,15 +1,15 @@
 "use client";
 import { useState } from "react";
 import graph1 from "../../assets/invest_page_image/graph_1.webp";
-import graph2 from "../../assets/invest_page_image/graph_2.webp";
-import graph3 from "../../assets/invest_page_image/graph_3.webp";
-import graph4 from "../../assets/invest_page_image/graph_4.webp";
-import graph5 from "../../assets/invest_page_image/graph_5.webp";
-import graph6 from "../../assets/invest_page_image/graph_6.webp";
-import graph7 from "../../assets/invest_page_image/graph_7.webp";
-import graph8 from "../../assets/invest_page_image/graph_8.webp";
-import graph9 from "../../assets/invest_page_image/graph_9.webp";
-import graph10 from "../../assets/invest_page_image/graph_10.webp";
+import graph2 from "../../assets/capital-investment/rumah-hutan_casa-brilhante.png";
+import graph3 from "../../assets/capital-investment/rumah-hutan_casa-brilhante.png";
+import graph4 from "../../assets/capital-investment/rio-royale.png";
+import graph5 from "../../assets/capital-investment/rio-estilo.png";
+import graph6 from "../../assets/capital-investment/rio-estado.png";
+import graph7 from "../../assets/capital-investment/black-forest.png";
+import graph8 from "../../assets/capital-investment/the-hills-estate.png";
+import graph9 from "../../assets/capital-investment/a-capella.png";
+import graph10 from "../../assets/capital-investment/6-assagao.png";
 
 const RoiTrendsSection = () => {
   const [selectedProperty, setSelectedProperty] = useState("#opt-2");
@@ -109,7 +109,7 @@ const RoiTrendsSection = () => {
 
   return (
     <section
-      className="text-change rio-trends new-set-trends bgblack scroll-smooth sticky snap-scroll"
+      className="text-change rio-trends new-set-trends bgwhite scroll-smooth sticky snap-scroll"
       data-sidebar-title="ROI Trends"
     >
       <div className="wrapper">
@@ -164,9 +164,8 @@ const RoiTrendsSection = () => {
                   {Object.keys(graphImages).map((key) => (
                     <div
                       key={key}
-                      className={`graph-image-item ${
-                        selectedProperty === key ? "active" : ""
-                      }`}
+                      className={`graph-image-item ${selectedProperty === key ? "active" : ""
+                        }`}
                       data-item={key}
                     >
                       <img src={graphImages[key].src || graphImages[key]} alt="" />
@@ -216,9 +215,8 @@ const RoiTrendsSection = () => {
                 {Object.keys(graphDetails).map((key) => (
                   <div
                     key={key}
-                    className={`graph-details ${
-                      selectedProperty === key ? "active" : ""
-                    }`}
+                    className={`graph-details ${selectedProperty === key ? "active" : ""
+                      }`}
                     data-item={key}
                   >
                     {graphDetails[key].map((detail, index) => (
