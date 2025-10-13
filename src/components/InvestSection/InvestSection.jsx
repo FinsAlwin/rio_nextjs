@@ -42,7 +42,7 @@ const InvestSection = () => {
   return (
     <section
       id="top"
-      className="text-change about-intro new-set bgblack scroll-smooth sticky snap-scroll"
+      className="text-change about-intro new-set bgwhite scroll-smooth sticky snap-scroll"
       data-sidebar-title="Invest"
     >
       <div className="dual-container flip-mob dual-invest-section">

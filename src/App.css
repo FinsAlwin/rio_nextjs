@@ -1290,6 +1290,7 @@ nav.open {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  position: relative !important;
 }
 
 .projects-dual.flip .projects-container .left {
@@ -2443,6 +2444,8 @@ footer .footer-bottom-section .backtotop {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  position: relative !important 
+  ;
 }
 
 .timeline
@@ -4715,7 +4718,7 @@ footer .footer-bottom-section .backtotop {
 .rio-trends {
   /* height: 92vh !important; */
   overflow: hidden;
-  color: #fff;
+  color: #000000;
 }
 
 .rio-trends .wrapper {
@@ -7175,7 +7178,11 @@ nav.open {
   height: 100vh;
   overflow: hidden;
 }
-
+.team-members .title-container {
+  text-align: center;
+  margin-bottom: 50px;
+  width: 90%;
+}
 .project-features .wrapper .inner-container .title-container {
   text-align: center;
   padding-bottom: 40px;
@@ -7328,7 +7335,7 @@ footer {
 footer .footer-container {
   display: grid;
   height: 100%;
-  grid-template-columns: 1.3fr 2fr;
+  grid-template-columns: 1.5fr 2fr;
   gap: 0px;
 }
 
@@ -7361,7 +7368,7 @@ footer .footer-container .left .image-container::before {
   left: 0;
 }
 
-footer .footer-container .left .left-footer-bottom { 
+footer .footer-container .left .left-footer-bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -8886,11 +8893,11 @@ footer .footer-bottom-section .backtotop {
   border-bottom: 1px solid #050505;
 } */
 
-.top-blank-section .title-container h2 {
+/* .top-blank-section .title-container h2 {
   color: #000000;
   text-transform: uppercase;
   margin: 0;
-}
+} */
 
 .top-blank-section.top-right {
   justify-content: end;
@@ -10211,7 +10218,7 @@ input[type="checkbox"].investment-timeline-input-label:checked::after {
 .rio-trends {
   /* height: 92vh !important; */
   overflow: hidden;
-  color: #fff;
+  color: #000000;
 }
 
 .rio-trends .wrapper .inner-container .rio-trends-container .invest-graph {
@@ -10234,8 +10241,8 @@ input[type="checkbox"].investment-timeline-input-label:checked::after {
   .rio-trends-container
   .invest-graph
   textarea {
-  color: #fff;
-  background: #050505;
+  color: #000000;
+  background: #ffffff;
   text-align: left;
 }
 
@@ -10312,7 +10319,7 @@ input[type="checkbox"].investment-timeline-input-label:checked::after {
   position: absolute;
   right: 0;
   top: 0;
-  background: #050505;
+  background: #ffffff;
   width: 100%;
   height: 100%;
   transition: all 3s ease-in-out;

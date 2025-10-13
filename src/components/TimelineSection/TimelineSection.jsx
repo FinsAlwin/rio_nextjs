@@ -11,6 +11,7 @@ import timeLine7 from "../../assets/about_us_founder/timeline_image_7.webp";
 import "./TimelineSection.css";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { relative } from "path";
 const sections = [
   "timeitem1",
   "timeitem2",

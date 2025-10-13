@@ -89,9 +89,14 @@ const TeamSection = () => {
             {/* Using React Icon for right arrow */}
           </div>
         </div>
-        <div className="top-blank-section h-5 top-right">
+        {/* <div className="top-blank-section h-5 top-right">
           <div className="title-container">
             <h2>Team</h2>
+          </div>
+        </div> */}
+        <div className="">
+          <div className="title-container">
+            <h2>TEAM</h2>
           </div>
         </div>
         <div className="inner-container ">

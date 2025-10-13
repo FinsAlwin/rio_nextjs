@@ -5,10 +5,12 @@ import RioLuxuryHomesInfo from "../../components/RioLuxuryHomesInfo/RioLuxuryHom
 import FounderSection from "../../components/FounderSection/FounderSection";
 import TimelineSection from "../../components/TimelineSection/TimelineSection";
 import { useEffect, useRef, useState } from "react";
+import { Element } from "react-scroll";
 // import createScrollSnap from "scroll-snap"; // Conditional import to prevent SSR issues
 import TeamSection from "../../components/TeamSection/TeamSection";
 import Header from "../../components/Header/Header";
 import BannerSection from "../../components/BannerSection/BannerSection";
+import GlobalExplore from "../../components/GlobalExplore/GlobalExplore";
 import UpcomingProjectsSection from "../../components/UpcomingProjectsSection/UpcomingProjectsSection";
 import CTASection from "../../components/CTASection/CTASection";
 import Footer from "../../components/Footer/Footer";
@@ -79,7 +81,7 @@ const AboutSection = () => {
           } catch (error) {
             console.warn("ScrollSnap error:", error);
           }
-          
+
         } else {
           if (element.style) { element.style.scrollSnapType = "none"; }
         }
@@ -134,9 +136,17 @@ const AboutSection = () => {
         <section data-logo-type="logo-dark-v" data-sidebar-title="Timeline">
           <TimelineSection />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="Overseas">
-          <UpcomingProjectsSection />
+        <section
+          data-logo-type="logo-dark-v"
+          data-sidebar-title="Global"
+        >
+          <Element name="single-select">
+            <GlobalExplore />
+          </Element>
         </section>
+        {/*  <section data-logo-type="logo-dark" data-sidebar-title="Overseas">
+          <UpcomingProjectsSection />
+        </section> */}
         {/* <CTASection /> */}
         <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
           <Footer />
