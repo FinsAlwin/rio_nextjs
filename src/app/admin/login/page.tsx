@@ -220,7 +220,7 @@ export default function AdminLogin() {
           </form>
 
           {/* Divider */}
-          <div style={{ marginTop: "1rem" }}>
+          {/* <div style={{ marginTop: "1rem" }}>
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-slate-600" />
@@ -231,10 +231,10 @@ export default function AdminLogin() {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Test Credentials */}
-          <div
+          {/* <div
             style={{
               display: "flex",
               flexDirection: "column",
@@ -262,10 +262,10 @@ export default function AdminLogin() {
                 @Alwin143
               </code>
             </div>
-          </div>
+          </div> */}
 
           {/* Footer */}
-          <div style={{ marginTop: "2rem", textAlign: "center" }}>
+          <div style={{ marginTop: "1rem", textAlign: "center" }}>
             <p className="text-xs text-slate-500">
               Secure access to Rio Luxury Homes admin panel
             </p>
