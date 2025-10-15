@@ -10,7 +10,10 @@ import Features from "../../components/Features/Features";
 import Footer from "../../components/Footer/Footer";
 import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
-import { DynamicInteriors, DynamicProjects } from "../../components/DynamicComponents/DynamicComponents";
+import {
+  DynamicInteriors,
+  DynamicProjects,
+} from "../../components/DynamicComponents/DynamicComponents";
 import "./Home.css";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
 import ContactUsButton from "../../components/ContactUsButton/ContactUsButton";
@@ -128,29 +131,42 @@ function Home() {
         <DynamicMeta title={title} description={description} />
         <Header logoType={logoType} />
         <section
-          data-logo-type={isMobile ? "logo-dark" : "logo-dark"}
+          // data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
+          data-logo-type="logo-dark-v"
           data-sidebar-title="Goa"
+          data-sidebar-title-color="#fff"
         >
           <Hero />
         </section>
-        <section data-logo-type="logo-dark-v" data-sidebar-title="Properties">
+        <section
+          data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
+          // data-logo-type="logo-dark-v"
+          data-sidebar-title="Properties"
+          data-sidebar-title-color="#050505"
+        >
           <SectionSlick1 />
         </section>
         <section
-          data-logo-type="logo-dark-v"
+          data-logo-type="logo-dark"
           data-sidebar-title="Global"
+          data-sidebar-title-color="#050505"
         >
           <Element name="single-select">
             <GlobalExplore />
           </Element>
         </section>
 
-
-        <section className=""
+        <section
+          className=""
           data-logo-type="logo-dark-v"
           data-sidebar-title="Selects"
+          data-sidebar-title-color="#050505"
         >
-          <Suspense fallback={<div className="loading-placeholder">Loading interiors...</div>}>
+          <Suspense
+            fallback={
+              <div className="loading-placeholder">Loading interiors...</div>
+            }
+          >
             <DynamicInteriors
               onSlideChange={(slideIndex) => {
                 setCurrentSlide(slideIndex);
@@ -159,10 +175,10 @@ function Home() {
           </Suspense>
         </section>
 
-
         <section
-          data-logo-type="logo-dark-v"
+          data-logo-type="logo-dark"
           data-sidebar-title="Features"
+          data-sidebar-title-color="#050505"
         >
           <Features />
         </section>
@@ -176,15 +192,18 @@ function Home() {
         </section> */}
 
         <section
-          data-logo-type="logo-dark-v"
+          data-logo-type="logo-dark"
           data-sidebar-title="Press"
+          data-sidebar-title-color="#050505"
         >
-          <Suspense fallback={<div className="loading-placeholder">Loading projects...</div>}>
+          <Suspense
+            fallback={
+              <div className="loading-placeholder">Loading projects...</div>
+            }
+          >
             <PressHighlights />
-
           </Suspense>
         </section>
-
 
         <section
           data-logo-type="logo-dark-v"

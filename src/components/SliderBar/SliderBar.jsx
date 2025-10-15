@@ -7,6 +7,7 @@ function SliderBar({ sidebarTitle, backgroundType }) {
   const [glyphClass, setGlyphClass] = useState("");
   const [menuIconClass, setMenuIconClass] = useState("");
   const [currentSectionTitle, setCurrentSectionTitle] = useState("");
+  const [sidebarTitleColor, setSidebarTitleColor] = useState("");
   const sidebarRef = useRef(null); // Create ref for sidebar
 
   const toggleMenu = () => {
@@ -31,6 +32,51 @@ function SliderBar({ sidebarTitle, backgroundType }) {
   }, [backgroundType]);
 
   useEffect(() => {
+    // Helper function to determine if a color is light or dark
+    const isLightColor = (color) => {
+      if (!color) return false;
+
+      // Convert color to RGB
+      let r, g, b;
+
+      // Handle hex colors
+      if (color.startsWith("#")) {
+        let hex = color.replace("#", "");
+
+        // Convert 3-char hex to 6-char hex (e.g., #fff -> #ffffff)
+        if (hex.length === 3) {
+          hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+        }
+
+        r = parseInt(hex.substr(0, 2), 16);
+        g = parseInt(hex.substr(2, 2), 16);
+        b = parseInt(hex.substr(4, 2), 16);
+      }
+      // Handle rgb/rgba colors
+      else if (color.startsWith("rgb")) {
+        const matches = color.match(/\d+/g);
+        if (matches) {
+          r = parseInt(matches[0]);
+          g = parseInt(matches[1]);
+          b = parseInt(matches[2]);
+        }
+      }
+      // Default named colors
+      else if (color.toLowerCase() === "white") {
+        return true;
+      } else if (color.toLowerCase() === "black") {
+        return false;
+      }
+
+      // Calculate relative luminance
+      if (r !== undefined && g !== undefined && b !== undefined) {
+        const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+        return luminance > 0.5; // If luminance > 0.5, it's a light color
+      }
+
+      return false;
+    };
+
     const sections = document.querySelectorAll("section[data-logo-type]");
     const observerOptions = {
       root: null,
@@ -43,11 +89,32 @@ function SliderBar({ sidebarTitle, backgroundType }) {
         if (entry.isIntersecting) {
           const logoType = entry.target.getAttribute("data-logo-type");
           const sidebarTitle = entry.target.getAttribute("data-sidebar-title");
+          const sidebarColor = entry.target.getAttribute(
+            "data-sidebar-title-color"
+          );
+
           setCurrentSectionTitle(sidebarTitle);
-          const isDarkVSection = logoType === "logo-dark-v";
-          console.log("SliderBar Observer - Section detected:", { logoType, isDarkVSection, sidebarTitle });
-          setGlyphClass(isDarkVSection ? "dark-v" : "");
-          setMenuIconClass(isDarkVSection ? "dark-v" : "");
+
+          // Set color: custom color > logo-type based color > default white
+          if (sidebarColor) {
+            setSidebarTitleColor(sidebarColor);
+            // If color is dark (like black), use dark-v class for icons
+            // If color is light (like white), don't use dark-v class
+            const shouldUseDarkIcons = !isLightColor(sidebarColor);
+            setGlyphClass(shouldUseDarkIcons ? "dark-v" : "");
+            setMenuIconClass(shouldUseDarkIcons ? "dark-v" : "");
+          } else {
+            setSidebarTitleColor(""); // Clear inline style
+            const isDarkVSection = logoType === "logo-dark-v";
+            setGlyphClass(isDarkVSection ? "dark-v" : "");
+            setMenuIconClass(isDarkVSection ? "dark-v" : "");
+          }
+
+          console.log("SliderBar Observer - Section detected:", {
+            logoType,
+            sidebarTitle,
+            sidebarColor,
+          });
         }
       });
     };
@@ -101,7 +168,10 @@ function SliderBar({ sidebarTitle, backgroundType }) {
             </div>
           </div>
           <div className="center">
-            <div className={`sidebar-text ${menuIconClass}`}>
+            <div
+              className={`sidebar-text ${menuIconClass}`}
+              style={sidebarTitleColor ? { color: sidebarTitleColor } : {}}
+            >
               <h3 className="menutext">Menu</h3>
               <h3 className="changetext">
                 {currentSectionTitle || sidebarTitle}

@@ -142,20 +142,33 @@ function InvestUs() {
         <DynamicMeta title={title} description={description} />
         {isHeaderVisible && <Header logoType={logoType} />}{" "}
         {/* Hide Header when InvestContact is visible */}
-        <section data-logo-type="logo-dark" data-sidebar-title="Invest">
+        <section
+          data-logo-type="logo-dark"
+          data-sidebar-title="Invest"
+          data-sidebar-title-color="#fffff"
+        >
           <InvestSection />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="RIO Trends">
+        <section
+          data-logo-type="logo-dark"
+          data-sidebar-title="RIO Trends"
+          data-sidebar-title-color="#050505"
+        >
           <RoiTrendsSection />
         </section>
         <section
           ref={investContactRef}
           data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
           data-sidebar-title="Contact"
+          data-sidebar-title-color="#050505"
         >
           <InvestContact />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="Invest">
+        <section
+          data-logo-type="logo-dark-v"
+          data-sidebar-title="Invest"
+          data-sidebar-title-color="#fff"
+        >
           <InvestUs2 />
         </section>
         {/* <section

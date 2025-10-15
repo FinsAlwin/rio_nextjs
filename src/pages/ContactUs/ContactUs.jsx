@@ -147,22 +147,32 @@ function ContactUs() {
       <>
         <DynamicMeta title={title} description={description} />
         <Header logoType={logoType} />
-        <section data-logo-type="logo-dark" data-sidebar-title="Contact Us">
+        <section
+          data-logo-type="logo-dark-v"
+          data-sidebar-title="Contact Us"
+          data-sidebar-title-color="#fff"
+        >
           <ContactSection />
         </section>
         <section
           data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
           data-sidebar-title="Contact Form"
+          data-sidebar-title-color="#050505"
         >
           <ContactForm />
         </section>
         <section
-          data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
+          data-logo-type={isMobile ? "logo-dark" : "logo-dark"}
           data-sidebar-title="Contact Us"
+          data-sidebar-title-color="#050505"
         >
           <ContactDetails />
         </section>
-        <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
+        <section
+          data-logo-type="logo-dark-v"
+          data-sidebar-title="Contact Us"
+          data-sidebar-title-color="#050505"
+        >
           {/* <Footer 
             imageSrc="/invest_page_image/Invest.webp"
             backgroundColor="dark"

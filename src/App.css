@@ -509,6 +509,14 @@ header .wrapper .left .logo-container .logo img.logo-dark {
   opacity: 0;
 }
 
+header .wrapper .left .logo-container .logo.logo-dark img.logo-white {
+  opacity: 0;
+}
+
+header .wrapper .left .logo-container .logo.logo-dark img.logo-dark {
+  opacity: 1;
+}
+
 header .wrapper .left .logo-container .logo.dark-v img.logo-white {
   opacity: 0;
 }
@@ -5968,6 +5976,14 @@ header .wrapper .left .logo-container .logo img.logo-white {
 
 header .wrapper .left .logo-container .logo img.logo-dark {
   opacity: 0;
+}
+
+header .wrapper .left .logo-container .logo.logo-dark img.logo-white {
+  opacity: 0;
+}
+
+header .wrapper .left .logo-container .logo.logo-dark img.logo-dark {
+  opacity: 1;
 }
 
 header .wrapper .left .logo-container .logo.dark-v img.logo-white {

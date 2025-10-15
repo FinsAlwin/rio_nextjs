@@ -8,7 +8,10 @@ import Footer from "../../components/Footer/Footer";
 import SliderBar from "../../components/SliderBar/SliderBar";
 import DynamicMeta from "../../components/DynamicMeta/DynamicMeta";
 import WhatsAppPopup from "../../components/WhatsAppPopup/WhatsAppPopup";
-import { DynamicProjects, DynamicPropertyBlogSlider } from "../../components/DynamicComponents/DynamicComponents";
+import {
+  DynamicProjects,
+  DynamicPropertyBlogSlider,
+} from "../../components/DynamicComponents/DynamicComponents";
 // import { Modal } from "react-responsive-modal"; // Temporarily disabled due to ESM compatibility issue
 // import "react-responsive-modal/styles.css"; // Temporarily disabled due to ESM compatibility issue
 import ApplyNowForm from "../../components/ApplyForm/ApplyForm";
@@ -57,13 +60,13 @@ function Properties() {
         if (entry.isIntersecting) {
           const logoType = entry.target.getAttribute("data-logo-type");
           const sidebarTitle = entry.target.getAttribute("data-sidebar-title");
-          
+
           console.log("Properties Observer - Section intersecting:", {
             logoType,
             sidebarTitle,
-            className: entry.target.className
+            className: entry.target.className,
           });
-          
+
           if (logoType) {
             setLogoType(logoType);
           }
@@ -108,13 +111,12 @@ function Properties() {
             //     console.warn("ScrollSnap import error:", error);
             //   });
             //   if (element.style) {
-            //     
+            //
             //   }
             // }
           } catch (error) {
             console.warn("ScrollSnap error:", error);
           }
-          
         } else {
           element.style.scrollSnapType = "none";
         }
@@ -153,22 +155,24 @@ function Properties() {
       <Header logoType={logoType} />
 
       <section
-      id="top"
-      className="text-change intro-image intro-image-new bgwhite"
-      data-logo-type="logo-dark"
-      data-sidebar-title="Properties"
-    >
-      <PropertiesIntroSection />
+        id="top"
+        className="text-change intro-image intro-image-new bgwhite"
+        data-logo-type="logo-dark-v"
+        data-sidebar-title="Properties"
+        data-sidebar-title-color="#fff"
+      >
+        <PropertiesIntroSection />
       </section>
 
       <section
-        data-logo-type="logo-dark-v"
+        data-logo-type="logo-dark"
         data-sidebar-title="Properties"
+        data-sidebar-title-color="#050505"
         className="properties-section"
       >
         <PropertiesListing />
       </section>
-{/* 
+      {/* 
       <section
         data-logo-type={isMobile ? "logo-dark" : "logo-dark-v"}
         data-sidebar-title="Overseas"
@@ -187,7 +191,11 @@ function Properties() {
       {/* Sidebar */}
       <SliderBar sidebarTitle={sidebarTitle} />
 
-      <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
+      <section
+        data-logo-type="logo-dark-v"
+        data-sidebar-title="Contact Us"
+        data-sidebar-title-color="#050505"
+      >
         {/* <Footer 
           imageSrc="/properties_image/Properties.webp"
           backgroundColor="#f0f0f1"

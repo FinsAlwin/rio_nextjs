@@ -32,7 +32,7 @@ function PropertiesContent({ propertiesURLId }) {
   const containerRef = useRef(null);
   const [sidebarTitle, setSidebarTitle] = useState("");
   const [backgroundType, setBackgroundType] = useState("");
-  
+
   useEffect(() => {
     const sections = document.querySelectorAll("section[data-logo-type]");
     const observerOptions = {
@@ -78,30 +78,30 @@ function PropertiesContent({ propertiesURLId }) {
 
         // Initialize scroll snap on the container
         try {
-            // Scroll snap disabled
-            // if (element && typeof window !== "undefined") {
-            //   // Dynamic import to prevent SSR issues
-            //   import("scroll-snap").then(({ default: createScrollSnap }) => {
-            //     const snapInstance = createScrollSnap(element, {
-            //       snapDestinationX: "0%",
-            //       snapDestinationY: "100%",
-            //       timeout: 100,
-            //       duration: 300,
-            //       threshold: 0.1,
-            //     });
-            //     if (element.style) {
-            //       element.style.scrollSnapType = "y mandatory";
-            //     }
-            //     snapInstance.bind();
-            //
-            //     // Cleanup on component unmount or screen size change
-            //     return () => {
-            //       snapInstance.unbind();
-            //     };
-            //   }).catch((error) => {
-            //     console.warn("ScrollSnap import error:", error);
-            //   });
-            // }
+          // Scroll snap disabled
+          // if (element && typeof window !== "undefined") {
+          //   // Dynamic import to prevent SSR issues
+          //   import("scroll-snap").then(({ default: createScrollSnap }) => {
+          //     const snapInstance = createScrollSnap(element, {
+          //       snapDestinationX: "0%",
+          //       snapDestinationY: "100%",
+          //       timeout: 100,
+          //       duration: 300,
+          //       threshold: 0.1,
+          //     });
+          //     if (element.style) {
+          //       element.style.scrollSnapType = "y mandatory";
+          //     }
+          //     snapInstance.bind();
+          //
+          //     // Cleanup on component unmount or screen size change
+          //     return () => {
+          //       snapInstance.unbind();
+          //     };
+          //   }).catch((error) => {
+          //     console.warn("ScrollSnap import error:", error);
+          //   });
+          // }
         } catch (error) {
           console.warn("ScrollSnap error:", error);
         }
@@ -150,10 +150,10 @@ function PropertiesContent({ propertiesURLId }) {
   const fetchPropertyData = async (propertyId) => {
     try {
       // Use fetch directly instead of the problematic fetchDataPost
-      const response = await fetch('/api/get-property-details/', {
-        method: 'POST',
+      const response = await fetch("/api/get-property-details/", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           property_url: `/properties/${propertyId}/`,
@@ -165,11 +165,13 @@ function PropertiesContent({ propertiesURLId }) {
       }
 
       const data = await response.json();
-      
+
       if (data && data.status === "success") {
         return data.response_data;
       } else {
-        throw new Error(`API returned error status: ${data.status || 'unknown'}`);
+        throw new Error(
+          `API returned error status: ${data.status || "unknown"}`
+        );
       }
     } catch (error) {
       console.error("Error fetching property data:", error);
@@ -216,10 +218,14 @@ function PropertiesContent({ propertiesURLId }) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Property Not Found</h1>
-          <p className="text-gray-600 mb-4">The property you're looking for doesn't exist or has been removed.</p>
-          <a 
-            href="/properties" 
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">
+            Property Not Found
+          </h1>
+          <p className="text-gray-600 mb-4">
+            The property you're looking for doesn't exist or has been removed.
+          </p>
+          <a
+            href="/properties"
             className="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
           >
             View All Properties
@@ -244,7 +250,8 @@ function PropertiesContent({ propertiesURLId }) {
       />
       <Header logoType={logoType} />
       <section
-        data-logo-type="logo-dark"
+        data-logo-type="logo-dark-v"
+        data-sidebar-title-color="#fff"
         data-sidebar-title={propertyDetails.property_name}
       >
         <PropertiesSection1
@@ -255,8 +262,9 @@ function PropertiesContent({ propertiesURLId }) {
       {propertyDetails.property_tagline_1?.trim() &&
         propertyDetails.property_tagline_1_img?.trim() && (
           <section
-            data-logo-type="logo-dark"
+            data-logo-type="logo-dark-v"
             data-sidebar-title={propertyDetails.property_name}
+            data-sidebar-title-color="#fff"
           >
             <PropertiesSection2
               property_tagline_1={propertyDetails.property_tagline_1}
@@ -298,7 +306,6 @@ function PropertiesContent({ propertiesURLId }) {
           </section>
         )}
 
-      
       {propertyGallery && propertyGallery.length > 0 && (
         <section
           data-logo-type="logo-dark"
@@ -307,26 +314,35 @@ function PropertiesContent({ propertiesURLId }) {
           <GallerySlider propertyGallery={propertyGallery} />
         </section>
       )}
-      
+
       {propertyVillas && propertyVillas.length > 0 && (
         <section
           data-logo-type="logo-dark-v"
           data-sidebar-title={propertyDetails.property_name}
         >
-          <RentCalculator propertiesURLId={propertiesURLId} propertyVillas={propertyVillas} />
+          <RentCalculator
+            propertiesURLId={propertiesURLId}
+            propertyVillas={propertyVillas}
+          />
         </section>
       )}
-
-          
 
       {/* <section data-logo-type="logo-dark-v" data-sidebar-title="">
           <RoamSection />
         </section> */}
-      <section data-logo-type="logo-dark-v" data-sidebar-title="Overseas">
+      <section
+        data-logo-type="logo-dark-v"
+        data-sidebar-title="Overseas"
+        data-sidebar-title-color="#fff"
+      >
         <Projects />
       </section>
 
-      <section data-logo-type="logo-dark-v" data-sidebar-title="Contact Us">
+      <section
+        data-logo-type="logo-dark-v"
+        data-sidebar-title="Contact Us"
+        data-sidebar-title-color="#050505"
+      >
         {/* <PropertiesFooter /> */}
         <Footer />
       </section>

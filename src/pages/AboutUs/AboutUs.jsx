@@ -81,9 +81,10 @@ const AboutSection = () => {
           } catch (error) {
             console.warn("ScrollSnap error:", error);
           }
-
         } else {
-          if (element.style) { element.style.scrollSnapType = "none"; }
+          if (element.style) {
+            element.style.scrollSnapType = "none";
+          }
         }
       }
     };
@@ -115,30 +116,55 @@ const AboutSection = () => {
       >
         <DynamicMeta title={title} description={description} />
         <Header logoType={logoType} />
-        <section data-logo-type="logo-dark" data-sidebar-title="About Us">
+        <section
+          data-logo-type="logo-dark-v"
+          data-sidebar-title="About Us"
+          data-sidebar-title-color="#fff"
+        >
           <OwnerInfo />
         </section>
-        <section data-logo-type="logo-dark" data-sidebar-title="About Us">
+        <section
+          data-logo-type="logo-dark"
+          data-sidebar-title="About Us"
+          data-sidebar-title-color="#050505"
+        >
           <RioLuxuryHomesInfo />
-        </section>
-        <section data-logo-type="logo-dark-v" data-sidebar-title="What We Do">
-          <TechnicalSection />
-        </section>
-        <section data-logo-type="logo-dark-v" data-sidebar-title="Founder">
-          <FounderSection />
-        </section>
-        <section data-logo-type="logo-dark-v" data-sidebar-title="Team ">
-          <TeamSection />
-        </section>
-        <section data-logo-type="logo-dark">
-          <BannerSection />
-        </section>
-        <section data-logo-type="logo-dark-v" data-sidebar-title="Timeline">
-          <TimelineSection />
         </section>
         <section
           data-logo-type="logo-dark-v"
+          data-sidebar-title="What We Do"
+          data-sidebar-title-color="#050505"
+        >
+          <TechnicalSection />
+        </section>
+        <section
+          data-logo-type="logo-dark"
+          data-sidebar-title="Founder"
+          data-sidebar-title-color="#050505"
+        >
+          <FounderSection />
+        </section>
+        <section
+          data-logo-type="logo-dark"
+          data-sidebar-title="Team"
+          data-sidebar-title-color="#050505"
+        >
+          <TeamSection />
+        </section>
+        <section data-logo-type="logo-dark" data-sidebar-title-color="#050505">
+          <BannerSection />
+        </section>
+        <section
+          data-logo-type="logo-dark"
+          data-sidebar-title="Timeline"
+          data-sidebar-title-color="#050505"
+        >
+          <TimelineSection />
+        </section>
+        <section
+          data-logo-type="logo-dark"
           data-sidebar-title="Global"
+          data-sidebar-title-color="#050505"
         >
           <Element name="single-select">
             <GlobalExplore />
